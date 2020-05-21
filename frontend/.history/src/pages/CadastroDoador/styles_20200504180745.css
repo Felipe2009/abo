@@ -1,0 +1,85 @@
+.doador-container {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doador-container.content {
+    width: 100%;
+    padding: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* joga a imagem pra esquerda e o form pra direita */
+    align-items: center;
+}
+
+.doador .content section {
+    width: 100%;
+    max-width: 200px;
+}
+
+.doador-container .content section h1 {
+    /* margin: 64px 0 32px; */
+    font-size: 30px;
+    text-align: center;
+}
+
+.doador-container .content section form {
+    width: 100%;
+    max-width: 200px;
+}
+
+.doador-container .content form button {
+    margin-top: 6px;
+    inline-size: 370px;
+}
+
+.doador-container .content form input,
+.doador-container .content form textarea {
+    margin-top: 5px;
+    inline-size: 370px;
+}
+
+.register-container .content form .input-group {
+    display: flex;
+}
+
+.register-container .content form .input-group input+input {
+    /* pra por o estado do lado da cidade esse input + input */
+    margin-left: 30px;
+}
+
+
+/* .new-incident-container content form labelId {
+    margin-top: 6px;
+    inline-size: 370px;
+} */
+
+
+/* .new-incident-container content form .input-group Select MenuItem {
+    width: 190%;
+    display: flex;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 30px;
+} */
+
+.doador-container content form .input-group .FormControl .demo-simple-select-label .demo-simple-select {
+    width: 190%;
+    display: flex;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 30px;
+    border-radius: 10%;
+}

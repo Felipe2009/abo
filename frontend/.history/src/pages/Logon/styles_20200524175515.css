@@ -14,7 +14,6 @@
 .logon-container section.form {
     width: 10px;
     max-width: 50px;
-    margin-left: 560px;
 }
 
 .logon-container section.form form {
@@ -75,8 +74,4 @@
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s;
-}
-
-.arrumar {
-    margin: 40px;
 }

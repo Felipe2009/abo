@@ -13,50 +13,48 @@
 
 .logon-container section.form {
     width: 10px;
-    max-width: 50px;
+    max-width: 150px;
     margin-left: 560px;
 }
 
 .logon-container section.form form {
     margin-bottom: 120px;
-    width: 700px;
+    width: 1050px;
 }
 
 .logon-container section.form form h1 {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
     font-size: 22px;
     text-align: center;
-    margin-left: -340px;
+    margin-left: -590px;
 }
 
 .logon-container section.form form input {
     /* altura dos botoes de email e senha */
     height: 50px;
-    width: 330px;
-    right: 300px;
+    width: 420px;
 }
 
 .teste {
-    left: -750px;
+    left: -730px;
     position: relative;
-    width: 510px;
+    width: 560px;
 }
 
 .logon-container section img {
-    /* logo */
     margin-left: -60px;
     margin-bottom: 60px;
 }
 
 .button {
-    width: 330px;
+    width: 420px;
     height: 60px;
     background: #c2bfbf;
     /* background: #9315ed; */
     border: 0;
     border-radius: 8px;
     color: #201f1f;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 16px;
     display: inline-block;
     text-align: center;
@@ -64,19 +62,4 @@
     font-size: 16px;
     line-height: 60px;
     transition: filter 0.2s;
-}
-
-.voltar {
-    display: flex;
-    text-align: center;
-    margin-top: 10px;
-    color: #41414d;
-    font-size: 12px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s;
-}
-
-.arrumar {
-    margin: 40px;
 }

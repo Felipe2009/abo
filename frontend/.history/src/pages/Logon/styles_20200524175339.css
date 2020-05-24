@@ -20,6 +20,7 @@
 .logon-container section.form form {
     margin-bottom: 120px;
     width: 700px;
+    margin-right: 180px;
 }
 
 .logon-container section.form form h1 {
@@ -75,8 +76,4 @@
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s;
-}
-
-.arrumar {
-    margin: 40px;
 }

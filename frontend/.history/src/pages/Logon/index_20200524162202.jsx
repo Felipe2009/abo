@@ -16,8 +16,8 @@ export default function Logon() {
     async function handleLogin(e) {
         e.preventDefault();
         try {
-            const response = await api.post('sessions', { email });
-            localStorage.setItem('funcionarioEmail', email);
+            const response = await api.post('sessions', { id });
+            localStorage.setItem('funcionarioId', id);
             localStorage.setItem('funcionarioName', response.data.name);
             history.push('/perfil');
         }
@@ -28,31 +28,30 @@ export default function Logon() {
     return (
         <div className="logon-container" >
             <section className="form" >
-                <img className="logo" src={logoImg} />
-                <form className="arrumar" onSubmit={handleLogin}>
+                <img src={logoImg} />
+                <form onSubmit={handleLogin}>
                     <h1>Login</h1>
                     <input
                         placeholder="Insira seu email"
                         value={email}
                         onChange={e => setEmail(e.target.value)} />
-                    <br></br>
+
 
                     <input
-                        type="password"
+                        type="text"
                         placeholder="Insira sua senha"
-                        value={senha}
+                        value={id}
                         onChange={e => setSenha(e.target.value)}
-
 
                     // value={id} comentado pq tava dando a msm coisa q o email
                     //onChange={e => setId(e.target.value)}
                     />
-                    <br></br>
+                    
                     {/* <button type="button" onClick="mostrarSenha()">Mostrar a senha</button> */}
 
                     <button className="button" type="submit" > Entrar </button>
 
-                    <Link className="voltar" to="/cadastroFuncionario">
+                    <Link className="back-link" to="/cadastroFuncionario">
                         Ainda não possui cadastro?
              </Link>
                 </form >

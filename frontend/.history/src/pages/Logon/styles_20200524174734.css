@@ -20,6 +20,7 @@
 .logon-container section.form form {
     margin-bottom: 120px;
     width: 700px;
+    margin-right: 180px;
 }
 
 .logon-container section.form form h1 {
@@ -33,7 +34,6 @@
     /* altura dos botoes de email e senha */
     height: 50px;
     width: 330px;
-    right: 300px;
 }
 
 .teste {
@@ -56,7 +56,7 @@
     border: 0;
     border-radius: 8px;
     color: #201f1f;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 16px;
     display: inline-block;
     text-align: center;
@@ -75,8 +75,4 @@
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s;
-}
-
-.arrumar {
-    margin: 40px;
 }

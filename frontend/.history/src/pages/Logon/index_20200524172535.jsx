@@ -29,20 +29,21 @@ export default function Logon() {
         <div className="logon-container" >
             <section className="form" >
                 <img className="logo" src={logoImg} />
-                <form className="arrumar" onSubmit={handleLogin}>
+                <background-image className="teste" src={sangue}></background-image>
+                <form onSubmit={handleLogin}>
                     <h1>Login</h1>
                     <input
                         placeholder="Insira seu email"
                         value={email}
                         onChange={e => setEmail(e.target.value)} />
-                    <br></br>
+<br></br>
 
                     <input
                         type="password"
                         placeholder="Insira sua senha"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
-
+                        
 
                     // value={id} comentado pq tava dando a msm coisa q o email
                     //onChange={e => setId(e.target.value)}
@@ -52,13 +53,13 @@ export default function Logon() {
 
                     <button className="button" type="submit" > Entrar </button>
 
-                    <Link className="voltar" to="/cadastroFuncionario">
+                    <Link className="back-link" to="/cadastroFuncionario">
                         Ainda não possui cadastro?
              </Link>
                 </form >
 
             </section>
-            <img className="teste" src={sangue} />
+            
 
         </div >
 

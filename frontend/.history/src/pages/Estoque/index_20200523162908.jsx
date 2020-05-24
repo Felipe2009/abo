@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
+import sangue from '../../assets/Sangue1.png';
 import { Link, useHistory } from 'react-router-dom';
 
 

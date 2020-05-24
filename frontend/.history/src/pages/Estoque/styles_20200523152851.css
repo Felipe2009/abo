@@ -4,7 +4,7 @@
     margin-top: 30px;
 }
 
-.back {
+.back-perfil {
     align-items: center;
     color: #41414d;
     font-size: 12px;
@@ -12,13 +12,6 @@
     font-weight: 550;
     transition: opacity 0.2s;
     position: relative;
-    margin-left: 420px;
+    margin-left: 530px;
     bottom: 45px;
-}
-
-.botao-estoque {
-    background: #46d47c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 14px;
 }

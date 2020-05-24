@@ -1,0 +1,15 @@
+.estoque-container img {
+    height: 100px;
+    margin-left: 155px;
+    margin-top: 30px;
+}
+
+.back-perfil {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 750;
+    transition: opacity 0.2s;
+}

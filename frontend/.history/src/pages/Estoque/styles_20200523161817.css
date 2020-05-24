@@ -12,13 +12,24 @@
     font-weight: 550;
     transition: opacity 0.2s;
     position: relative;
-    margin-left: 420px;
+    margin-left: 530px;
     bottom: 45px;
 }
 
-.botao-estoque {
-    background: #46d47c;
+.button {
+    width: 190%;
+    height: 60px;
+    background: #d45646;
+    /* background: #9315ed; */
+    border: 0;
+    border-radius: 8px;
     color: #fff;
+    font-weight: 700;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
-    border-radius: 14px;
+    font-size: 16px;
+    line-height: 60px;
+    transition: filter 0.2s;
 }

@@ -17,8 +17,9 @@
 }
 
 .botao-estoque {
-    background: #46d47c;
+    background: #d45646;
     color: #fff;
     text-decoration: none;
     border-radius: 14px;
+    width: 200px;
 }

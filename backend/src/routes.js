@@ -16,7 +16,7 @@ routes.get('/perfil', ProfileController.index);
 
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
-routes.delete('/doador/:id', DoadorController.delete); //:id c/ o id q vc quer deletar
+routes.delete('/doador', DoadorController.delete); //:id c/ o id q vc quer deletar
 
 
 

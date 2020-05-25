@@ -1,3 +1,4 @@
+
 exports.up = function(knex) { // up é responsavel por criar tabela
     return knex.schema.createTable('doador', function(table) {
         table.increments(); //criar chave primaria p/ o id q é autoincrement
@@ -10,9 +11,9 @@ exports.up = function(knex) { // up é responsavel por criar tabela
         table.string('tipo').notNullable();
 
 
-        table.string('funcionario_id').notNullable();
+        //table.string('funcionario_id').notNullable();
 
-        table.foreign('funcionario_id').references('id').inTable('funcionario');
+        //table.foreign('funcionario_id').references('id').inTable('funcionario');
     });
 };
 
@@ -21,4 +22,4 @@ exports.down = function(knex) {
 };
 
 //p/desfazer a ultima migrate:latest -> npx knex migrate:rollback
-/*migrations são formas de criar tabelas e manter um historico das tabelas criadas,alteradas*/
+//migrations são formas de criar tabelas e manter um historico das tabelas criadas,alteradas

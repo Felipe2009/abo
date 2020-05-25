@@ -1,11 +1,13 @@
 const connection = require('../database/connection');
 
+
+//responsabilidade é saber se o funcionario existe ou não
 module.exports = {
     async create(request, response) { //request é responsavel por guardar todos os dados q vem atraves da requisição do usuário. E o response é responsável por retornar uma resposta para o usuário
-        const { id } = request.body;
+        const { email } = request.body;
 
         const funcionario = await connection('funcionario') //verifica se func existe
-            .where('id', id) //o id da const
+            .where('email', email) //o id da const
             .select('name') //unica info q vo exibir no front
             .first(); //só exibir a 1a pq só tem ela
 

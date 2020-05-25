@@ -46,9 +46,8 @@
     margin-bottom: 10px;
     min-inline-size: 310px;
     height: 56px;
-    border-radius: 8px;
-    color: #000000;
-    border: 0;
+    border-radius: 7px;
+    color: #f0f0f0;
 }
 
 .funcionario-container .content form .input-group {

@@ -1,9 +1,3 @@
-.estoque-container {
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
 .estoque-container img {
     height: 100px;
     margin-left: 155px;
@@ -18,17 +12,14 @@
     font-weight: 550;
     transition: opacity 0.2s;
     position: relative;
-    margin-left: 340px;
+    margin-left: 420px;
     bottom: 45px;
 }
 
 .estoque-container .buton {
     padding: 15px;
-    align-items: center;
+    margin-right: 200px;
     text-decoration: none;
-    margin-left: 220px;
-    height: 75px;
-    border-radius: 8px;
 }
 
 

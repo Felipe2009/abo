@@ -5,7 +5,7 @@ module.exports = {
         const funcionario_id = request.headers.authorization; //acessando os dados do func q ta logado
 
         const doador = await connection('doador') //buscar doadores q esse func criou
-            .where('funcionario_id', funcionario_id)
+            //.where('funcionario_id', funcionario_id)
             .select('*'); //mudar isso
 
         return response.json(doador);

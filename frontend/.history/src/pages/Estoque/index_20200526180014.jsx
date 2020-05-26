@@ -11,8 +11,10 @@ export default function Estoque() {
         <div className="estoque-container">
             <header>
                 <img src={logoImg}></img>
-                <Link className="buton" type="submit" to="/cadastroDoador">Cadastrar Doador</Link>
-                <Link className="back" to="/"> Voltar para home</Link>
+                <button className="buton" type="submit" to="/cadastroDoador">Cadastrar</button>
+                <Link className="back" to="/">
+                    Voltar para home
+                    </Link>
             </header>
         </div>
     )

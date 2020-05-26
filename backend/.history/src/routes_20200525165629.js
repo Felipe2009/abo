@@ -3,10 +3,10 @@ const express = require('express');
 const FuncionarioController = require('./controllers/FuncionarioController')
 const DoadorController = require('./controllers/DoadorController')
 const ListaController = require('./controllers/ListaController')
-const LoginController = require('./controllers/LoginController')
+const SessionController = require('./controllers/SessionController')
 
 const routes = express.Router();
-routes.post('/login', LoginController.create); //criando sessão de login
+routes.post('/sessions', SessionController.create); //criando sessão de login
 
 //criando rota para listar todas as ongs do banco de dados
 routes.get('/funcionario', FuncionarioController.index)

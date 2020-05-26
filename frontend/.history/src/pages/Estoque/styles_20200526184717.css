@@ -1,7 +1,9 @@
 .estoque-container {
     align-items: center;
     justify-content: center;
+    width: 100%;
     position: absolute;
+    flex-direction: column;
 }
 
 .estoque-container img {
@@ -18,7 +20,7 @@
     font-weight: 550;
     transition: opacity 0.2s;
     position: relative;
-    margin-left: 340px;
+    margin-left: 420px;
     bottom: 45px;
 }
 
@@ -26,9 +28,7 @@
     padding: 15px;
     align-items: center;
     text-decoration: none;
-    margin-left: 220px;
-    height: 75px;
-    border-radius: 8px;
+    margin-bottom: 200px;
 }
 
 

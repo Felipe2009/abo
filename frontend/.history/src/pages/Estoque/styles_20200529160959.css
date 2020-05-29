@@ -1,0 +1,51 @@
+.estoque-container {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.estoque-container img {
+    height: 100px;
+    margin-left: 155px;
+    margin-top: 30px;
+}
+
+.back {
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: opacity 0.2s;
+    position: relative;
+    margin-left: 220px;
+    bottom: 45px;
+}
+
+.aa {
+    background: #c2bfbf;
+    border-radius: 8px;
+    color: #000000;
+    border: 0;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+}
+
+
+/* .botao {
+    width: 90%;
+    height: 56px;
+    border-radius: 8px;
+    background: #c2bfbf;
+    color: #000000;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    transition: filter 0.2s;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 0;
+} */

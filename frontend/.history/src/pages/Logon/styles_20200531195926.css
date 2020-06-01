@@ -14,7 +14,7 @@
 .logon-container section.form {
     width: 10px;
     max-width: 50px;
-    margin-left: 700px;
+    margin-left: 560px;
 }
 
 .logon-container section.form form {
@@ -26,14 +26,14 @@
     margin-bottom: 28px;
     font-size: 22px;
     text-align: center;
-    margin-right: 770px;
-    width: 300px;
+    margin-right: 430px;
 }
 
 .logon-container section.form form input {
     /* altura dos botoes de email e senha */
     height: 51px;
     width: 300px;
+    right: 150px;
 }
 
 .teste {
@@ -44,10 +44,8 @@
 
 .logon-container section img {
     /* logo */
-    position: relative;
-    margin-right: 110px;
-    margin-bottom: 70px;
-    width: 300px;
+    margin-left: -60px;
+    margin-bottom: 60px;
 }
 
 .button {

@@ -14,7 +14,7 @@
 .logon-container section.form {
     width: 10px;
     max-width: 50px;
-    margin-left: 700px;
+    margin-left: 560px;
 }
 
 .logon-container section.form form {
@@ -23,31 +23,29 @@
 }
 
 .logon-container section.form form h1 {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     font-size: 22px;
     text-align: center;
-    margin-right: 770px;
-    width: 300px;
+    margin-left: -340px;
 }
 
 .logon-container section.form form input {
     /* altura dos botoes de email e senha */
-    height: 51px;
+    height: 48px;
     width: 300px;
+    right: 150px;
 }
 
 .teste {
-    left: -780px;
+    left: -770px;
     position: relative;
     width: 511px;
 }
 
 .logon-container section img {
     /* logo */
-    position: relative;
-    margin-right: 110px;
-    margin-bottom: 70px;
-    width: 300px;
+    margin-left: -60px;
+    margin-bottom: 60px;
 }
 
 .button {
@@ -77,10 +75,9 @@
     font-weight: bold;
     transition: opacity 0.2s;
     margin-left: 50px;
-    width: 280px;
 }
 
 .arrumar {
     margin: 40px;
-    display: inline;
+    margin-right: 50px;
 }

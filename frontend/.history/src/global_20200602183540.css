@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Roboto, sans-serif;
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+    font: 15px Roboto, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(90%);
+}
+
+.back-link {
+    display: flex;
+    text-align: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    line-height: 20px;
+}
+
+.atualizar {
+    text-align: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    margin-left: 120px;
+    width: 200px;
+}
+
+.logon-container section.form form a:hover {
+    opacity: 0.8;
+}
+
+
+/* form textarea {
+    width: 190%;
+    resize: vertical;
+    /*pra qdo arrastar só arrastar verticalmente */

@@ -1,0 +1,71 @@
+.funcionario-container {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.funcionario-container.content {
+    width: 100%;
+    padding: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* joga a imagem pra esquerda e o form pra direita */
+    align-items: center;
+}
+
+.funcionario-container.content section {
+    width: 100%;
+    max-width: 200px;
+}
+
+.funcionario-container .content section h1 {
+    /* margin: 64px 0 32px; */
+    font-size: 26px;
+}
+
+.funcionario-container .content section form {
+    width: 100%;
+    max-width: 200px;
+}
+
+.funcionario-container .content form input {
+    margin-top: 5px;
+    inline-size: 310px;
+    height: 55px;
+}
+
+.buton {
+    background: #c2bfbf;
+    margin-bottom: 10px;
+    min-inline-size: 310px;
+    height: 56px;
+    border-radius: 8px;
+    color: #000000;
+    border: 0;
+}
+
+.funcionario-container .content form .input-group {
+    display: flex;
+}
+
+.funcionario-container .content form .input-group input+input {
+    /* pra por o estado do lado da cidade esse input + input */
+    margin-left: 30px;
+}
+
+form input {
+    width: 51%;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 30px;
+    margin-left: 10px;
+}

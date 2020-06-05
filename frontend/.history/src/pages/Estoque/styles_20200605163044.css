@@ -21,6 +21,7 @@
     text-decoration: none;
     font-weight: 600;
     transition: opacity 0.2s;
+    margin-left: 300px;
 }
 
 .volta {
@@ -48,7 +49,7 @@
 }
 
 .estoque-container header a {
-    margin-left: 200px;
+    margin-left: auto;
     margin-top: 0;
 }
 

@@ -53,16 +53,16 @@ export default function Profile() {
             <table border="1" className="tabela">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Tipo</th>
+                        <th>titulo 1</th>
+                        <th>titulo 2</th>
+                        <th>titulo 3</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p>{doador.name}</p></td>
-                        <td><p>{doador.telefone}</p></td>
-                        <td><p>{doador.tipo}</p></td>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
                     </tr>
                     <tr>
                         <td>d</td>

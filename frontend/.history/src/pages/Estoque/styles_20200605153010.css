@@ -16,10 +16,11 @@
 
 .aaa {
     align-items: center;
-    color: #151516;
-    font-size: 14px;
+    color: #41414d;
+    font-size: 18px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 550;
+    margin-left: 100px;
     transition: opacity 0.2s;
 }
 
@@ -48,7 +49,8 @@
 }
 
 .estoque-container header a {
-    margin-left: 200px;
+    width: 220px;
+    margin-left: auto;
     margin-top: 0;
 }
 
@@ -96,16 +98,6 @@
 .estoque-container ul li button:hover {
     opacity: 0.8;
     /* filter: brightness(90%); */
-}
-
-.estoque-container ul li strong {
-    display: block;
-    margin-bottom: 14px;
-    color: #41414d;
-}
-
-.estoque-container ul li p+strong {
-    margin-top: 28px;
 }
 
 .estoque-container ul li p {
@@ -184,8 +176,7 @@
 .listagem {
     text-decoration: none;
     color: #131212;
-    font-weight: 479;
-    font-size: 9pt;
+    font-weight: 430;
     text-align: center;
 }
 

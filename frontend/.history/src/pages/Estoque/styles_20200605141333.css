@@ -16,10 +16,11 @@
 
 .aaa {
     align-items: center;
-    color: #151516;
-    font-size: 14px;
+    color: #41414d;
+    font-size: 18px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 550;
+    margin-left: 100px;
     transition: opacity 0.2s;
 }
 
@@ -48,7 +49,8 @@
 }
 
 .estoque-container header a {
-    margin-left: 200px;
+    width: 220px;
+    margin-left: auto;
     margin-top: 0;
 }
 
@@ -72,7 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* esse negocio de fr significa q são 2 colunas com 1 unidade flexível */
-    grid-gap: 10px;
+    grid-gap: 20px;
     /* distanciamento entre os cards */
     list-style: none;
 }
@@ -147,7 +149,6 @@
 .figurab {
     width: 52px;
     margin-left: 250px;
-    margin-top: -18px;
 }
 
 .blocoa- {
@@ -162,12 +163,12 @@
 
 .blocoab {
     margin-left: 360px;
-    margin-top: -188px;
+    margin-top: -210px;
 }
 
 .blocoab- {
     margin-left: 740px;
-    margin-top: -204px;
+    margin-top: -227px;
 }
 
 .blocoo,
@@ -179,14 +180,6 @@
 .blocoo- {
     margin-left: 360px;
     margin-top: -187px;
-}
-
-.listagem {
-    text-decoration: none;
-    color: #131212;
-    font-weight: 479;
-    font-size: 9pt;
-    text-align: center;
 }
 
 

@@ -14,10 +14,11 @@
     height: 105px;
 }
 
-.lista-container header a {
-    width: 220px;
-    margin-left: auto;
-    margin-top: 0;
+.lista-container header button {
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin-left: 14px;
 }
 
 .lista-container header button:hover {
@@ -25,10 +26,11 @@
 }
 
 .lista-container h1 {
-    margin-top: 10px;
+    margin-top: 70px;
+    margin-bottom: 28px;
 }
 
-.botaoo {
+.botao {
     height: 58px;
     border-radius: 8px;
     color: #000000;
@@ -54,20 +56,5 @@
 }
 
 .textao {
-    text-align: center;
-}
-
-.tabela {
-    background-color: rgb(239, 242, 248);
-    height: 40px;
-    position: relative;
-    margin-left: 300px;
-}
-
-table th {
-    width: 120px;
-}
-
-table td {
     text-align: center;
 }

@@ -48,30 +48,44 @@ export default function Profile() {
                 <Link className="voltar" to="/"> Voltar para home</Link>
             </header>
             <h1 className="textao">Doadores cadastrados</h1>
-            <br></br>
 
-            <table border="1" className="tabela">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><p>{doador.name}</p></td>
-                        <td><p>{doador.telefone}</p></td>
-                        <td><p>{doador.tipo}</p></td>
-                    </tr>
-                    <tr>
-                        <td>d</td>
-                        <td>e</td>
-                        <td>f</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="wrapper wrapper-content animated fadeInRight">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="title">
+                        <h3>Grau de Curso</h3>
+                    </div>
+                    <br />
+                    <table class="table table-striped table-bordered table-hover dataTables-example" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Ativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="clickable-row" style="cursor: pointer">
+                                    <td >@item.GrauId</td>
+                                    <td>@item.Nome</td>
+                                    <td>@item.Ativo</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+        </div>
         </div>
     )
 

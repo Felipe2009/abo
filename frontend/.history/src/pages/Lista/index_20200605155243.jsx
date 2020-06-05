@@ -48,29 +48,16 @@ export default function Profile() {
                 <Link className="voltar" to="/"> Voltar para home</Link>
             </header>
             <h1 className="textao">Doadores cadastrados</h1>
-            <br></br>
 
-            <table border="1" className="tabela">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><p>{doador.name}</p></td>
-                        <td><p>{doador.telefone}</p></td>
-                        <td><p>{doador.tipo}</p></td>
-                    </tr>
-                    <tr>
-                        <td>d</td>
-                        <td>e</td>
-                        <td>f</td>
-                    </tr>
-                </tbody>
-            </table>
+            <table class="table table-striped table-bordered table-hover dataTables-example" id="myTable">
+            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Ativo</th>
+                            </tr>
+                        </thead>
+                </table>
 
         </div>
     )

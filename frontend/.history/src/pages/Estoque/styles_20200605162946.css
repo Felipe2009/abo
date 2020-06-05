@@ -48,7 +48,8 @@
 }
 
 .estoque-container header a {
-    margin-left: 200px;
+    width: 360px;
+    margin-left: auto;
     margin-top: 0;
 }
 

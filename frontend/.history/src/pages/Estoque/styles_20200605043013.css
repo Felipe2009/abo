@@ -1,0 +1,150 @@
+.estoque-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.estoque-container img {
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 230px;
+}
+
+.aaa {
+    align-items: center;
+    color: #41414d;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 100px;
+    transition: opacity 0.2s;
+}
+
+.volta {
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 100px;
+    transition: opacity 0.2s;
+}
+
+.estoque-container header {
+    display: flex;
+    align-items: center
+}
+
+.estoque-container header span {
+    font-size: 18px;
+    margin-left: 24px;
+}
+
+.estoque-container header img {
+    height: 105px;
+}
+
+.estoque-container header a {
+    width: 220px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.estoque-container header button {
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin-left: 14px;
+}
+
+.estoque-container header button:hover {
+    border-color: #999;
+}
+
+.estoque-container h1 {
+    margin-top: 70px;
+    margin-bottom: 28px;
+}
+
+.estoque-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* esse negocio de fr significa q são 2 colunas com 1 unidade flexível */
+    grid-gap: 20px;
+    /* distanciamento entre os cards */
+    list-style: none;
+}
+
+.estoque-container ul li {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.estoque-container ul li button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 0;
+}
+
+.estoque-container ul li button:hover {
+    opacity: 0.8;
+    /* filter: brightness(90%); */
+}
+
+.estoque-container ul li strong {
+    display: block;
+    margin-bottom: 14px;
+    color: #41414d;
+}
+
+.estoque-container ul li p+strong {
+    margin-top: 28px;
+}
+
+.estoque-container ul li p {
+    color: #737380;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.botao {
+    height: 58px;
+    border-radius: 8px;
+    background: #c2bfbf;
+    color: #000000;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    transition: filter 0.2s;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 0;
+    font-weight: 550;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: opacity 0.2s;
+}
+
+.textao {
+    text-align: center;
+    margin-bottom: 400px;
+}
+
+.figurab {
+    width: 20px;
+}

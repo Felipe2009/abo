@@ -24,45 +24,10 @@ export default function Estoque() {
 
             <h1 className="textao">Estoque</h1>
             <br></br>
-            <ul>
-                <li className="blocoa">
-                    <br></br>
-                    <strong>Quantidade Necessária:</strong>
-                    {/* <p>{doador.name}</p> */}
-                    <br></br>
-
-                    <strong>Quantidade Disponível:</strong>
-                    {/* <p>{doador.telefone}</p> */}
-                    
-                    
-                    <img className="figurab" src={figuraa}></img>
-                    
-                </li>
-
-            </ul>
-
-            <br></br>
-            <ul>
-                <li className="blocoa-">
-                    <br></br>
-                    <strong>Quantidade Necessária:</strong>
-                    {/* <p>{doador.name}</p> */}
-                    <br></br>
-
-                    <strong>Quantidade Disponível:</strong>
-                    {/* <p>{doador.telefone}</p> */}
-                    
-                    
-                    <img className="figurab" src={figuraaa}></img>
-                    
-                </li>
-
-            </ul>
             
-
-            <br></br>
             <ul>
-                <li className="blocob">
+            <div className="grupob">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -75,13 +40,13 @@ export default function Estoque() {
                     <img className="figurab" src={figurab}></img>
                     
                 </li>
-
+</div>
             </ul>
 
-
             <br></br>
+            <div className="grupoab">
             <ul>
-                <li className="blocob-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -96,11 +61,49 @@ export default function Estoque() {
                 </li>
 
             </ul>
+            </div>
+
+            <br></br>
+            <ul>
+                <li>
+                    <br></br>
+                    <strong>Quantidade Necessária:</strong>
+                    {/* <p>{doador.name}</p> */}
+                    <br></br>
+
+                    <strong>Quantidade Disponível:</strong>
+                    {/* <p>{doador.telefone}</p> */}
+                    
+                    
+                    <img className="figurab" src={figuraoo}></img>
+                    
+                </li>
+
+            </ul>
 
 
             <br></br>
             <ul>
-                <li className="blocoab">
+                <li>
+                    <br></br>
+                    <strong>Quantidade Necessária:</strong>
+                    {/* <p>{doador.name}</p> */}
+                    <br></br>
+
+                    <strong>Quantidade Disponível:</strong>
+                    {/* <p>{doador.telefone}</p> */}
+                    
+                    
+                    <img className="figurab" src={figurao}></img>
+                    
+                </li>
+
+            </ul>
+
+
+            <br></br>
+            <ul>
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -118,7 +121,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoab-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -136,7 +139,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoo">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -146,7 +149,7 @@ export default function Estoque() {
                     {/* <p>{doador.telefone}</p> */}
                     
                     
-                    <img className="figurab" src={figurao}></img>
+                    <img className="figurab" src={figuraa}></img>
                     
                 </li>
 
@@ -154,7 +157,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoo-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -164,13 +167,12 @@ export default function Estoque() {
                     {/* <p>{doador.telefone}</p> */}
                     
                     
-                    <img className="figurab" src={figuraoo}></img>
+                    <img className="figurab" src={figuraaa}></img>
                     
                 </li>
 
             </ul>
-            </div>
 
-       
+        </div>
     )
 }

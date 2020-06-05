@@ -25,7 +25,7 @@ export default function Estoque() {
             <h1 className="textao">Estoque</h1>
             <br></br>
             <ul>
-                <li className="blocoa">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -62,7 +62,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocob">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -81,7 +81,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocob-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -100,7 +100,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoab">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -118,7 +118,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoab-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -136,7 +136,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoo">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}
@@ -154,7 +154,7 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-                <li className="blocoo-">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}

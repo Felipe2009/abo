@@ -25,7 +25,7 @@ export default function Estoque() {
             <h1 className="textao">Estoque</h1>
             <br></br>
             <ul>
-                <li className="blocoa">
+                <li>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}

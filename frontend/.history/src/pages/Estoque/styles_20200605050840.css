@@ -151,51 +151,11 @@
     margin-left: 250px;
 }
 
-.blocoa- {
-    margin-left: 360px;
-    margin-top: -187px;
+.grupob {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    /* esse negocio de fr significa q são 2 colunas com 1 unidade flexível */
+    grid-gap: 10px;
+    /* distanciamento entre os cards */
+    grid-column: span;
 }
-
-.blocob {
-    margin-left: 740px;
-    margin-top: -204px;
-}
-
-.blocoab {
-    margin-left: 360px;
-    margin-top: -187px;
-}
-
-.blocoab- {
-    margin-left: 740px;
-    margin-top: -203px;
-}
-
-.blocoo,
-.blocoa,
-.blocob- {
-    margin-left: -30px;
-}
-
-.blocoo- {
-    margin-left: 360px;
-    margin-top: -187px;
-}
-
-
-/* display: grid; */
-
-
-/* grid-template-columns: 1fr 1fr; */
-
-
-/* esse negocio de fr significa q são 2 colunas com 1 unidade flexível */
-
-
-/* grid-gap: 10px; */
-
-
-/* distanciamento entre os cards */
-
-
-/* list-style: none; */

@@ -9,7 +9,7 @@
 
 .imagem {
     height: 100px;
-    margin-left: 10px;
+    margin-left: -30px;
     margin-top: 10px;
     width: 230px;
 }
@@ -152,22 +152,22 @@
 }
 
 .blocoa- {
-    margin-left: 360px;
+    margin-left: 400px;
     margin-top: -187px;
 }
 
 .blocob {
-    margin-left: 740px;
+    margin-left: 770px;
     margin-top: -204px;
 }
 
 .blocoab {
-    margin-left: 360px;
+    margin-left: 400px;
     margin-top: -187px;
 }
 
 .blocoab- {
-    margin-left: 740px;
+    margin-left: 770px;
     margin-top: -203px;
 }
 
@@ -178,7 +178,7 @@
 }
 
 .blocoo- {
-    margin-left: 360px;
+    margin-left: 400px;
     margin-top: -187px;
 }
 

@@ -51,7 +51,7 @@ export default function Profile() {
             <br></br>
             <br></br>
 
-            <table border="2" className="tabela">
+            <table border="1" className="tabela">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -66,7 +66,7 @@ export default function Profile() {
                         <td><p>{doador.tipo}</p></td>
                     </tr>
                     <tr>
-                        <td width="25%" height="20%">d</td>
+                        <td>d</td>
                         <td>e</td>
                         <td>f</td>
                     </tr>

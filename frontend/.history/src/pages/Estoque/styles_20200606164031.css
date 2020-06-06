@@ -184,17 +184,8 @@
 .listagem {
     text-decoration: none;
     color: #131212;
-    font-weight: 500;
+    font-weight: 479;
     font-size: 9pt;
-    margin-left: 50px;
-}
-
-.listagemab {
-    text-decoration: none;
-    color: #131212;
-    font-weight: 500;
-    font-size: 9pt;
-    margin-bottom: -120px;
     margin-left: 50px;
 }
 

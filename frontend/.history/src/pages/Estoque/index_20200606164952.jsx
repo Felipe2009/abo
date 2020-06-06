@@ -34,9 +34,9 @@ export default function Estoque() {
                     <strong>Quantidade Disponível:</strong>
                     {/* <p>{doador.telefone}</p> */}
                     
+                    
                     <img className="figurab" src={figuraa}></img>
                     <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
-
 
                 </li>
 

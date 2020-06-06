@@ -64,11 +64,11 @@ form input {
 .button {
     width: 300px;
     height: 55px;
-    background: #e4dfdf;
-    color: #6dabf1;
+    background: #ffffff;
     border: 0;
     border-radius: 8px;
     margin-left: 80px;
+    color: #6dabf1;
     font-weight: 600;
     margin-top: 16px;
     display: inline-block;

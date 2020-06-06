@@ -181,21 +181,13 @@
     margin-top: -187px;
 }
 
-.listagem {
+.estoque-container ul li Link {
     text-decoration: none;
     color: #131212;
     font-weight: 500;
     font-size: 9pt;
     margin-left: 50px;
-}
-
-.listagemab {
-    text-decoration: none;
-    color: #131212;
-    font-weight: 500;
-    font-size: 9pt;
-    margin-bottom: -120px;
-    margin-left: 50px;
+    margin-top: 280px;
 }
 
 

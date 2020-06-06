@@ -85,7 +85,7 @@
 
 .cadastrar {
     height: 60px;
-    background: #e4dfdf;
+    background: #cccaca;
     color: #6dabf1;
     border: 0;
     border-radius: 8px;
@@ -96,7 +96,6 @@
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
-    box-shadow: 10px;
     transition: filter 0.2s;
 }
 

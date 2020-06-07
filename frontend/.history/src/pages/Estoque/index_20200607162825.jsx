@@ -86,8 +86,8 @@ export default function Estoque() {
             <br></br>
             <ul>
             
-                <li className="blocob-">
-                
+                <li className="blocob-"
+                style={{  }}>
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}

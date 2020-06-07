@@ -66,9 +66,9 @@ export default function Profile() {
                         <td><p>{doador.tipo}</p></td>
                     </tr>
                     <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
+                        <td style={{ width: 70 }}>d</td>
+                        <td>e</td>
+                        <td>f</td>
                     </tr>
                 </tbody>
             </table>

@@ -35,6 +35,7 @@ export default function Estoque() {
                     {/* <p>{doador.telefone}</p> */}
                     
                     <img className="figurab" src={figuraa}></img>
+                    <br></br>
                     <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
 
 
@@ -87,7 +88,7 @@ export default function Estoque() {
             <ul>
             
                 <li className="blocob-">
-                
+                    
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}

@@ -67,8 +67,8 @@ export default function Profile() {
                     </tr>
                     <tr>
                         <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
+                        <td style={{ width: 120 }}>e</td>
+                        <td style={{ width: 60 }}>e</td>
                     </tr>
                 </tbody>
             </table>

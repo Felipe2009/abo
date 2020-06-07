@@ -87,7 +87,7 @@ export default function Estoque() {
             <ul>
             
                 <li className="blocob-">
-                
+                    
                     <br></br>
                     <strong>Quantidade Necessária:</strong>
                     {/* <p>{doador.name}</p> */}

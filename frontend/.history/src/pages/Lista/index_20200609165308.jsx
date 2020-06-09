@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash, FiEdit} from 'react-icons/fi';
+import { FiArrowLeft, FiTrash2, FiPower ,FiRefreshCw} from 'react-icons/fi';
 
 
 export default function Profile() {
@@ -69,11 +69,10 @@ export default function Profile() {
                         <td style={{ width: 180 }}>d</td>
                         <td style={{ width: 135 }}>e</td>
                         <td style={{ width: 44 }}>f</td>
-                        
-                        <FiEdit className="editar"></FiEdit>
-                        <FiTrash></FiTrash>
+                        <FiRefreshCw></FiRefreshCw>
+                        <FiTrash2></FiTrash2>
+
                     </tr>
-                    
                 </tbody>
             </table>
 

@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash, FiEdit} from 'react-icons/fi';
+import { FiArrowLeft, FiTrash, FiPower ,FiEdit} from 'react-icons/fi';
 
 
 export default function Profile() {

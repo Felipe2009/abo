@@ -59,8 +59,9 @@
 
 .tabela {
     background-color: rgb(239, 242, 248);
+    height: 40px;
     position: relative;
-    margin-left: 130px;
+    margin-left: 110px;
     border-color: rgb(5, 5, 3);
     width: 700px;
 }
@@ -72,7 +73,6 @@ table th {
 table td {
     text-align: center;
     border: 1px solid black;
-    font-size: 12pt;
 }
 
 .verificarestoque {

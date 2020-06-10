@@ -92,7 +92,7 @@ export default function Doador() {
                     />
 
                     <select className="tipo" value={tipo} onChange={e => setTipo(e.target.value)}
-                        style={{ width: 92 }}>
+                        style={{ width: 86 }}>
                         <option value="" disabled selected>Tipo</option>
                         <option value={10}>A+</option>
                         <option value={20}>A-</option>

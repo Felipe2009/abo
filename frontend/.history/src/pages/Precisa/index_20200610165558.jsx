@@ -7,15 +7,12 @@ import api from '../../services/api';
 
 
 export default function Doador() {
-    const [cpf, setCpf] = useState('');
     const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [sexo, setSexo] = useState('');
     const [tipo, setTipo] = useState('');
     const [idade, setIdade] = useState('');
-    const [ultima, setUltima] = useState('');
-
+    const [quantidade, setQuantidade] = useState('');
 
     const history = useHistory();
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
@@ -24,14 +21,12 @@ export default function Doador() {
         e.preventDefault();
 
         const data = {
-            cpf,
             name,
-            email,
             telefone,
             sexo,
             tipo,
             idade,
-            ultima
+            quantidade
         };
         try {
             await api.post('doador', data, {
@@ -44,33 +39,22 @@ export default function Doador() {
             alert("Erro ao cadastrar caso")
         }
     }
-    // function checkIdade(field, rules, i, options){
-    //     if (field.val() < 18) {
-    //        // this allows the use of i18 for the error msgs
-    //        return options.allrules.validate2fields.alertText;
-    // //        <input class="validate[required,funcCall[checkIdade]]" 
-    // //    type="text" 
-    // //    id="idade" 
-    // //    name="idade" /> por lá no input da idade
-    //     }
-    //   }
+
 
     return (
         <div className="doador-container">
             <div className="content">
                 <section>
                     <img src={logoImg}></img>
-                    <h1>Cadastrar Doador</h1>
+                    <h1>Cadastrar Pessoa</h1>
                     <br></br>
                     {/* <p>Faça o cadastro do doador e ajude as pessoas</p> */}
                     <Link className="back-link" to="/">
 
                         Voltar para home
-                        <Link className="atualizar" to="/lista">
+                        <a className="atualizar" to="/lista">
 
-
-                            Atualizar o cadastro
-                            </Link>
+                            Atualizar o cadastro</a>
                     </Link>
 
                     <br></br>
@@ -79,20 +63,28 @@ export default function Doador() {
                 <form onSubmit={handleDoador}>
                     {/* essa função handleDoador precisa ser chamada no submit do form */}
                     <input
-                        placeholder="Nome do Doador"
+                        placeholder="Nome do indivíduo"
                         value={name}
                         onChange={e => setName(e.target.value)} required
                     />
 
                     <input
-                        placeholder="Cpf do Doador"
-                        style={{ width: 192 }}
-                        value={cpf}
-                        onChange={e => setCpf(e.target.value)} required
+                        placeholder="Telefone"
+                        style={{ width: 306 }}
+                        value={telefone}
+                        onChange={e => setTelefone(e.target.value)} required
+                    />
+                    <input
+                        type="number"
+                        placeholder="Quantidade"
+                        style={{ width: 180 }}
+                        value={quantidade}
+                        onChange={e => setQuantidade(e.target.value)} required
+
                     />
 
-                    <select className="tipo" value={tipo} onChange={e => setTipo(e.target.value)}
-                        style={{ width: 92 }}>
+                    <select className="type" value={tipo} onChange={e => setTipo(e.target.value)}
+                        style={{ width: 80 }}>
                         <option value="" disabled selected>Tipo</option>
                         <option value={10}>A+</option>
                         <option value={20}>A-</option>
@@ -104,29 +96,6 @@ export default function Doador() {
                         <option value={80}>O-</option>
 
                     </select>
-
-                    <input
-
-                        placeholder="Email do Doador"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)} required
-
-                    />
-
-                    <input
-                        placeholder="Telefone"
-                        style={{ width: 160 }}
-                        value={telefone}
-                        onChange={e => setTelefone(e.target.value)} required
-                    />
-                    <input className="ultima" type="text" //talvez esse number não seja totalmente aceito e normatizado nos navegadores, além de permitir o caracter “e” entre os números. Ao usar “number” você pode ter problemas ao selecionar o valor via jQuery com: jQuery( ‘.input_type_number’ ).val(); .
-                        placeholder="Ultima Doação"
-                        style={{ width: 134 }}
-                        value={ultima}
-                        onChange={e => setUltima(e.target.value)} required
-                        id="placeholder-text"
-                    />
-
 
                     <input className="idade" type="date" //talvez esse number não seja totalmente aceito e normatizado nos navegadores, além de permitir o caracter “e” entre os números. Ao usar “number” você pode ter problemas ao selecionar o valor via jQuery com: jQuery( ‘.input_type_number’ ).val(); .
                         placeholder="Data de Nascimento"

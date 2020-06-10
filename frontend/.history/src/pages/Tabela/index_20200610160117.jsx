@@ -54,7 +54,7 @@ export default function Profile() {
             <Link className="verificarestoque" to="/estoque"> Verificar estoque</Link>
             <br></br>       
 
-            <table border="2" className="table">
+            <table border="2" className="tabela">
                 <thead>
                     <tr>
                         <th>Tipo de Sangue</th>

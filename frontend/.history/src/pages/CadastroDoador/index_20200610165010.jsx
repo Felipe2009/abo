@@ -86,13 +86,13 @@ export default function Doador() {
 
                     <input
                         placeholder="Cpf do Doador"
-                        style={{ width: 192 }}
+                        style={{ width: 175 }}
                         value={cpf}
                         onChange={e => setCpf(e.target.value)} required
                     />
 
                     <select className="tipo" value={tipo} onChange={e => setTipo(e.target.value)}
-                        style={{ width: 92 }}>
+                        style={{ width: 80 }}>
                         <option value="" disabled selected>Tipo</option>
                         <option value={10}>A+</option>
                         <option value={20}>A-</option>

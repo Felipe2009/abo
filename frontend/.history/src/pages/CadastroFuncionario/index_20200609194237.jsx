@@ -60,7 +60,7 @@ export default function Register() {
                     <br></br>
                     <h1>Cadastro de Funcionário</h1>
                     <br></br>
-                    <Link className="back-link" to="/">
+                    <Link className="back" to="/">
                         Voltar para home
 
                         <Link className="atualizar" to="/lista">

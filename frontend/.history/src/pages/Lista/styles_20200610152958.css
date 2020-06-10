@@ -75,11 +75,8 @@ table td {
 }
 
 .verificarestoque {
-    text-decoration: none;
-    font-weight: 550;
-    color: #141414;
-    transition: opacity 0.2s;
-    margin-left: 210px;
-    margin-top: 20px;
-    font-size: 10pt;
+    list-style: none;
+    font-weight: 500;
+    columns: #212121;
+    ;
 }

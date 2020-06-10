@@ -8,7 +8,7 @@ import CadastroDoador from './pages/CadastroDoador';
 import Estoque from './pages/Estoque';
 import Precisa from './pages/Precisa';
 import Espera from './pages/Espera';
-import Tabela from './pages/Tabela'
+import Receber from './pages/Receber'
 
 export default function Routes(){
     return(
@@ -21,7 +21,7 @@ export default function Routes(){
             <Route path="/estoque" component={Estoque} />
             <Route path="/precisa" component={Precisa} />
             <Route path="/espera" component={Espera} />
-            <Route path="/tabela" component={Tabela} />
+            <Route path="/receber" component={Receber} />
 
 
         </Switch>

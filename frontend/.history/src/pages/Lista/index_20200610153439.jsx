@@ -51,8 +51,10 @@ export default function Profile() {
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
             
-            <Link className="verificarestoque" to="/estoque"> Verificar estoque</Link>
-            <br></br>       
+            <Link className="verificarestoque" to="/"> Verificar estoque</Link>
+            <br></br>
+            <br></br>
+            
 
             <table border="2" className="tabela">
                 <thead>

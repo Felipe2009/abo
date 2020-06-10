@@ -66,7 +66,7 @@ form input {
     height: 60px;
     color: #333;
     border: 1px solid #dcdce6;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 0 30px;
     margin-left: 1px;
 }

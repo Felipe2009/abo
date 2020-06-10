@@ -9,6 +9,7 @@
     /* alinha horizontalmente ao centro */
     justify-content: center;
     justify-content: space-between;
+    background-color: #ffc;
 }
 
 .logon-container section.form {
@@ -33,7 +34,7 @@
 .logon-container section.form form input {
     /* altura dos botoes de email e senha */
     height: 51px;
-    width: 290px;
+    width: 300px;
     margin-left: 78px;
 }
 
@@ -42,7 +43,7 @@ form input {
     height: 60px;
     color: #333;
     border: 1px solid #dcdce6;
-    /* border-radius: 6px; */
+    border-radius: 8px;
     padding: 0 30px;
     margin-left: 180px;
 }
@@ -62,10 +63,10 @@ form input {
 }
 
 .button {
-    width: 290px;
+    width: 300px;
     height: 55px;
-    background: #d4d1d1;
-    color: rgb(14, 13, 13);
+    background: #a70303;
+    color: #fff;
     border: 0;
     border-radius: 8px;
     margin-left: 80px;

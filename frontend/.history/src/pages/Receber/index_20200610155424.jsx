@@ -48,7 +48,7 @@ export default function Profile() {
                 <Link className="voltar" to="/"> Voltar para home</Link>
             </header>
 
-            <h1 className="textao">Doadores cadastrados</h1>
+            <h1 className="textao">Tabela de Compatibilidade</h1>
             <br></br>
             
             <Link className="verificarestoque" to="/estoque"> Verificar estoque</Link>
@@ -57,24 +57,58 @@ export default function Profile() {
             <table border="2" className="tabela">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Tipo</th>
+                        <th>Tipo de Sangue</th>
+                        <th>Pode doar para</th>
+                        <th>Poder receber de</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p>{doador.name}</p></td>
-                        <td><p>{doador.telefone}</p></td>
-                        <td><p>{doador.tipo}</p></td>
+                        <td>A+</td>
+                        <td>AB+ e A+</td>
+                        <td>A+, A-, O+ e O-</td>
                     </tr>
                     <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
+                        <td style={{ width: 80 }}>A-</td>
+                        <td style={{ width: 80 }}>e</td>
+                        <td style={{ width: 80 }}>f</td>
                         
-                        <FiEdit className="editar"></FiEdit>
-                        <FiTrash></FiTrash>
+                    </tr>
+
+                    <tr>
+                        <td>B+</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+
+                    <tr>
+                        <td>B-</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+
+                    <tr>
+                        <td>AB+</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+
+                    <tr>
+                        <td>AB-</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+
+                    <tr>
+                        <td>O+</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+
+                    <tr>
+                        <td>O-</td>
+                        <td>a</td>
+                        <td>a</td>
                     </tr>
                     
                 </tbody>

@@ -69,12 +69,10 @@ export default function Profile() {
                         <td><p>{doador.tipo}</p></td>
                     </tr>
                     <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
+                        <td style={{ width: 80 }}>d</td>
+                        <td style={{ width: 80 }}>e</td>
+                        <td style={{ width: 80 }}>f</td>
                         
-                        <FiEdit className="editar"></FiEdit>
-                        <FiTrash></FiTrash>
                     </tr>
                     
                 </tbody>

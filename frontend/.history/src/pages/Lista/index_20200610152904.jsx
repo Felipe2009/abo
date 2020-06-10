@@ -47,12 +47,11 @@ export default function Profile() {
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
             </header>
+            <Link className="verificarestoque" to="/"> Verificar estoque</Link>
 
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
-            
-            <Link className="verificarestoque" to="/estoque"> Verificar estoque</Link>
-            <br></br>       
+            <br></br>
 
             <table border="2" className="tabela">
                 <thead>

@@ -63,6 +63,7 @@
     position: relative;
     margin-left: 210px;
     border-color: rgb(5, 5, 3);
+    width: 300px;
 }
 
 table th {
@@ -72,6 +73,7 @@ table th {
 table td {
     text-align: center;
     border: 1px solid black;
+    font-size: 12pt;
 }
 
 .verificarestoque {

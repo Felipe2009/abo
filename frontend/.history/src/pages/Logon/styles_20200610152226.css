@@ -42,7 +42,7 @@ form input {
     height: 60px;
     color: #333;
     border: 1px solid #dcdce6;
-    /* border-radius: 6px; */
+    border-radius: 6px;
     padding: 0 30px;
     margin-left: 180px;
 }

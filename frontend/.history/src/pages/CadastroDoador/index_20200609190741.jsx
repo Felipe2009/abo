@@ -66,14 +66,13 @@ export default function Doador() {
                     <Link className="back-link" to="/">
 
                         Voltar para home
-                        <Link className="atualizar" to="/lista">
+                        <Link></Link>
+                        <a className="atualizar" to="/lista">
 
-
-                            Atualizar o cadastro
-                            </Link>
+                            Atualizar o cadastro</a>
                     </Link>
 
-                    <br></br>
+<br></br>
 
                 </section>
                 <form onSubmit={handleDoador}>

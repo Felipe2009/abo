@@ -123,8 +123,6 @@ export default function Register() {
 
                     </div> */}
                     <br></br>
-                    <br></br>
-
 
                     <button className="buton" type="submit">Cadastrar</button>
                 </form>

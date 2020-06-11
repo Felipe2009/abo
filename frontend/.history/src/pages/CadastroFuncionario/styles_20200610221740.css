@@ -52,10 +52,9 @@
     border: 0;
 }
 
-
-/* .funcionario-container .content form .input-group {
+.funcionario-container .content form .input-group {
     display: flex;
-} */
+}
 
 
 /* .funcionario-container .content form .input-group input+input {

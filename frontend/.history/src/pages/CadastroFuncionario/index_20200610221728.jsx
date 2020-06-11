@@ -114,7 +114,7 @@ export default function Register() {
                         type="password"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
-                        style={{ width: 133 }}
+                        style={{ width: 136 }}
                     />
 
 
@@ -123,8 +123,6 @@ export default function Register() {
 
                     </div> */}
                     <br></br>
-                    <br></br>
-
 
                     <button className="buton" type="submit">Cadastrar</button>
                 </form>

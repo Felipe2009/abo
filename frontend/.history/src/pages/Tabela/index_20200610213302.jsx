@@ -5,7 +5,38 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 
 export default function Profile() {
-    
+    const [doador, setDoador] = useState([]);
+    const funcionarioEmail = localStorage.getItem('funcionarioEmail');
+    const funcionarioName = localStorage.getItem('funcionarioName');
+    const history = useHistory();
+    // use effect serve para disparar uma função em um determinado momento do componente
+    useEffect(() => {
+        api.get('lista', {
+            headers: { //pra mostrar qual funcionario está logado
+                Authorization: funcionarioEmail,
+            }
+        }).then(response => {
+            setDoador(response.data);
+        })
+    }, [funcionarioEmail]);
+    async function handleDeleteDoador(cpf) {
+        try {
+            await api.delete(`doador/${cpf}`, {
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
+            })
+            setDoador(doador.filter(doador => doador.cpf !== cpf))
+        } catch (err) {
+            alert("Erro ao deletar")
+        }
+    }
+
+    function handleLogout() { //remove dados do localstorage
+        localStorage.clear();
+        history.push('/'); //enviando de volta a raiz
+
+    }
     return (
         <div className="receber-container">
             <header>

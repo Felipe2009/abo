@@ -73,13 +73,13 @@ export default function Profile() {
                         <td style={{ width: 135 }}>e</td>
                         <td style={{ width: 44 }}>f</td>
 
-                        <FiEdit className="editar"></FiEdit>
-                        <FiTrash></FiTrash>
+
                     </tr>
 
                 </tbody>
             </table>
-
+            <FiEdit className="editar"></FiEdit>
+                    <FiTrash></FiTrash>
 
 
         </div>

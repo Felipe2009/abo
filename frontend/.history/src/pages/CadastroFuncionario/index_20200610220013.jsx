@@ -89,32 +89,27 @@ export default function Register() {
                         placeholder="CPF"
                         value={cpf}
                         onChange={e => setCpf(e.target.value)}
-                        style={{ width: 166 }}
-
                     ></input>
+
+                    <input classname="whatsapp"
+                        placeholder="Whatsapp"
+                        value={whatsapp}
+                        onChange={e => setWhatsapp(e.target.value)}
+
+                    />
 
                     <input
                         placeholder="Data de Aniversário"
                         type="date"
                         value={idade}
                         onChange={e => setIdade(e.target.value)}
-                        style={{ width: 152 }}
-
                     />
 
-                    <input classname="whatsapp"
-                        placeholder="Whatsapp"
-                        value={whatsapp}
-                        onChange={e => setWhatsapp(e.target.value)}
-                        style={{ width: 168 }}
-
-                    />
-                    <input className="senha"
+                    <input
                         placeholder="Senha"
                         type="password"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
-                        style={{ width: 133 }}
                     />
 
 
@@ -123,8 +118,6 @@ export default function Register() {
 
                     </div> */}
                     <br></br>
-                    <br></br>
-
 
                     <button className="buton" type="submit">Cadastrar</button>
                 </form>

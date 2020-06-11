@@ -84,37 +84,33 @@ export default function Register() {
                         value={email}
                         onChange={e => setEmail(e.target.value)} //e.target.value representa o valor do input e to colocando dentro da variavel name q to colocando dentro do estado
                     />
-
+<div className="input-group">
                     <input classname="cpf"
                         placeholder="CPF"
                         value={cpf}
                         onChange={e => setCpf(e.target.value)}
-                        style={{ width: 166 }}
-
                     ></input>
+
+                    <input classname="whatsapp"
+                        placeholder="Whatsapp"
+                        value={whatsapp}
+                        onChange={e => setWhatsapp(e.target.value)}
+
+                    />
+                    </div>
 
                     <input
                         placeholder="Data de Aniversário"
                         type="date"
                         value={idade}
                         onChange={e => setIdade(e.target.value)}
-                        style={{ width: 152 }}
-
                     />
 
-                    <input classname="whatsapp"
-                        placeholder="Whatsapp"
-                        value={whatsapp}
-                        onChange={e => setWhatsapp(e.target.value)}
-                        style={{ width: 168 }}
-
-                    />
                     <input className="senha"
                         placeholder="Senha"
                         type="password"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
-                        style={{ width: 133 }}
                     />
 
 
@@ -123,8 +119,6 @@ export default function Register() {
 
                     </div> */}
                     <br></br>
-                    <br></br>
-
 
                     <button className="buton" type="submit">Cadastrar</button>
                 </form>

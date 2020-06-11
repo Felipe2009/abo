@@ -52,10 +52,9 @@
     border: 0;
 }
 
-
-/* .funcionario-container .content form .input-group {
+.funcionario-container .content form .input-group {
     display: flex;
-} */
+}
 
 
 /* .funcionario-container .content form .input-group input+input {
@@ -96,5 +95,5 @@ form input {
 }
 
 .senha {
-    margin-left: 17px;
+    margin-left: 21px;
 }

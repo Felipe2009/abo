@@ -16,8 +16,8 @@ export default function Routes(){
         <Switch>
             <Route path="/" exact component={Logon} />{/* o exact é pra mostrar q o caminho deve ser exatamente esse para ir pra essa rota.Pq senão o /register q começa com / ñ vai pegar */}
             <Route path="/CadastroFuncionario" component={CadastroFuncionario} />
-            <Route path="/CadastroDoador" component={CadastroDoador} /> 
-            <Route path="/lista" component={Lista} /> 
+            <Route path="/CadastroDoador" component={CadastroDoador} />
+            <Route path="/lista" component={Lista} />
             <Route path="/estoque" component={Estoque} />
             <Route path="/precisa" component={Precisa} />
             <Route path="/espera" component={Espera} />

@@ -24,7 +24,7 @@ module.exports = {
         //request.headers;    
 
         //const [email] =
-        await connection('doador').insert({ //ponho o nome da tabela q quero inserir dados e o insert insere dados ali dentro. Aí vc poe todas as colunas q vc quer inserir la dentro
+        await connection('doador').insert({
             name,
             cpf,
             email,

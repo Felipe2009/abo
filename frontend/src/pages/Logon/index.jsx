@@ -19,7 +19,7 @@ export default function Logon() {
             const response = await api.post('login', { email });
             localStorage.setItem('funcionarioEmail', email); //salvando o email no storage do navegador
             localStorage.setItem('funcionarioName', response.data.name);
-            history.push('/lista');
+            history.push('/cadastroDoador');
         }
         catch (err) {
             alert('Falha no login');

@@ -51,7 +51,7 @@ export default function Profile() {
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
 
-            <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
+            <Link className="verificarestoque" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
             <table border="2" className="tabelalista">
@@ -60,8 +60,6 @@ export default function Profile() {
                         <th>Nome</th>
                         <th>Telefone</th>
                         <th>Tipo</th>
-                        <th>Email</th>
-                        <th>Sexo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,29 +67,11 @@ export default function Profile() {
                         <td><p>{doador.name}</p></td>
                         <td><p>{doador.telefone}</p></td>
                         <td><p>{doador.tipo}</p></td>
-                        <td><p>{doador.email}</p></td>
-                        <td><p>{doador.sexo}</p></td>
-
                     </tr>
                     <tr>
                         <td style={{ width: 180 }}>d</td>
                         <td style={{ width: 135 }}>e</td>
                         <td style={{ width: 44 }}>f</td>
-                        <td style={{ width: 100 }}>f</td>
-                        <td style={{ width: 44 }}>f</td>
-
-
-                        <FiEdit className="editar"></FiEdit>
-                        <FiTrash></FiTrash>
-                    </tr>
-
-                    <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
-                        <td style={{ width: 100 }}>f</td>
-                        <td style={{ width: 44 }}>f</td>
-
 
                         <FiEdit className="editar"></FiEdit>
                         <FiTrash></FiTrash>

@@ -1,0 +1,130 @@
+.doador-container {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doador-container.content {
+    width: 100%;
+    padding: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* joga a imagem pra esquerda e o form pra direita */
+    align-items: center;
+}
+
+.doador .content section {
+    width: 100%;
+    max-width: 200px;
+}
+
+.doador-container .content section h1 {
+    /* margin: 64px 0 32px; */
+    font-size: 30px;
+    text-align: center;
+}
+
+.doador-container .content section form {
+    width: 100%;
+    max-width: 200px;
+}
+
+.doador-container .content form button {
+    margin-top: 6px;
+    inline-size: 370px;
+}
+
+.doador-container .content form input {
+    margin-top: 6px;
+    inline-size: 305px;
+}
+
+.doador-container .content form .input-group {
+    border-radius: 8px;
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    display: flex;
+}
+
+.idade {
+    margin-right: 4px;
+    margin-left: 1px;
+    margin-top: 3px;
+    height: 60px;
+}
+
+.sexo {
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    margin-right: 5px;
+}
+
+.tipo {
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    margin-left: 16px;
+}
+
+.ultima {
+    height: 60px;
+    margin: 10px;
+    margin-bottom: 1px;
+}
+
+.cadastrar {
+    height: 60px;
+    background: #d4d1d1;
+    color: rgb(14, 13, 13);
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 10px;
+    transition: filter 0.2s;
+}
+
+form input {
+    width: 51%;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 30px;
+    margin-left: 1px;
+}
+
+#placeholder-text::placeholder {
+    font-size: 13px;
+    text-align: left;
+}
+
+.atualizar {
+    margin-left: 45px;
+}
+
+.back-link {
+    margin-top: 3px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.logo {
+    margin-left: 520px;
+}

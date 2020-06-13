@@ -30,7 +30,7 @@ export default function Precisa() {
         try {
             await api.post('precisa', data, {
                 headers: {
-                    Authorization: funcionarioEmail,
+                    Authorization: precisaTelefone,
                 }
             })
             history.push('/lista');

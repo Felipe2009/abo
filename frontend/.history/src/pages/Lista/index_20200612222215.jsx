@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash, FiEdit } from 'react-icons/fi';
+import { FiEdit } from 'react-icons/fi';
 
 
 export default function Profile() {
@@ -54,53 +54,47 @@ export default function Profile() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="2" className="tabelalista">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Tipo</th>
-                        <th>Email</th>
-                        <th>Sexo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><p>{doador.name}</p></td>
-                        <td><p>{doador.telefone}</p></td>
-                        <td><p>{doador.tipo}</p></td>
-                        <td><p>{doador.email}</p></td>
-                        <td><p>{doador.sexo}</p></td>
+            {doador.map(doador => (
+                <table border="2" className="tabelalista">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Tipo</th>
+                            <th>Email</th>
+                            <th>Sexo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                    </tr>
-                    <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
-                        <td style={{ width: 100 }}>f</td>
-                        <td style={{ width: 44 }}>f</td>
+                        <tr>
+            <td> {doador.name}</td>
+                            <td style={{ width: 135 }}>e</td>
+                            <td style={{ width: 44 }}>f</td>
+                            <td style={{ width: 100 }}>f</td>
+                            <td style={{ width: 44 }}>f</td>
 
 
-                        <FiEdit className="editar"></FiEdit>
-                    </tr>
+                            <FiEdit className="editar"></FiEdit>
+                        </tr>
 
-                    <tr>
-                        <td style={{ width: 180 }}>d</td>
-                        <td style={{ width: 135 }}>e</td>
-                        <td style={{ width: 44 }}>f</td>
-                        <td style={{ width: 100 }}>f</td>
-                        <td style={{ width: 44 }}>f</td>
-
-
-                        <FiEdit className="editar"></FiEdit>
-                    </tr>
-
-                </tbody>
-            </table>
+                        <tr>
+                            <td style={{ width: 180 }}>d</td>
+                            <td style={{ width: 135 }}>e</td>
+                            <td style={{ width: 44 }}>f</td>
+                            <td style={{ width: 100 }}>f</td>
+                            <td style={{ width: 44 }}>f</td>
 
 
+                            <FiEdit className="editar"></FiEdit>
+                        </tr>
+
+                    </tbody>
+                </table>
+            ))}
 
         </div>
     )
 
 }
+

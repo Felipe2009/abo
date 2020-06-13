@@ -58,7 +58,7 @@ export default function Doador() {
         <div className="doador-container">
             <div className="content">
                 <section>
-                    <img className="logoo" src={logoImg} ></img>
+                    <img classname="logodoador" src={logoImg} ></img>
                     <h1>Cadastrar Doador</h1>
                     <br></br>
                     {/* <p>Faça o cadastro do doador e ajude as pessoas</p> */}

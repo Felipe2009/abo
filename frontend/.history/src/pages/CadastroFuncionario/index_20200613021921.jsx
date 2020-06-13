@@ -56,7 +56,7 @@ export default function CadastroFunc() {
         <div className="funcionario-container">
             <div className="content">
                 <section>
-                    <img className="logoo" src={logoImg}></img>
+                    <img className="logo" src={logoImg}></img>
                     <br></br>
                     <h1>Cadastro de Funcionário</h1>
                     <br></br>

@@ -1,10 +1,12 @@
+
+
 exports.up = function(knex) { // up é responsavel por criar tabela
-    return knex.schema.createTable('funcionario', function(table) {
+     return knex.schema.createTable('funcionario', function(table) {
         table.string('cpf').primary();
         table.string('name').notNullable();
         table.string('email').notNullable();
         table.string('whatsapp').notNullable(); //NotNullAble é q nao pode ser nulo
-        table.string('senha').notNullable();
+        table.string('senha').notNullable(); 
         table.string('idade').notNullable();
     });
 };

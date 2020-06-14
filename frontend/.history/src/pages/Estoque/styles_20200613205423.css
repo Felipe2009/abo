@@ -131,7 +131,7 @@
 .figurab {
     width: 52px;
     margin-left: 250px;
-    margin-top: -69px;
+    margin-top: -18px;
 }
 
 .blocoa- {
@@ -165,10 +165,45 @@
     margin-top: -187px;
 }
 
-.estoque-container ul li a {
-    margin-left: 50px;
+.listagem {
     text-decoration: none;
     color: #131212;
     font-weight: 600;
     font-size: 9pt;
+    margin-left: 50px;
 }
+
+.listagemab {
+    text-decoration: none;
+    color: #131212;
+    font-weight: 600;
+    font-size: 9pt;
+    margin-left: 50px;
+}
+
+.listagema {
+    text-decoration: none;
+    color: #131212;
+    font-weight: 600;
+    font-size: 9pt;
+    margin-left: 50px;
+    margin-bottom: 110px;
+}
+
+
+/* display: grid; */
+
+
+/* grid-template-columns: 1fr 1fr; */
+
+
+/* esse negocio de fr significa q são 2 colunas com 1 unidade flexível */
+
+
+/* grid-gap: 10px; */
+
+
+/* distanciamento entre os cards */
+
+
+/* list-style: none; */

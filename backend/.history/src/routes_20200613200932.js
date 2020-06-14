@@ -17,11 +17,10 @@ routes.get('/lista', ListaController.index);
 
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
-routes.delete('/doador/:cpf', DoadorController.delete); //:cpf c/ o cpf q é pra deletar
+routes.delete('/doador/:cpf', DoadorController.delete); //:id c/ o id q vc quer deletar
 
 routes.post('/precisa', PrecisaController.create);
 routes.get('/precisa', PrecisaController.index)
-routes.delete('/precisa/:name', PrecisaController.delete);
 
 
 

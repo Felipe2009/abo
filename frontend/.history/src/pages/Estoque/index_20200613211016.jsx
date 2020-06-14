@@ -27,7 +27,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoa">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -49,7 +49,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoa-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -70,7 +70,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocob">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -93,7 +93,7 @@ export default function Estoque() {
                 <li className="blocob-">
                 
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -115,7 +115,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoab">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -134,7 +134,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoab-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
                     {/* <p>{doador.name}</p> */} 
                     {/* Tipo e quantidade */}
@@ -155,7 +155,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoo">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
@@ -175,7 +175,7 @@ export default function Estoque() {
             <ul>
                 <li className="blocoo-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>

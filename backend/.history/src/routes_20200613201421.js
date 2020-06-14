@@ -21,7 +21,6 @@ routes.delete('/doador/:cpf', DoadorController.delete); //:cpf c/ o cpf q é pra
 
 routes.post('/precisa', PrecisaController.create);
 routes.get('/precisa', PrecisaController.index)
-routes.delete('/precisa/:name', PrecisaController.delete);
 
 
 

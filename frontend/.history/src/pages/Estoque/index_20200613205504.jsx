@@ -27,18 +27,16 @@ export default function Estoque() {
             <ul>
                 <li className="blocoa">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>
-
               
-                    <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
-                    <img className="figurab" src={figuraa}></img>
                     
+                    <img className="figurab" src={figuraa}></img>
+                    <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
 
 
                 </li>
@@ -49,17 +47,17 @@ export default function Estoque() {
             <ul>
                 <li className="blocoa-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>
-
+                   
                     
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+                    
                     <img className="figurab" src={figuraaa}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                 </li>
 
@@ -70,16 +68,17 @@ export default function Estoque() {
             <ul>
                 <li className="blocob">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>                    
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
-                    <img className="figurab" src={figurabb}></img>
+                    {/* <p>{doador.telefone}</p> */}
                     
+                    
+                    <img className="figurab" src={figurabb}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                     
                 </li>
@@ -93,18 +92,18 @@ export default function Estoque() {
                 <li className="blocob-">
                 
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>                    
+                    {/* <p>{doador.telefone}</p> */}
                     
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+                    
                     <img className="figurab" src={figurab}></img>
                     
-                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                 </li>
                
@@ -115,16 +114,16 @@ export default function Estoque() {
             <ul>
                 <li className="blocoab">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>                    
-
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+                    {/* <p>{doador.telefone}</p> */}
+                                        
                     <img className="figurab" src={figuraab}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     
                 </li>
 
@@ -134,17 +133,17 @@ export default function Estoque() {
             <ul>
                 <li className="blocoab-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
                     {/* <p>{doador.name}</p> */} 
                     {/* Tipo e quantidade */}
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>                    
-
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+                   
+                    
                     <img className="figurab" src={figuraabab}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                     
                 </li>
@@ -155,16 +154,16 @@ export default function Estoque() {
             <ul>
                 <li className="blocoo">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p> 
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+                    {/* <p>{doador.telefone}</p> */}
+               
                     <img className="figurab" src={figurao}></img>
-                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                     
                 </li>
@@ -175,17 +174,17 @@ export default function Estoque() {
             <ul>
                 <li className="blocoo-">
                     <br></br>
-                    <strong>Quantidade Mínima:</strong>
+                    <strong>Quantidade Necessária:</strong>
                     <p>20 bolsas</p>
 
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <p>2 bolsas</p>
+                    {/* <p>{doador.telefone}</p> */}
                     
-                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+
                     <img className="figurab" src={figuraoo}></img>
-                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                     
                 </li>

@@ -7,7 +7,7 @@
 }
 
 .opcao {
-    margin-left: 12px;
+    margin-left: 10px;
     height: 58px;
     border-radius: 8px;
     background-color: white;
@@ -72,6 +72,7 @@
 }
 
 .telefone {
+    margin-left: 155px;
     height: 58px;
     border-radius: 8px;
     background-color: white;

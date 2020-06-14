@@ -84,7 +84,7 @@ export default function Precisa() {
                     />
                     <input className="telefone"
                         placeholder="Telefone"
-                        style={{ width: 174 }}
+                        style={{ width: 170 }}
                         value={telefone}
                         onChange={e => setTelefone(e.target.value)} required
                     />

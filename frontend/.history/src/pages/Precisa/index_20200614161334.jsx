@@ -77,14 +77,14 @@ export default function Precisa() {
                      <input
                         type="number"
                         placeholder="Quantidade"
-                        style={{ width: 148 }}
+                        style={{ width: 146 }}
                         value={quantidade}
                         onChange={e => setQuantidade(e.target.value)} required
 
                     />
                     <input className="telefone"
                         placeholder="Telefone"
-                        style={{ width: 174 }}
+                        style={{ width: 170 }}
                         value={telefone}
                         onChange={e => setTelefone(e.target.value)} required
                     />

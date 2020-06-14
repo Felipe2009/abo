@@ -69,26 +69,24 @@ export default function Precisa() {
                     />
 
                     <input
-                        placeholder="RG"
-                        style={{ width: 157 }}
-                        value={rg}
-                        onChange={e => setRg(e.target.value)} required
+                        placeholder="Número do RG"
+                        value={name}
+                        onChange={e => setName(e.target.value)} required
                     />
-                     <input
+                    <input
+                        placeholder="Telefone"
+                        style={{ width: 306 }}
+                        value={telefone}
+                        onChange={e => setTelefone(e.target.value)} required
+                    />
+                    <input
                         type="number"
                         placeholder="Quantidade"
-                        style={{ width: 148 }}
+                        style={{ width: 180 }}
                         value={quantidade}
                         onChange={e => setQuantidade(e.target.value)} required
 
                     />
-                    <input className="telefone"
-                        placeholder="Telefone"
-                        style={{ width: 174 }}
-                        value={telefone}
-                        onChange={e => setTelefone(e.target.value)} required
-                    />
-                   
 
                     <select className="type" value={tipo} onChange={e => setTipo(e.target.value)}
                         style={{ width: 100 }}>

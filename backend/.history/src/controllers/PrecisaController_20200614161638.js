@@ -6,7 +6,7 @@ module.exports = {
         return response.json(precisa);
     },
     async create(request, response) {
-        const { name, rg, telefone, quantidade, idade, tipo, sexo } = request.body;
+        const { name, telefone, quantidade, idade, tipo, sexo } = request.body;
 
         // const id = crypto.randomBytes(4).toString('HEX');
         await connection('precisa').insert({

@@ -23,8 +23,6 @@ export default function Estoque() {
             </header>
 
             <h1 className="textao">Estoque</h1>
-            <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
-
             <br></br>
             <ul>
                 <li className="blocoa">
@@ -35,12 +33,12 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
+                    <p>2 bolsas</p>
 
-                    />             bolsas
-
-                    
+              
+                    <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figuraa}></img>
+                    
 
 
                 </li>
@@ -57,16 +55,16 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
-
-                    />             bolsas
+                    <p>2 bolsas</p>
 
                     
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figuraaa}></img>
+
                 </li>
 
             </ul>
-
+            
 
             <br></br>
             <ul>
@@ -78,12 +76,12 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
-
-                    />             bolsas
-
+                    <p>2 bolsas</p>                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figurabb}></img>
+                    
 
+                    
                 </li>
 
             </ul>
@@ -91,9 +89,9 @@ export default function Estoque() {
 
             <br></br>
             <ul>
-
+            
                 <li className="blocob-">
-
+                
                     <br></br>
                     <strong>Quantidade Mínima:</strong>
                     <p>20 bolsas</p>
@@ -101,15 +99,15 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
-
-                    />             bolsas
-
-
+                    <p>2 bolsas</p>                    
+                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figurab}></img>
+                    
+                    
 
                 </li>
-
+               
             </ul>
 
 
@@ -123,12 +121,11 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
+                    <p>2 bolsas</p>                    
 
-                    />             bolsas
-
-
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figuraab}></img>
+                    
                 </li>
 
             </ul>
@@ -139,17 +136,18 @@ export default function Estoque() {
                     <br></br>
                     <strong>Quantidade Mínima:</strong>
                     <p>20 bolsas</p>
-
+                  
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
                     <input className="xxx" type="number"
+                        
+                    />                    
 
-                    />             bolsas
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figuraabab}></img>
 
-
-
+                    
                 </li>
 
             </ul>
@@ -164,11 +162,12 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
-
-                    />             bolsas
+                    <p>2 bolsas</p> 
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figurao}></img>
+                    
 
+                    
                 </li>
 
             </ul>
@@ -183,19 +182,18 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
-
-                    />             bolsas
-
-
+                    <p>2 bolsas</p>
+                    
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                     <img className="figurab" src={figuraoo}></img>
+                    
 
-
+                    
                 </li>
 
             </ul>
-        </div>
+            </div>
 
-
+       
     )
 }

@@ -19,7 +19,6 @@
 }
 
 .logon-container section.form form {
-    /*estilizando o formulário*/
     margin-bottom: 120px;
     width: 700px;
 }
@@ -42,7 +41,7 @@
 form input {
     width: 51%;
     height: 60px;
-    color: rgb(46, 46, 46);
+    color: #333;
     border: 1px solid #dcdce6;
     /* border-radius: 6px; */
     padding: 0 30px;
@@ -69,7 +68,7 @@ form input {
     background: #d4d1d1;
     color: rgb(14, 13, 13);
     border: 0;
-    border-radius: 11px;
+    border-radius: 8px;
     margin-left: 80px;
     font-weight: 600;
     margin-top: 16px;

@@ -47,8 +47,8 @@ export default function Login() {
                     {/* <button type="button" onClick="mostrarSenha()">Mostrar a senha</button> */}
 
                     <button className="button" type="submit" > Entrar </button>
-                    {/* com o link a pagina nao tem q recarregar */}
-                    <Link className="back-voltar" to="/cadastroFuncionario">
+{/* com o link a pagina nao tem q recarregar */}
+                    <Link className="back-voltar" to="/cadastroFuncionario"> 
                         Ainda não possui cadastro?
              </Link>
                 </form >

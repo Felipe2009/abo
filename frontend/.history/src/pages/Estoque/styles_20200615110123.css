@@ -127,7 +127,7 @@
 .figurab {
     width: 52px;
     margin-left: 250px;
-    margin-top: -42px;
+    margin-top: -100px;
 }
 
 .blocoa- {
@@ -166,19 +166,13 @@
     text-decoration: none;
     color: #131212;
     font-weight: 600;
-    font-size: 8pt;
+    font-size: 9pt;
 }
 
 .xxx {
     width: 45px;
-    border-radius: 3px;
-    border-color: rgb(15, 15, 15);
-    height: 25px;
 }
 
-.listagema {
-    text-decoration: none;
-    color: rgb(15, 15, 15);
-    margin-left: -20px;
-    font-weight: 550;
+.estoque-container ul li a .listagemdoador {
+    margin-left: 30px;
 }

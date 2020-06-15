@@ -173,12 +173,4 @@
     width: 45px;
     border-radius: 3px;
     border-color: rgb(15, 15, 15);
-    height: 25px;
-}
-
-.listagema {
-    text-decoration: none;
-    color: rgb(15, 15, 15);
-    margin-left: -20px;
-    font-weight: 550;
 }

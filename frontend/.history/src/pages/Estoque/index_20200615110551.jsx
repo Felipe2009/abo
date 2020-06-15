@@ -23,8 +23,6 @@ export default function Estoque() {
             </header>
 
             <h1 className="textao">Estoque</h1>
-            <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
-
             <br></br>
             <ul>
                 <li className="blocoa">
@@ -41,6 +39,7 @@ export default function Estoque() {
 
                     
                     <img className="figurab" src={figuraa}></img>
+                    <Link className="listagema" to="/lista">Ver a lista de doadores</Link>
 
 
                 </li>
@@ -63,6 +62,7 @@ export default function Estoque() {
 
                     
                     <img className="figurab" src={figuraaa}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                 </li>
 
             </ul>
@@ -83,6 +83,8 @@ export default function Estoque() {
                     />             bolsas
 
                     <img className="figurab" src={figurabb}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+
 
                 </li>
 
@@ -107,6 +109,8 @@ export default function Estoque() {
 
 
                     <img className="figurab" src={figurab}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
+
 
                 </li>
 
@@ -129,6 +133,7 @@ export default function Estoque() {
 
 
                     <img className="figurab" src={figuraab}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
                 </li>
 
             </ul>
@@ -147,6 +152,7 @@ export default function Estoque() {
 
                     />             bolsas
                     <img className="figurab" src={figuraabab}></img>
+                    <Link className="listagemdoador" to="/lista">Ver a lista de doadores</Link>
 
 
 
@@ -168,6 +174,7 @@ export default function Estoque() {
 
                     />             bolsas
                     <img className="figurab" src={figurao}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
                 </li>
 
@@ -189,6 +196,7 @@ export default function Estoque() {
 
 
                     <img className="figurab" src={figuraoo}></img>
+                    <Link className="listagem" to="/lista">Ver a lista de doadores</Link>
 
 
                 </li>

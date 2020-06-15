@@ -52,3 +52,9 @@ button {
 .logon-container section.form form a:hover {
     opacity: 0.8;
 }
+
+
+/* form textarea {
+    width: 190%;
+    resize: vertical;
+    /*pra qdo arrastar só arrastar verticalmente */

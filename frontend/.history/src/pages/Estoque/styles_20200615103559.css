@@ -98,12 +98,6 @@
     /* filter: brightness(90%); */
 }
 
-.estoque-container ul li strong {
-    display: block;
-    margin-bottom: 14px;
-    color: #26262c;
-}
-
 .estoque-container ul li p {
     color: #737380;
     line-height: 20px;
@@ -127,7 +121,7 @@
 .figurab {
     width: 52px;
     margin-left: 250px;
-    margin-top: -42px;
+    margin-top: -69px;
 }
 
 .blocoa- {
@@ -166,19 +160,5 @@
     text-decoration: none;
     color: #131212;
     font-weight: 600;
-    font-size: 8pt;
-}
-
-.xxx {
-    width: 45px;
-    border-radius: 3px;
-    border-color: rgb(15, 15, 15);
-    height: 25px;
-}
-
-.listagema {
-    text-decoration: none;
-    color: rgb(15, 15, 15);
-    margin-left: -20px;
-    font-weight: 550;
+    font-size: 9pt;
 }

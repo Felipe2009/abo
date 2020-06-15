@@ -4,8 +4,8 @@ const cors = require('cors'); //importando o modulo cors dentro da variavel cors
 
 
 const app = express();
-app.use(cors()); //"p/ ter o controle de quem ta acessando a aplicação"
-app.use(express.json()); //falando p/ q antes de todas as requisições o express vá no corpo das requisições e converta o json em um objeto do JS
+app.use(cors());
+app.use(express.json());
 app.use(routes);
 
 /*
@@ -24,6 +24,3 @@ Request Body: Corpo da requisição utilizado para criar ou alterar recursos
 */
 
 app.listen(3333); //para acessar tem q ser localhost:/3333
-
-/*Request -> guarda os dados da requisição do usuario
-  Response é responsável por retornar uma resposta ao usuario */

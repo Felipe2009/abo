@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiEdit } from 'react-icons/fi';
+import { FiTrash, FiEdit } from 'react-icons/fi';
 
 
 export default function Lista() {
@@ -28,7 +28,7 @@ export default function Lista() {
     //                 Authorization: funcionarioEmail,
     //             }
     //         })
-    //         setDoadores(doador.filter(doador => doador.cpf !== cpf)) //p/ sair da tela qdo deletar
+    //         setDoador(doador.filter(doador => doador.cpf !== cpf)) /*p/ sair da tela qdo deletar
     //     } catch (err) {
     //         alert("Erro ao deletar")
     //     }
@@ -55,7 +55,7 @@ export default function Lista() {
             <br></br>
 
             <table border="2" className="tabelalista">
-                <thead>
+                {doadores.map(doador =>(<thead>
                     <tr>
                         <th>Nome</th>
                         <th>Telefone</th>
@@ -63,8 +63,8 @@ export default function Lista() {
                         <th>Email</th>
                         <th>Sexo</th>
                     </tr>
-                </thead>
-                {doadores.map(doador =>(
+                </thead>))}
+                
                 <tbody>
                     <tr>
                         <td><p>{doador.name}</p></td>
@@ -72,15 +72,24 @@ export default function Lista() {
                         <td><p>{doador.tipo}</p></td>
                         <td><p>{doador.email}</p></td>
                         <td><p>{doador.sexo}</p></td>
-                        <FiEdit className="editar"></FiEdit>
 
                     </tr>
+                    <tr>
+                        <td style={{ width: 180 }}>d</td>
+                        <td style={{ width: 135 }}>e</td>
+                        <td style={{ width: 44 }}>f</td>
+                        <td style={{ width: 100 }}>f</td>
+                        <td style={{ width: 44 }}>f</td>
+
+
+                        <FiEdit className="editar"></FiEdit>
+                    </tr>
+
 
                 </tbody>
-                ))}
             </table>
 
-                
+
 
         </div>
     )

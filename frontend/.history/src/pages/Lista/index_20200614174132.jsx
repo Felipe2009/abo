@@ -67,7 +67,7 @@ export default function Lista() {
                 {doadores.map(doador =>(
                 <tbody>
                     <tr>
-                        <td><p>{doador.name}</p></td>
+                        <td><p>{doadores.name}</p></td>
                         <td><p>{doador.telefone}</p></td>
                         <td><p>{doador.tipo}</p></td>
                         <td><p>{doador.email}</p></td>

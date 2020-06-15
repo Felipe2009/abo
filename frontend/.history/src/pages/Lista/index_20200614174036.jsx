@@ -21,18 +21,18 @@ export default function Lista() {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
-    // async function handleDeleteDoador(cpf) {
-    //     try {
-    //         await api.delete(`doador/${cpf}`, {
-    //             headers: {
-    //                 Authorization: funcionarioEmail,
-    //             }
-    //         })
-    //         setDoadores(doador.filter(doador => doador.cpf !== cpf)) //p/ sair da tela qdo deletar
-    //     } catch (err) {
-    //         alert("Erro ao deletar")
-    //     }
-    // }
+    async function handleDeleteDoador(cpf) {
+        try {
+            await api.delete(`doador/${cpf}`, {
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
+            })
+            setDoadores(doador.filter(doador => doador.cpf !== cpf)) //p/ sair da tela qdo deletar
+        } catch (err) {
+            alert("Erro ao deletar")
+        }
+    }
 
     function handleLogout() { //remove dados do localstorage
         localStorage.clear();

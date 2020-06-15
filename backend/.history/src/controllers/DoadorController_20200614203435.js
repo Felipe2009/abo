@@ -2,17 +2,17 @@ const connection = require('../database/connection'); //importando arquivo de co
 
 module.exports = {
     async index(request, response) {
-        const { page = 1 } = request.query //buscar dentro do request.query um parametro page
+        const { page = 1 } = request.query
 
-        const [count] = await connection('doador').count(); //retorna a qte de doadores
+        const [count] = await connection('doador').count();
 
 
         const doador = await connection('doador')
-            .limit(5) //esquema de paginação p/ nao retornar todos os doadores de uma só vez, vai retornar 5 registros.
-            .offset((page - 1) * 5) //nao pode só multicplicar por 5 senão nao pega a 1a pag
+            .limit(5) //esquema de paginação, vai retornar 5 registros.
+            .offset((page - 1) * 5)
             .select('*');
         response.header('X_Total-Count', count['count(*)']); //mostrando pro frontend qtos casos tem.(mostrando no header)
-        //X_Total-Count ->nome p/ total de itens q tem na lista 
+        //X_Total-Count é o nome q eu dei pro total de itens q tem na lista 
         return response.json(doador);
     },
 
@@ -34,5 +34,19 @@ module.exports = {
         });
         return response.json({ email });
     },
+    async delete(request, response) {
+        const { email } = request.params; //pegar o email q vem lá do request.params
+        // const funcionario_id = request.headers.authorization; //verificar se o doador q vai ser excluido foi criado por esse func ou nao
 
+        // const doadores = await connection('doador') //ele verifica se quem ta apagando foi quem criou... não necessario
+        //     .where('id', id)
+        //     .select('funcionario_id')
+        //     .first();
+
+        // if (doadores.funcionario_id != funcionario_id) {
+        //     return response.status(401).json({ error: 'Operation not permitted' });
+        // }
+        await connection('doador').where('email', email).delete();
+        return response.status(204).send();
+    }
 };

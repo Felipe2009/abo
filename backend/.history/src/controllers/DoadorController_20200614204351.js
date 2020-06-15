@@ -4,7 +4,7 @@ module.exports = {
     async index(request, response) {
         const { page = 1 } = request.query //buscar dentro do request.query um parametro page
 
-        const [count] = await connection('doador').count(); //retorna a qte de doadores
+        const [count] = await connection('doador').count();
 
 
         const doador = await connection('doador')
@@ -12,7 +12,7 @@ module.exports = {
             .offset((page - 1) * 5) //nao pode só multicplicar por 5 senão nao pega a 1a pag
             .select('*');
         response.header('X_Total-Count', count['count(*)']); //mostrando pro frontend qtos casos tem.(mostrando no header)
-        //X_Total-Count ->nome p/ total de itens q tem na lista 
+        //X_Total-Count é o nome q eu dei pro total de itens q tem na lista 
         return response.json(doador);
     },
 

@@ -1,4 +1,4 @@
-const connection = require('../database/connection'); //importando arquivo de conexão p/ se conectar com BD
+const connection = require('../database/connection');
 // os role de criar id  
 // const crypto = require('crypto'); 
 
@@ -10,6 +10,7 @@ module.exports = {
     async create(request, response) {
         const { name, email, whatsapp, idade, senha, cpf } = request.body; //desestruturar os dados p/ pegar cada um dos dados numa variavel separada
 
+        // const id = crypto.randomBytes(4).toString('HEX');
         await connection('funcionario').insert({
             email,
             name,

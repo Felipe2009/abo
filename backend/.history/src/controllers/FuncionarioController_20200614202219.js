@@ -1,4 +1,4 @@
-const connection = require('../database/connection'); //importando arquivo de conexão p/ se conectar com BD
+const connection = require('../database/connection');
 // os role de criar id  
 // const crypto = require('crypto'); 
 

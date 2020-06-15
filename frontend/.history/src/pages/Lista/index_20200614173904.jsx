@@ -21,18 +21,18 @@ export default function Lista() {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
-    // async function handleDeleteDoador(cpf) {
-    //     try {
-    //         await api.delete(`doador/${cpf}`, {
-    //             headers: {
-    //                 Authorization: funcionarioEmail,
-    //             }
-    //         })
-    //         setDoadores(doador.filter(doador => doador.cpf !== cpf)) //p/ sair da tela qdo deletar
-    //     } catch (err) {
-    //         alert("Erro ao deletar")
-    //     }
-    // }
+    async function handleDeleteDoador(cpf) {
+        try {
+            await api.delete(`doador/${cpf}`, {
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
+            })
+            setDoadores(doador.filter(doador => doador.cpf !== cpf)) //p/ sair da tela qdo deletar
+        } catch (err) {
+            alert("Erro ao deletar")
+        }
+    }
 
     function handleLogout() { //remove dados do localstorage
         localStorage.clear();
@@ -55,7 +55,7 @@ export default function Lista() {
             <br></br>
 
             <table border="2" className="tabelalista">
-                <thead>
+                {doadores.map(doador =>(<thead>
                     <tr>
                         <th>Nome</th>
                         <th>Telefone</th>
@@ -63,8 +63,8 @@ export default function Lista() {
                         <th>Email</th>
                         <th>Sexo</th>
                     </tr>
-                </thead>
-                {doadores.map(doador =>(
+                </thead>))}
+                
                 <tbody>
                     <tr>
                         <td><p>{doador.name}</p></td>
@@ -77,10 +77,9 @@ export default function Lista() {
                     </tr>
 
                 </tbody>
-                ))}
             </table>
 
-                
+
 
         </div>
     )

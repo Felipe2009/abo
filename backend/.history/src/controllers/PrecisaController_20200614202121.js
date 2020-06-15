@@ -1,4 +1,4 @@
-const connection = require('../database/connection'); //importando arquivo de conexão p/ se conectar com BD
+const connection = require('../database/connection');
 
 module.exports = {
     async index(request, response) { //index -> nome do método q faz a listagem dos dados de uma tabela

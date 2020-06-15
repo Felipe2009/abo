@@ -4,7 +4,7 @@ const cors = require('cors'); //importando o modulo cors dentro da variavel cors
 
 
 const app = express();
-app.use(cors()); //"p/ ter o controle de quem ta acessando a aplicação"
+app.use(cors());
 app.use(express.json()); //falando p/ q antes de todas as requisições o express vá no corpo das requisições e converta o json em um objeto do JS
 app.use(routes);
 

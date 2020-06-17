@@ -47,7 +47,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="4" className="tabelalista">
+            <table border="3" className="tabelalista">
 
                 <thead>
                     <tr>

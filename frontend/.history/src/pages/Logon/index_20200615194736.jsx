@@ -6,6 +6,7 @@ import sangue from '../../assets/Sangue1.png';
 import api from '../../services/api';
 
 export default function Login() {
+    //const [id, setId] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
@@ -15,7 +16,7 @@ export default function Login() {
     async function handleLogin(e) {
         e.preventDefault();
         try {
-            const response = await api.post('/login', { email });
+            const response = await api.post('login', { email });
             localStorage.setItem('funcionarioEmail', email); //salvando o email no storage do navegador
             localStorage.setItem('funcionarioSenha', response.data.senha);
             history.push('/cadastroDoador');

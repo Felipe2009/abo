@@ -12,13 +12,16 @@ export default function Espera(){
 
     const history = useHistory();
 
+    const PrecisaName = localStorage.getItem('precisaName');
+    const PrecisaRg = localStorage.getItem('precisaRg');
+
     useEffect(()=>{
         api.get('espera', {
             
         }).then(response => {
             setPrecisa(response.data);
         })
-    });
+    }, [precisaRg]);
 
     async function handleDeletePrecisa(rg){
         try{
@@ -26,7 +29,7 @@ export default function Espera(){
                
             })
 
-            setPrecisa(precisa.filter(precisa => precisa.rg != rg))
+            setPrecisa(precisa.filter(precisar => precisar.rg !== rg))
         }catch (err){
             alert('Erro ao deletar pessoa. Por favor, tente novamente.')
         }
@@ -63,7 +66,7 @@ export default function Espera(){
                         <td>c</td>
                         <td>d</td>
                         <td>e</td>
-                        <button onClick={() => handleDeletePrecisa(precisa.rg)} type="button">
+                        <button onClick={() => handleDeletePrecisa(precisar.rg)} type="button">
                         <FiTrash2 size={18} color="#a8a8b3"></FiTrash2>
                     </button>
                     </tr>
@@ -74,9 +77,7 @@ export default function Espera(){
                         <td>h</td>
                         <td>i</td>
                         <td>j</td>
-                        <button onClick={() => handleDeletePrecisa(precisa.rg)} type="button">
-                        <FiTrash2 size={18} color="#a8a8b3"></FiTrash2>
-                    </button>
+                       
 
                     </tr>
 

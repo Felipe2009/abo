@@ -63,7 +63,7 @@
     margin-left: 20px;
     border-color: rgb(5, 5, 3);
     width: 750px;
-    height: 90px;
+    height: 20px;
 }
 
 table th {
@@ -84,8 +84,4 @@ table td {
     margin-left: 21px;
     margin-top: 20px;
     font-size: 10pt;
-}
-
-.editar {
-    margin-top: 20px;
 }

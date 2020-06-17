@@ -14,6 +14,7 @@ module.exports = {
             return response.status(400).json({ error: 'Nenhum funcionario encontrado' });
         }
         if (!(funcionario.senha == senha)) {
+            console.log("erro xxx");
             return response.status(400).json({ error: 'xxx' });
         }
         return response.json(funcionario);

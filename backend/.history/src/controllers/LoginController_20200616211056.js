@@ -10,11 +10,9 @@ module.exports = {
             .where('email', email) //o email do func
             .select('email', 'senha').first(); //unica info q vo exibir no front
 
+        console.log(funcionario);
         if (!funcionario) {
             return response.status(400).json({ error: 'Nenhum funcionario encontrado' });
-        }
-        if (!(funcionario.senha == senha)) {
-            return response.status(400).json({ error: 'xxx' });
         }
         return response.json(funcionario);
     }

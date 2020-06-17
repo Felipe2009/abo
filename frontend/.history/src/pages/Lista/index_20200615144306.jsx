@@ -8,11 +8,9 @@ import { FiEdit } from 'react-icons/fi';
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
-    const history = useHistory();
-
-
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const funcionarioName = localStorage.getItem('funcionarioName');
+    const history = useHistory();
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('lista', {
@@ -23,10 +21,7 @@ export default function Lista() {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
-
     
-
-
     function handleLogout() { //remove dados do localstorage
         localStorage.clear();
         history.push('/'); //enviando de volta a raiz
@@ -47,28 +42,18 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="4" className="tabelalista">
-
+            <table border="5" className="tabelalista">
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>CPF</th>
+                        <th>Telefone</th>
                         <th>Tipo</th>
                         <th>Email</th>
                         <th>Sexo</th>
                     </tr>
                 </thead>
+                {doadores.map(doador =>(
                 <tbody>
-                {doadores.map(doador => (  <tr key={doador.cpf}>
-                            <td>{doador.name}</td>
-                            <td>{doador.cpf}</td>
-                            <td>{doador.tipo}</td>
-                            <td>{doador.email}</td>
-                            <td>{doador.sexo}</td>
-                            <FiEdit className="editar"></FiEdit>
-                            </tr>
-                        ))}
-                   
                     <tr>
                         <td>a</td>
                         <td>b</td>
@@ -79,21 +64,11 @@ export default function Lista() {
 
                     </tr>
 
-                    <tr>
-                        <td>f</td>
-                        <td>g</td>
-                        <td>h</td>
-                        <td>i</td>
-                        <td>j</td>
-                        <FiEdit className="editar"></FiEdit>
-
-                    </tr>
-
                 </tbody>
-
+                ))}
             </table>
 
-
+                
 
         </div>
     )

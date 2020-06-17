@@ -8,13 +8,14 @@ module.exports = {
 
         const funcionario = await connection('funcionario') //verifica se func existe
             .where('email', email) //o email do func
-            .select('email', 'senha').first(); //unica info q vo exibir no front
+            .select('email').first(); //unica info q vo exibir no front
 
+        if (senha != senha.funcionario()) {
+            return response.status(400).json({ error: 'Nenhum funcionario encontrado' });
+
+        }
         if (!funcionario) {
             return response.status(400).json({ error: 'Nenhum funcionario encontrado' });
-        }
-        if (!(funcionario.senha == senha)) {
-            return response.status(400).json({ error: 'xxx' });
         }
         return response.json(funcionario);
     }

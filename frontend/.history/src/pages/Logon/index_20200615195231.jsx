@@ -6,6 +6,7 @@ import sangue from '../../assets/Sangue1.png';
 import api from '../../services/api';
 
 export default function Login() {
+    //const [id, setId] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 

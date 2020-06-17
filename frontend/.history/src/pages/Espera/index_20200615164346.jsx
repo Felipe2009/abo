@@ -1,34 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash2 } from 'react-icons/fi';
+import { FiEdit } from 'react-icons/fi';
 
 
-export default function Espera(){
-    const [precisa, setPrecisa] = useState([]);
+export default function Espera() {
+    
+    const [telefone, setTelefone] = useState('');
+    const [name, setName] = useState(''); //setName-> serve p/ atualizar o valor
+    const [rg, setRg] = useState('');
+    const [quantidade, setQuantidade] = useState('');
+    const [tipo, setTipo] = useState('');
+    const [idade, setIdade] = useState('');
+    const [sexo, setSexo] = useState('');
 
     const history = useHistory();
 
-    useEffect(()=>{
-        api.get('espera', {
-            
-        }).then(response => {
-            setPrecisa(response.data);
-        })
-    });
+    async function handleCadastroFunc(e) {
+        // função responsavel por fazer o cadastro do usuário e quero q ela seja disparada qdo for acionado o submit
+        e.preventDefault(); //pra ñ recarregar a pagina(evitar o comportamento padrão)
+        const data = {
+            telefone,
+            name,
+            rg,
+            quantidade,
+            idade,
+            tipo,
+            sexo,
 
-    async function handleDeletePrecisa(rg){
-        try{
-            await api.delete(`precisa/${rg}`, {
-               
-            })
-
-            setPrecisa(precisa.filter(precisa => precisa.rg != rg))
-        }catch (err){
-            alert('Erro ao deletar pessoa. Por favor, tente novamente.')
         }
     }
     return (
@@ -44,7 +46,7 @@ export default function Espera(){
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="4" className="tabelalista">
+            <table border="3" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -63,9 +65,8 @@ export default function Espera(){
                         <td>c</td>
                         <td>d</td>
                         <td>e</td>
-                        <button onClick={() => handleDeletePrecisa(precisa.rg)} type="button">
-                        <FiTrash2 size={18} color="#a8a8b3"></FiTrash2>
-                    </button>
+                        <FiEdit className="editar"></FiEdit>
+
                     </tr>
 
                     <tr>
@@ -74,9 +75,7 @@ export default function Espera(){
                         <td>h</td>
                         <td>i</td>
                         <td>j</td>
-                        <button onClick={() => handleDeletePrecisa(precisa.rg)} type="button">
-                        <FiTrash2 size={18} color="#a8a8b3"></FiTrash2>
-                    </button>
+                        <FiEdit className="editar"></FiEdit>
 
                     </tr>
 

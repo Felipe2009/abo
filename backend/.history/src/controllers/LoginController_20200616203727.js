@@ -7,14 +7,11 @@ module.exports = {
         const { email, senha } = request.body; //buscar o email do func no corpo da requisição
 
         const funcionario = await connection('funcionario') //verifica se func existe
-            .where('email', email) //o email do func
+            .where('email', 'senha', email, senha) //o email do func
             .select('email', 'senha').first(); //unica info q vo exibir no front
 
         if (!funcionario) {
             return response.status(400).json({ error: 'Nenhum funcionario encontrado' });
-        }
-        if (!(funcionario.senha == senha)) {
-            return response.status(400).json({ error: 'xxx' });
         }
         return response.json(funcionario);
     }

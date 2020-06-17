@@ -26,7 +26,7 @@ export default function Espera(){
                
             })
 
-            setPrecisa(precisa.filter(precisa => precisa.rg != rg))
+            setPrecisa(precisa.filter(precisar => precisar.rg != rg))
         }catch (err){
             alert('Erro ao deletar pessoa. Por favor, tente novamente.')
         }

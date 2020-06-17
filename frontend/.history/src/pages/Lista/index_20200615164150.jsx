@@ -10,7 +10,7 @@ export default function Lista() {
     const [doadores, setDoadores] = useState([]);
     const history = useHistory();
 
-
+    
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const funcionarioName = localStorage.getItem('funcionarioName');
     // use effect serve para disparar uma função em um determinado momento do componente
@@ -47,7 +47,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="4" className="tabelalista">
+            <table border="3" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -59,7 +59,7 @@ export default function Lista() {
                     </tr>
                 </thead>
                 <tbody>
-                {doadores.map(doador => (  <tr key={doador.cpf}>
+                {doadores.map(doador => (  <tr>
                             <td>{doador.name}</td>
                             <td>{doador.cpf}</td>
                             <td>{doador.tipo}</td>

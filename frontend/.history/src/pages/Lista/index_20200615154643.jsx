@@ -8,9 +8,7 @@ import { FiEdit } from 'react-icons/fi';
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
-    const history = useHistory();
-
-
+    const history = useHistory();   
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const funcionarioName = localStorage.getItem('funcionarioName');
     // use effect serve para disparar uma função em um determinado momento do componente
@@ -23,10 +21,7 @@ export default function Lista() {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
-
     
-
-
     function handleLogout() { //remove dados do localstorage
         localStorage.clear();
         history.push('/'); //enviando de volta a raiz
@@ -47,8 +42,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table border="4" className="tabelalista">
-
+            <table border="3" className="tabelalista">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -59,16 +53,6 @@ export default function Lista() {
                     </tr>
                 </thead>
                 <tbody>
-                {doadores.map(doador => (  <tr key={doador.cpf}>
-                            <td>{doador.name}</td>
-                            <td>{doador.cpf}</td>
-                            <td>{doador.tipo}</td>
-                            <td>{doador.email}</td>
-                            <td>{doador.sexo}</td>
-                            <FiEdit className="editar"></FiEdit>
-                            </tr>
-                        ))}
-                   
                     <tr>
                         <td>a</td>
                         <td>b</td>
@@ -76,24 +60,14 @@ export default function Lista() {
                         <td>d</td>
                         <td>e</td>
                         <FiEdit className="editar"></FiEdit>
-
-                    </tr>
-
-                    <tr>
-                        <td>f</td>
-                        <td>g</td>
-                        <td>h</td>
-                        <td>i</td>
-                        <td>j</td>
-                        <FiEdit className="editar"></FiEdit>
-
+                        
                     </tr>
 
                 </tbody>
-
+              
             </table>
 
-
+                
 
         </div>
     )

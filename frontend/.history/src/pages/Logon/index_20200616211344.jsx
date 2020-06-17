@@ -15,7 +15,7 @@ export default function Login() {
     async function handleLogin(e) {
         e.preventDefault();
         try {
-            const response = await api.post('/login', { email });
+            const response = await api.post('/login', { email,senha });
             localStorage.setItem('funcionarioEmail', email); //salvando o email no storage do navegador
             localStorage.setItem('funcionarioSenha', response.data.senha);
             history.push('/cadastroDoador');

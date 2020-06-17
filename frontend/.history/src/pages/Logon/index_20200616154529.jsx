@@ -5,7 +5,7 @@ import logoImg from '../../assets/gots.png';
 import sangue from '../../assets/Sangue1.png';
 import api from '../../services/api';
 
-export default function Login() {
+export default function Logon() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 

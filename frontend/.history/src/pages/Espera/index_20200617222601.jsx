@@ -8,13 +8,13 @@ import { FiTrash, FiEdit } from 'react-icons/fi';
 
 
 export default function Espera() {
-    const [precisas, setPrecisas] = useState([]);
+    const [receptores, setReceptores] = useState([]);
 
     const history = useHistory();
 
     useEffect(() => {
         api.get('espera').then(response => {
-            setPrecisas(response.data);
+            setReceptores(response.data);
         })
     });
 
@@ -43,9 +43,9 @@ export default function Espera() {
                     </tr>
                 </thead>
                 <tbody>
-                    {precisas.map(precisa => (
+                    {receptores.map(precisa => (
                         // valor para identificar
-                        <tr key={precisa.rg}>
+                        <tr key={precisa.rg}> 
 
                             <td>{precisa.name}</td>
                             <td>{precisa.rg}</td>
@@ -56,17 +56,6 @@ export default function Espera() {
 
                         </tr>
                     ))}
-                    <tr >
-
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <FiTrash></FiTrash>
-
-                    </tr>
-
 
                 </tbody>
 

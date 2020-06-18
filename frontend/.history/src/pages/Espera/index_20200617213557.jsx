@@ -4,21 +4,33 @@ import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash, FiEdit } from 'react-icons/fi';
+import { FiTrash,FiEdit } from 'react-icons/fi';
 
 
 export default function Espera() {
-    const [precisas, setPrecisas] = useState([]);
+    const [receptor, setReceptor] = useState([]);
 
     const history = useHistory();
 
     useEffect(() => {
-        api.get('espera').then(response => {
-            setPrecisas(response.data);
+        api.get('espera', {
+
+        }).then(response => {
+            setReceptor(response.data);
         })
     });
 
+    // async function handleDeletePrecisa(rg) {
+    //     try {
+    //         await api.delete(`precisa/${rg}`, {
 
+    //         })
+
+    //         setPrecisa(precisa.filter(precisa => precisa.rg !== rg))
+    //     } catch (err) {
+    //         alert('Erro ao deletar pessoa. Por favor, tente novamente.')
+    //     }
+    // }
     return (
         <div className="espera-container">
             <header>
@@ -36,37 +48,23 @@ export default function Espera() {
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>RG</th>
+                        <th>CPF</th>
                         <th>Tipo</th>
-                        <th>Telefone</th>
+                        <th>Email</th>
                         <th>Sexo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {precisas.map(precisa => (
-                        // valor para identificar
-                        <tr key={precisa.rg}>
-
-                            <td>{precisa.name}</td>
-                            <td>{precisa.rg}</td>
-                            <td>{precisa.telefone}</td>
-                            <td>{precisa.sexo}</td>
-                            <td>{precisa.tipo}</td>
-                            <FiTrash></FiTrash>
-
-                        </tr>
-                    ))}
-                    <tr >
-
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <FiTrash></FiTrash>
-
+                    {receptor.map(precisa => (<tr key={precisa.rg}>
+                        <td className="alargarnome">{precisa.name}</td>
+                        <td>{precisa.rg}</td>
+                        <td>{precisa.quantidade}</td>
+                        <td className="alargarnome">{precisa.telefone}</td>
+                        <td>{precisa.sexo}</td>
+                        
+                        <FiEdit className="editar"></FiEdit>
                     </tr>
-
+                    ))}
 
                 </tbody>
 

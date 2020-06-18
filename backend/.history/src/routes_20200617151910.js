@@ -18,7 +18,6 @@ routes.get('/lista', ListaController.index);
 
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
-routes.delete('/doador/:cpf', DoadorController.delete);
 
 routes.post('/precisa', PrecisaController.create);
 routes.get('/precisa', PrecisaController.index)

@@ -12,13 +12,13 @@ routes.post('/login', LoginController.create); //criando sessão de login
 //criando rota para listar todas os funcionarios do banco de dados
 routes.get('/funcionario', FuncionarioController.index)
 routes.post('/funcionario', FuncionarioController.create);
+routes.delete('/funcionario/:cpf', FuncionarioController.delete);
 
 
 routes.get('/lista', ListaController.index);
 
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
-routes.delete('/doador/:cpf', DoadorController.delete);
 
 routes.post('/precisa', PrecisaController.create);
 routes.get('/precisa', PrecisaController.index)

@@ -68,19 +68,18 @@
 
 table th {
     width: 120px;
-    border: 2px solid black;
 }
 
 table td {
     text-align: center;
-    border: 110px solid black;
+    border: 1px solid black;
     font-size: 12pt;
 }
 
 .verificarestoquelista {
     text-decoration: none;
     font-weight: 550;
-    color: #242424;
+    color: #141414;
     transition: opacity 0.2s;
     margin-left: 100px;
     margin-top: 20px;
@@ -92,5 +91,6 @@ table td {
 }
 
 .alargarnome {
-    padding-right: 10px;
+    margin-right: 120px;
+    padding-right: 30px;
 }

@@ -68,12 +68,12 @@
 
 table th {
     width: 120px;
-    border: 2px solid black;
+    border: 5px dashed black;
 }
 
 table td {
     text-align: center;
-    border: 110px solid black;
+    border: 10px solid black;
     font-size: 12pt;
 }
 

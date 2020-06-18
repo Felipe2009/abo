@@ -33,7 +33,11 @@ export default function Doador() {
             ultima
         };
         try {
-            await api.post('doador', data)
+            await api.post('doador', data, {
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
+            })
             history.push('/lista');
         } catch (err) {
             alert("Erro ao cadastrar doador")

@@ -20,5 +20,9 @@ module.exports = {
 
         return response.json({ email });
     },
-
+    async delete(request, response) {
+        const { cpf } = request.params; //pegar o cpf q vem lá do request.params
+        await connection('funcionario').where('cpf', cpf).delete();
+        return response.status(204).send();
+    }
 }

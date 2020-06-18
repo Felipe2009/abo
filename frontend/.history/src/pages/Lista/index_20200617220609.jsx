@@ -55,12 +55,12 @@ export default function Lista() {
                     </tr>
                 </thead>
                 <tbody>
-                {doadores.map(doador => (  <tr key={doador.cpf}>
-                            <td className="alargarnome">{doador.name}</td>
-                            <td>{doador.cpf}</td>
-                            <td>{doador.tipo}</td>
-                            <td className="alargarnome">{doador.email}</td>
-                            <td>{doador.sexo}</td>
+                {doadores.map(doadores => (  <tr key={doadores.cpf}>
+                            <td className="alargarnome">{doadores.name}</td>
+                            <td>{doadores.cpf}</td>
+                            <td>{doadores.tipo}</td>
+                            <td className="alargarnome">{doadores.email}</td>
+                            <td>{doadores.sexo}</td>
                             <FiEdit className="editar"></FiEdit>
                             </tr>
                         ))}

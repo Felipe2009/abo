@@ -31,7 +31,9 @@ export default function Precisa() {
         };
         try {
             await api.post('precisa', data, {
-
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
             })
             history.push('/espera');
         } catch (err) {
@@ -72,7 +74,7 @@ export default function Precisa() {
                         value={rg}
                         onChange={e => setRg(e.target.value)} required
                     />
-                    <input
+                     <input
                         type="number"
                         placeholder="Quantidade"
                         style={{ width: 148 }}
@@ -86,19 +88,20 @@ export default function Precisa() {
                         value={telefone}
                         onChange={e => setTelefone(e.target.value)} required
                     />
-
+                   
 
                     <select className="type" value={tipo} onChange={e => setTipo(e.target.value)}
                         style={{ width: 100 }}>
                         <option value="" disabled selected>Tipo</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="O+">O+</option>
-                        <option value="O+">O-</option>
+                        <option value={10}>A+</option>
+                        <option value={20}>A-</option>
+                        <option value={30}>B+</option>
+                        <option value={40}>B-</option>
+                        <option value={50}>AB+</option>
+                        <option value={60}>AB-</option>
+                        <option value={70}>O+</option>
+                        <option value={80}>O-</option>
+
                     </select>
 
                     <input className="idade" type="date" //talvez esse number não seja totalmente aceito e normatizado nos navegadores, além de permitir o caracter “e” entre os números. Ao usar “number” você pode ter problemas ao selecionar o valor via jQuery com: jQuery( ‘.input_type_number’ ).val(); .

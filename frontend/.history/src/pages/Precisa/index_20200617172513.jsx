@@ -31,7 +31,9 @@ export default function Precisa() {
         };
         try {
             await api.post('precisa', data, {
-
+                headers: {
+                    Authorization: funcionarioEmail,
+                }
             })
             history.push('/espera');
         } catch (err) {
@@ -72,7 +74,7 @@ export default function Precisa() {
                         value={rg}
                         onChange={e => setRg(e.target.value)} required
                     />
-                    <input
+                     <input
                         type="number"
                         placeholder="Quantidade"
                         style={{ width: 148 }}
@@ -86,7 +88,7 @@ export default function Precisa() {
                         value={telefone}
                         onChange={e => setTelefone(e.target.value)} required
                     />
-
+                   
 
                     <select className="type" value={tipo} onChange={e => setTipo(e.target.value)}
                         style={{ width: 100 }}>

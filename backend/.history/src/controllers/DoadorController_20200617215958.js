@@ -9,7 +9,7 @@ module.exports = {
 
         const doador = await connection('doador')
             .limit(5) //esquema de paginação p/ nao retornar todos os doadores de uma só vez, vai retornar 5 registros.
-            .offset((page - 1) * 10) //nao pode só multicplicar por 5 senão nao pega a 1a pag
+            .offset((page - 1) * 5) //nao pode só multicplicar por 5 senão nao pega a 1a pag
             .select('*');
         response.header('X_Total-Count', count['count(*)']); //mostrando pro frontend qtos casos tem.(mostrando no header)
         //X_Total-Count ->nome p/ total de itens q tem na lista 

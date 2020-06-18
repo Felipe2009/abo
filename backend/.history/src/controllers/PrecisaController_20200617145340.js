@@ -17,7 +17,7 @@ module.exports = {
             idade,
             tipo,
             sexo,
-        });
+        })
 
         return response.json({ rg });
     },

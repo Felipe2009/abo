@@ -15,12 +15,13 @@ export default function Login() {
     async function handleLogin(e) {
         e.preventDefault();
         try {
-            const response = await api.post('/login', { email,senha });
+            const response = await api.post('/login', { email });
             localStorage.setItem('funcionarioEmail', email); //salvando o email no storage do navegador
             localStorage.setItem('funcionarioSenha', response.data.senha);
             history.push('/cadastroDoador');
         }
         catch (err) {
+            console.log(err);
             alert('Falha no login');
         }
     }

@@ -15,7 +15,11 @@ export default function Lista() {
     const funcionarioName = localStorage.getItem('funcionarioName');
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
-        api.get('lista').then(response => {
+        api.get('lista', {
+            headers: { //pra mostrar qual funcionario está logado
+                Authorization: funcionarioEmail,
+            }
+        }).then(response => {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);

@@ -73,8 +73,12 @@ table th {
 
 table td {
     text-align: center;
-    border: 110px solid black;
+    border: 10px solid black;
     font-size: 12pt;
+}
+
+table tr {
+    border: 25px dashed black;
 }
 
 .verificarestoquelista {

@@ -8,17 +8,17 @@ import { FiTrash, FiEdit } from 'react-icons/fi';
 
 
 export default function Espera() {
-    const [precisas, setPrecisas] = useState([]);
+    const [receptores, setReceptores] = useState([]);
 
     const history = useHistory();
 
     useEffect(() => {
         api.get('espera').then(response => {
-            setPrecisas(response.data);
+            setReceptores(response.data);
         })
     });
 
-
+    
     return (
         <div className="espera-container">
             <header>
@@ -38,35 +38,20 @@ export default function Espera() {
                         <th>Nome</th>
                         <th>RG</th>
                         <th>Tipo</th>
-                        <th>Telefone</th>
+                        <th>Email</th>
                         <th>Sexo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {precisas.map(precisa => (
-                        // valor para identificar
-                        <tr key={precisa.rg}>
-
-                            <td>{precisa.name}</td>
-                            <td>{precisa.rg}</td>
-                            <td>{precisa.telefone}</td>
-                            <td>{precisa.sexo}</td>
-                            <td>{precisa.tipo}</td>
-                            <FiTrash></FiTrash>
-
-                        </tr>
-                    ))}
-                    <tr >
-
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
+                    {receptores.map(precisa => (<tr key={precisa.rg}>
+                        <td className="alargarnome">{precisa.name}</td>
+                        <td>{precisa.rg}</td>
+                        <td>{precisa.tipo}</td>
+                        <td className="alargarnome">{precisa.email}</td>
+                        <td>{precisa.sexo}</td>
                         <FiTrash></FiTrash>
-
                     </tr>
-
+                    ))}
 
                 </tbody>
 

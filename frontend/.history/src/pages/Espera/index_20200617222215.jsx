@@ -8,15 +8,16 @@ import { FiTrash, FiEdit } from 'react-icons/fi';
 
 
 export default function Espera() {
-    const [precisas, setPrecisas] = useState([]);
+    const [receptores, setReceptores] = useState([]);
 
     const history = useHistory();
+    const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
     useEffect(() => {
         api.get('espera').then(response => {
-            setPrecisas(response.data);
+            setReceptores(response.data);
         })
-    });
+    },[funcionarioEmail]);
 
 
     return (
@@ -38,35 +39,22 @@ export default function Espera() {
                         <th>Nome</th>
                         <th>RG</th>
                         <th>Tipo</th>
-                        <th>Telefone</th>
+                        <th>Email</th>
                         <th>Sexo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {precisas.map(precisa => (
+                    {receptores.map(precisa => (
                         // valor para identificar
-                        <tr key={precisa.rg}>
-
+                        <tr key={precisa.rg}> 
                             <td>{precisa.name}</td>
                             <td>{precisa.rg}</td>
-                            <td>{precisa.telefone}</td>
-                            <td>{precisa.sexo}</td>
                             <td>{precisa.tipo}</td>
+                            <td>{precisa.email}</td>
+                            <td>{precisa.sexo}</td>
                             <FiTrash></FiTrash>
-
                         </tr>
                     ))}
-                    <tr >
-
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <FiTrash></FiTrash>
-
-                    </tr>
-
 
                 </tbody>
 

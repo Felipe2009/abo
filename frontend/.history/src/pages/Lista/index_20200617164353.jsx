@@ -15,7 +15,11 @@ export default function Lista() {
     const funcionarioName = localStorage.getItem('funcionarioName');
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
-        api.get('lista').then(response => {
+        api.get('lista', {
+            headers: { //pra mostrar qual funcionario está logado
+                Authorization: funcionarioEmail,
+            }
+        }).then(response => {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
@@ -56,10 +60,10 @@ export default function Lista() {
                 </thead>
                 <tbody>
                 {doadores.map(doador => (  <tr key={doador.cpf}>
-                            <td className="alargarnome">{doador.name}</td>
+                            <td>{doador.name}</td>
                             <td>{doador.cpf}</td>
                             <td>{doador.tipo}</td>
-                            <td className="alargarnome">{doador.email}</td>
+                            <td>{doador.email}</td>
                             <td>{doador.sexo}</td>
                             <FiEdit className="editar"></FiEdit>
                             </tr>

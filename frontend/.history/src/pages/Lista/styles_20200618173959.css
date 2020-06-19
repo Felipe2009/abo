@@ -1,0 +1,101 @@
+.lista-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.lista-container header {
+    display: flex;
+    align-items: center
+}
+
+.lista-container header img {
+    height: 105px;
+}
+
+.lista-container header a {
+    width: 220px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.lista-container header button:hover {
+    border-color: #999;
+}
+
+.lista-container h1 {
+    margin-top: 10px;
+}
+
+.botaoo {
+    height: 58px;
+    border-radius: 8px;
+    color: #000000;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    transition: filter 0.2s;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 0;
+    font-weight: 550;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: opacity 0.2s;
+}
+
+.textao {
+    text-align: center;
+}
+
+.tabelalista {
+    background-color: rgb(239, 242, 248);
+    position: relative;
+    margin-left: 100px;
+    border-color: rgb(5, 5, 3);
+    width: 750px;
+    height: 90px;
+}
+
+table th {
+    width: 120px;
+    border: 2px solid black;
+}
+
+table td {
+    text-align: center;
+    border: 110px solid black;
+    font-size: 12pt;
+}
+
+.verificarestoquelista {
+    text-decoration: none;
+    font-weight: 550;
+    color: #242424;
+    transition: opacity 0.2s;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 10pt;
+}
+
+.editar {
+    margin-top: 20px;
+}
+
+.alargarnome {
+    padding-right: 10px;
+}
+
+.apagar {
+    margin-left: 15px;
+    margin-bottom: 2px;
+}

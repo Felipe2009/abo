@@ -1,0 +1,93 @@
+.funcionario-container {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.funcionario-container.content {
+    width: 100%;
+    padding: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* joga a imagem pra esquerda e o form pra direita */
+    align-items: center;
+}
+
+.funcionario-container.content section {
+    width: 100%;
+    max-width: 200px;
+}
+
+.funcionario-container .content section h1 {
+    font-size: 26px;
+}
+
+.funcionario-container .content section form {
+    width: 100%;
+    max-width: 200px;
+}
+
+.funcionario-container .content form input {
+    margin-top: 5px;
+    inline-size: 320px;
+    height: 55px;
+}
+
+.buton {
+    background: #d4d1d1;
+    color: rgb(14, 13, 13);
+    font-weight: 550;
+    margin-bottom: 10px;
+    min-inline-size: 320px;
+    height: 56px;
+    border-radius: 8px;
+    border: 0;
+}
+
+form input {
+    width: 51%;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 30px;
+    margin-left: 1px;
+}
+
+.tabelacompatibilidade {
+    font-size: 9pt;
+    font-weight: 550;
+    color: rgb(22, 11, 11);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.back-link {
+    margin-top: 3px;
+    text-align: center;
+    margin-left: 20px;
+    font-weight: 750;
+}
+
+.cpf {
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    margin-left: 21px;
+}
+
+.senha {
+    margin-left: 17px;
+}
+
+.logoo {
+    margin-left: 50px;
+}

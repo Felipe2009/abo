@@ -1,5 +1,5 @@
 exports.up = function(knex) { // up é responsavel por criar tabela
-    return knex.schema.createTable('precisa', function(table) {
+    return knex.schema.createTable('precisar', function(table) {
         table.string('telefone').notNullable();
         table.string('name').notNullable();
         table.string('rg').notNullable();
@@ -12,7 +12,7 @@ exports.up = function(knex) { // up é responsavel por criar tabela
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTable('precisa');
+    return knex.schema.dropTable('precisar');
 };
 
 /*migrations são formas de criar tabelas e manter um historico das tabelas criadas,alteradas(é basicamente um controle de versão do BD)*/

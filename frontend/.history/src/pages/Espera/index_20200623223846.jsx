@@ -21,7 +21,7 @@ export default function Espera() {
             await api.delete(`precisa/${rg}`, {
 
             });
-            setPrecisas(precisas.filter(precisa => precisa.rg != rg));
+            setPrecisas(receptor.filter(precisa => precisa.rg != rg));
         }
         catch (err) {
             alert("Erro ao deletar pessoa")
@@ -61,10 +61,33 @@ export default function Espera() {
                             <td>{precisa.telefone}</td>
                             <td>{precisa.sexo}</td>
                             <td>{precisa.tipo}</td>
-                            <FiTrash classname="apagaprecisa" onClick={() => handleDeletePrecisa(precisa.rg)} type="button"></FiTrash>
+                            <FiTrash></FiTrash>
+
                         </tr>
                     ))}
-                   
+                    <tr >
+
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <FiTrash></FiTrash>
+
+                    </tr>
+
+                    <tr >
+
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <FiTrash></FiTrash>
+
+                    </tr>
+
+
                 </tbody>
 
             </table>

@@ -9,8 +9,6 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
     const history = useHistory();
-    const $ = require('jquery');
-    $.DataTable = require('datatables.net');
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
@@ -40,16 +38,31 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
-            <header>
-                <img src={logoImg} />
+            <head>
+                <header>
+                    <img src={logoImg} />
+                    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css"></link>
+                    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+                    <script>
+                        $(document).ready(function() {
+                            $('#tabelatabela').DataTable({
+                                "language": {
+                                    "lengthMenu": "Mostrando MENU registros por página",
+                                    "zeroRecords": "Nenhum Registro Encontrado",
+                                    "info": "Mostrando Página PAGE de _PAGES_",
+                                    "infoEmpty": "Nenhum registro Disponível",
+                                    "infoFiltered": "(filtrado de MAX registro no total)"
+                                }
+                            })
+                        } );
+                    </script>
+                    <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
+                    <Link className="voltar" to="/"> Voltar para home</Link>
 
-                <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
-                <Link className="voltar" to="/"> Voltar para home</Link>
-            </header>
+                </header>
+            </head>
 
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
@@ -57,7 +70,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table border="1" className="tabelalista" id="tabelatabela">
 
                 <thead>
                     <tr>
@@ -87,9 +100,8 @@ export default function Lista() {
 
             </table>
 
-            
-
         </div>
+
     )
 
 }

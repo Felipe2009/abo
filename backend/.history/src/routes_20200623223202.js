@@ -5,8 +5,6 @@ const DoadorController = require('./controllers/DoadorController')
 const ListaController = require('./controllers/ListaController')
 const LoginController = require('./controllers/LoginController')
 const PrecisaController = require('./controllers/PrecisaController')
-const EsperaController = require('./controllers/EsperaController')
-
 
 const routes = express.Router();
 routes.post('/login', LoginController.create); //criando sessão de login
@@ -17,8 +15,6 @@ routes.post('/funcionario', FuncionarioController.create);
 
 
 routes.get('/lista', ListaController.index);
-routes.get('/espera', EsperaController.index);
-
 
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);

@@ -9,8 +9,6 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
     const history = useHistory();
-    const $ = require('jquery');
-    $.DataTable = require('datatables.net');
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
@@ -40,8 +38,6 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
             <header>
@@ -57,7 +53,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table id="tabela" border="1" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -86,8 +82,40 @@ export default function Lista() {
                 </tbody>
 
             </table>
+            <script>
 
-            
+                $(function(){
+                    $("#tabela input").keyup(function () {
+                        var index = $(this).parent().index(); //A variável “index” receberá como valor, a coluna que contém o input que invocou o evento. Para recuperar este objeto, foi utilizado o método parent() da biblioteca jQuery.
+                        var testando = "#tabela td:testando-child(" + (index + 1).toString() + ")"; //A variável “testando” é apenas um string para ser usado posteriormente na seleção da coluna filtrada em todas as linhas da tabela. Por exemplo, ao filtrar a primeira coluna, seu conteúdo deverá ser “#tabela td:nth-child(1)”, ou seja, um seletor CSS.
+
+
+                        var valor = $(this).val().toUpperCase(); //A variável “valor” receberá o conteúdo o input que está sendo utilizado para fazer o filtro, convertendo o texto para maiúsculo. Essa conversão é feita para que a consulta seja “case insensitive”, ou seja, não diferencie letras maiúsculas de minúsculas.
+
+
+                        $("#tabela tbody tr").show(); //Para iniciar o filtro, todas as linhas são exibidas inicialmente para serem ocultadas depois, se for o caso.
+
+
+                        $(testando).each(function () { //Utilizamos a função each() da jQuery para realizar uma ação para cada coluna filtrada pelo seletor definido anteriormente pela variável “testando”.
+
+
+                            if ($(this).text().toUpperCase().indexOf(valor) < 0) { //Caso a coluna filtrada contenha o texto digitado, a linha que a contém é ocultada. Para isso usamos novamente a função parent() para recuperar a tag TR que contém a tag TD utilizada para a verificação. A existência ou não do texto digitado na coluna nos é informada pela função indexOf() do Javascript, que retornará -1 se o valor informado não estiver contido no texto alvo. Assim, se a coluna não contém o texto digitado, a linha que a contém é ocultada. Vale notar que convertemos também o conteúdo da célula para maiúsculo, par não haver diferenciação na hora do filtro.
+
+
+                                $(this).parent().hide();
+                            }
+                        });
+                    }),
+
+    $("#tabela input").blur(function(){ //evento blur dos inputs para que seu conteúdo seja limpo ao perderem o foco
+
+                    $(this).val("");
+    })
+});
+
+
+
+            </script>
 
         </div>
     )

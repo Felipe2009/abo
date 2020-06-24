@@ -9,8 +9,6 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
     const history = useHistory();
-    const $ = require('jquery');
-    $.DataTable = require('datatables.net');
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
@@ -40,16 +38,21 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
-            <header>
-                <img src={logoImg} />
+            <head>
+                <header>
+                    <img src={logoImg} />
+                    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-                <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
-                <Link className="voltar" to="/"> Voltar para home</Link>
-            </header>
+                    <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
+                    <Link className="voltar" to="/"> Voltar para home</Link>
+
+                </header>
+            </head>
 
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
@@ -57,7 +60,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table border="1" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -86,10 +89,21 @@ export default function Lista() {
                 </tbody>
 
             </table>
-
-            
-
+            <script>
+                $(document).ready(function () {
+                    $('#tabelalista').DataTable({
+                        "language": {
+                            "lengthMenu": "Display _MENU_ records per page",
+                            "zeroRecords": "Nothing found - sorry",
+                            "info": "Showing page _PAGE_ of _PAGES_",
+                            "infoEmpty": "No records available",
+                            "infoFiltered": "(filtered from _MAX_ total records)"
+                        }
+                    })
+                });
+                    </script>
         </div>
+
     )
 
 }

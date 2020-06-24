@@ -40,8 +40,6 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
             <header>
@@ -49,6 +47,11 @@ export default function Lista() {
 
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
+                <script src="/js/jquery.min.js"></script>
+
+                <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></link>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script src="https://ccdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" type="text/javascript"></script>
             </header>
 
             <h1 className="textao">Doadores cadastrados</h1>
@@ -57,7 +60,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table id="tabela" border="1" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -87,7 +90,9 @@ export default function Lista() {
 
             </table>
 
-            
+            <script>
+              
+            </script>
 
         </div>
     )

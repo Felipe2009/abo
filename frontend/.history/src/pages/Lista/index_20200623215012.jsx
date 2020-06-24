@@ -40,8 +40,6 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
             <header>
@@ -57,7 +55,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table id="tabela" border="1" className="tabelalista">
 
                 <thead>
                     <tr>
@@ -87,7 +85,9 @@ export default function Lista() {
 
             </table>
 
-            
+            <script>
+              
+            </script>
 
         </div>
     )

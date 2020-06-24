@@ -40,7 +40,16 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
+
+    componentDidMount(){
+        console.log(this.el);
+        this.$el = $(this.el)
+        this.$el.DataTable();
+    }
+
+    shouldComponentUpdate() {
+        return false;
+    }
 
     return (
         <div className="lista-container">

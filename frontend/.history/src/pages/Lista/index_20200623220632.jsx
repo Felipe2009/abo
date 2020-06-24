@@ -40,7 +40,15 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
+
+    componentDidMount(){
+        $(this.refs.main).DataTable();
+    }
+
+    shouldComponentUpdate() {
+        return false;
+    }
+
 
     return (
         <div className="lista-container">
@@ -57,7 +65,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table id="tabela" border="1" className="tabelalista" ref="main">
 
                 <thead>
                     <tr>

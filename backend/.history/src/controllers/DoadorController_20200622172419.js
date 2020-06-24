@@ -32,7 +32,9 @@ module.exports = {
             ultima,
 
         });
-
+        if (doador.cpf > 14) {
+            return alert("CPF incorreto");
+        }
         return response.json({ email });
     },
 

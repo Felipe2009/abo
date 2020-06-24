@@ -9,8 +9,6 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
     const history = useHistory();
-    const $ = require('jquery');
-    $.DataTable = require('datatables.net');
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
@@ -40,8 +38,6 @@ export default function Lista() {
         history.push('/'); //enviando de volta a raiz
 
     }
-    
-
     return (
         <div className="lista-container">
             <header>
@@ -57,7 +53,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
+            <table id="tabela" border="1" className="tabelalista">
 
                 <thead>
                     <tr>

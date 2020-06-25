@@ -89,7 +89,7 @@ export default function CadastroFunc() {
                         value={cpf}
                         onChange={e => setCpf(e.target.value)}
                         style={{ width: 166 }}
-                        maxLength='11'
+                        maxLength='14'
 
 
                     ></input>

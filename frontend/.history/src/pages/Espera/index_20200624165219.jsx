@@ -58,9 +58,9 @@ export default function Espera() {
 
                             <td>{precisa.name}</td>
                             <td>{precisa.rg}</td>
-                            <td>{precisa.tipo}</td>
                             <td>{precisa.telefone}</td>
                             <td>{precisa.sexo}</td>
+                            <td>{precisa.tipo}</td>
                             <br></br>
                             <FiTrash classname="apagaprecisa" onClick={() => handleDeletePrecisa(precisa.rg)} type="button"></FiTrash>
                         </tr>

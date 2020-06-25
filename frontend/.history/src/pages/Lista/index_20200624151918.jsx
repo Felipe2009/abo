@@ -42,7 +42,6 @@ export default function Lista() {
 
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
-                
             </header>
 
             <h1 className="textao">Doadores cadastrados</h1>

@@ -17,6 +17,10 @@ module.exports = {
             tipo,
             sexo,
         });
+        $(function() {
+
+            $(".rg").mask("99.999.999-9", { placeholder: " " });
+        });
 
         return response.json({ rg });
     },

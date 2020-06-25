@@ -79,6 +79,6 @@
 }
 
 #placeholder-text::placeholder {
-    font-size: 15px;
-    text-align: left;
+    font-size: 18px;
+    text-align: center;
 }

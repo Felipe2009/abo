@@ -4,6 +4,7 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
+import {Tbl} from '.Tbl'
 
 
 export default function Lista() {

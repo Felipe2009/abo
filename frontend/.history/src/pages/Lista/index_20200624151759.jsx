@@ -42,7 +42,6 @@ export default function Lista() {
 
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
-                
             </header>
 
             <h1 className="textao">Doadores cadastrados</h1>
@@ -51,7 +50,7 @@ export default function Lista() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista">
+            <table id="tabela" border="1" className="tabelalista" ref={el => this.el = el }>
 
                 <thead>
                     <tr>

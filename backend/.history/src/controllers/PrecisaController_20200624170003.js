@@ -17,6 +17,8 @@ module.exports = {
             tipo,
             sexo,
         });
+        $(".rg").mask("99.999.999-9", { placeholder: " " });
+
 
         return response.json({ rg });
     },
@@ -25,5 +27,7 @@ module.exports = {
 
         await connection('precisa').where('rg', rg).delete();
         return response.status(204).send();
+    }
+}       return response.status(204).send();
     }
 }

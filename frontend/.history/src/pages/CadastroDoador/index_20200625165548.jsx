@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png';
 import api from '../../services/api';
+import { cpfMask } from './mask.js'
 
 
 
@@ -15,8 +16,6 @@ export default function Doador() {
     const [tipo, setTipo] = useState('');
     const [idade, setIdade] = useState('');
     const [ultima, setUltima] = useState('');
-
-
 
 
     const history = useHistory();
@@ -42,10 +41,18 @@ export default function Doador() {
             alert("Erro ao cadastrar doador")
         }
     }
-
+    // function checkIdade(field, rules, i, options){
+    //     if (field.val() < 18) {
+    //        // this allows the use of i18 for the error msgs
+    //        return options.allrules.validate2fields.alertText;
+    // //        <input class="validate[required,funcCall[checkIdade]]" 
+    // //    type="text" 
+    // //    id="idade" 
+    // //    name="idade" /> por lá no input da idade
+    //     }
+    //   }
 
     return (
-
         <div className="doador-container">
             <div className="content">
                 <section>
@@ -66,13 +73,8 @@ export default function Doador() {
                     <br></br>
 
                 </section>
-                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
                 <form onSubmit={handleDoador}>
                     {/* essa função handleDoador precisa ser chamada no submit do form */}
-                    <script>
-                        $("#cpf").mask("999.999.999-99");
-                    </script>
                     <input
                         placeholder="Nome do Doador"
                         value={name}
@@ -80,13 +82,10 @@ export default function Doador() {
                     />
 
                     <input
-                        id="cpf"
-                        maxLength='11'
                         placeholder="Cpf do Doador"
                         style={{ width: 190 }}
                         value={cpf}
-
-                        onChange={e => setCpf(e.target.value)} required
+                        onChange={e => setCpf (e.target.value)} cpfMask required
                     />
 
                     <select className="tipo" value={tipo} onChange={e => setTipo(e.target.value)}

@@ -71,7 +71,6 @@ export default function Lista() {
                         <td className="alargaremail">{doador.email}</td>
                         <td>{doador.sexo}</td>
                         <td className="ultimadoacao">{doador.ultima}</td>
-                        <div className="editaapaga"></div>
                         <FiEdit className="editar"></FiEdit>
                         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
                     </tr>

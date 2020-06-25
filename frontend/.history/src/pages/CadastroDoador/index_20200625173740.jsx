@@ -71,7 +71,7 @@ export default function Doador() {
                 <form onSubmit={handleDoador}>
                     {/* essa função handleDoador precisa ser chamada no submit do form */}
                     <script>
-                        $("#cpf").mask("999.999.999-99");
+                        $("#cpf").mask("999.999.999-99")
                     </script>
                     <input
                         placeholder="Nome do Doador"
@@ -81,7 +81,7 @@ export default function Doador() {
 
                     <input
                         id="cpf"
-                        maxLength='11'
+                        maxLength='14'
                         placeholder="Cpf do Doador"
                         style={{ width: 190 }}
                         value={cpf}

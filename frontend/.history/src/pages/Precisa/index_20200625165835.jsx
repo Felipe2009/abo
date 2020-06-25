@@ -75,17 +75,16 @@ export default function Precisa() {
 
                     <input
                         placeholder="RG"
-                        style={{ width: 150 }}
+                        style={{ width: 157 }}
                         value={rg}
                         onChange={e => setRg(e.target.value)} required
-                        maxLength='9'
-                        id="placeholder-text"
+                        maxLength='12'
 
                     />
                     <input
                         type="number"
                         placeholder="Quantidade"
-                        style={{ width: 155 }}
+                        style={{ width: 148 }}
                         value={quantidade}
                         onChange={e => setQuantidade(e.target.value)} required
 

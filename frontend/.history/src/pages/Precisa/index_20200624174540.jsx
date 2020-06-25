@@ -45,13 +45,13 @@ export default function Precisa() {
             <div className="content">
                 <section>
                     <img src={logoImg}></img>
-                    {/* <script type="text/javascript" src="js/jquery.mask"></script>
+                    <script type="text/javascript" src="js/jquery.mask"></script>
                     <script type="text/javascript" src="js/jquery.mask.min"></script>
                     <script>
                     $(document).ready(function(){
                     $("$rg").mask("00.000.000-0")
                 })
-                    </script> */}
+                    </script>
                     <h1>Cadastrar Pessoa</h1>
                     <br></br>
                     <Link className="back-link" to="/">
@@ -75,17 +75,14 @@ export default function Precisa() {
 
                     <input
                         placeholder="RG"
-                        style={{ width: 150 }}
+                        style={{ width: 157 }}
                         value={rg}
                         onChange={e => setRg(e.target.value)} required
-                        maxLength='9'
-                        id="placeholder-text"
-
                     />
                     <input
                         type="number"
                         placeholder="Quantidade"
-                        style={{ width: 155 }}
+                        style={{ width: 148 }}
                         value={quantidade}
                         onChange={e => setQuantidade(e.target.value)} required
 

@@ -81,7 +81,7 @@ export default function Doador() {
 
                     <input
                         id="cpf"
-                        maxLength='11'
+                        maxLength='14'
                         placeholder="Cpf do Doador"
                         style={{ width: 190 }}
                         value={cpf}

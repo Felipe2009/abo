@@ -79,7 +79,6 @@ export default function Precisa() {
                         value={rg}
                         onChange={e => setRg(e.target.value)} required
                         maxLength='9'
-                        id="placeholder-text"
 
                     />
                     <input

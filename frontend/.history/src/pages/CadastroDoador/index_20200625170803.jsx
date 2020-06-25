@@ -17,8 +17,6 @@ export default function Doador() {
     const [ultima, setUltima] = useState('');
 
 
-
-
     const history = useHistory();
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
@@ -41,11 +39,23 @@ export default function Doador() {
         } catch (err) {
             alert("Erro ao cadastrar doador")
         }
+        function mascaraInteiro(){
+            if (event.keyCode < 48 || event.keyCode > 57){
+                    event.returnValue = false;
+                    return false;
+            }
+            return true;
     }
 
+        function MascaraCPF(cpf){
+            if(mascaraInteiro(cpf)==false){
+                    event.returnValue = false;
+            }       
+            return formataCampo(cpf, '000.000.000-00', event);
+    }
+    }
 
     return (
-
         <div className="doador-container">
             <div className="content">
                 <section>
@@ -66,13 +76,8 @@ export default function Doador() {
                     <br></br>
 
                 </section>
-                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
                 <form onSubmit={handleDoador}>
                     {/* essa função handleDoador precisa ser chamada no submit do form */}
-                    <script>
-                        $("#cpf").mask("999.999.999-99");
-                    </script>
                     <input
                         placeholder="Nome do Doador"
                         value={name}
@@ -80,13 +85,13 @@ export default function Doador() {
                     />
 
                     <input
-                        id="cpf"
-                        maxLength='11'
+                        maxLength='14'
                         placeholder="Cpf do Doador"
                         style={{ width: 190 }}
                         value={cpf}
-
-                        onChange={e => setCpf(e.target.value)} required
+                        
+                        onKeyPress="MascaraCPF(doador.cpf);"
+                        onChange={e => setCpf ( e.target.value)} required
                     />
 
                     <select className="tipo" value={tipo} onChange={e => setTipo(e.target.value)}

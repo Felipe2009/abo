@@ -1,0 +1,83 @@
+.listafuncionario-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.listafuncionario-container header {
+    display: flex;
+    align-items: center
+}
+
+.listafuncionario-container header img {
+    height: 105px;
+}
+
+.listafuncionario-container header a {
+    width: 220px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.listafuncionario-container header button:hover {
+    border-color: #999;
+}
+
+.listafuncionario-container h1 {
+    margin-top: 10px;
+}
+
+.botaoo {
+    height: 58px;
+    border-radius: 8px;
+    color: #000000;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    transition: filter 0.2s;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 0;
+    font-weight: 550;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: opacity 0.2s;
+}
+
+.tabela {
+    background-color: rgb(239, 242, 248);
+    position: relative;
+    margin-left: 100px;
+    border-color: rgb(5, 5, 3);
+    width: 750px;
+    height: 90px;
+}
+
+table th {
+    width: 120px;
+    border: 2px solid;
+}
+
+table td {
+    text-align: center;
+    font-size: 12pt;
+}
+
+.alargarnome {
+    padding-right: 10px;
+    width: 1200px;
+}
+
+.alargaremail {
+    padding-right: 10px;
+    width: 400px;
+}

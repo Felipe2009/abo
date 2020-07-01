@@ -1,5 +1,5 @@
 const connection = require('../database/connection'); //importando arquivo de conexão p/ se conectar com BD
-//const { put } = require('../routes');
+const { put } = require('../routes');
 
 module.exports = {
     async index(request, response) {
@@ -41,9 +41,9 @@ module.exports = {
         return response.status(204).send();
     },
 
-    // async put(request, response) {
-    //     const { cpf } = request.params;
-    //     await connection('doador').where('cpf', cpf).put();
-    //     return response.status(204).send();
-    // }
+    async put(request, response) {
+        const { cpf } = request.params;
+        await connection('doador').where('cpf', cpf).put();
+        return response.status(204).send();
+    }
 };

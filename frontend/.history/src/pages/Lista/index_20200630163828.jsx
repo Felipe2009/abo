@@ -35,17 +35,7 @@ export default function Lista() {
             alert("Erro ao deletar pessoa")
         }
     }
-    async function handleEditaDoador(cpf) {
-        try {
-            await api.put(`doador/${cpf}`, {
-
-            });
-            setDoadores(doadores.filter(doador => doador.cpf != cpf));
-        }
-        catch (err) {
-            alert("Erro ao editar pessoa")
-        }
-    }
+   
 
     return (
         <div className="lista-container">

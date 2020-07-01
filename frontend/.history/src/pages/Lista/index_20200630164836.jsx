@@ -35,17 +35,6 @@ export default function Lista() {
             alert("Erro ao deletar pessoa")
         }
     }
-    async function handleEditaDoador(cpf) {
-        try {
-            await api.put(`doador/${cpf}`, {
-
-            });
-            setDoadores(doadores.filter(doador => doador.cpf != cpf));
-        }
-        catch (err) {
-            alert("Erro ao editar pessoa")
-        }
-    }
 
     return (
         <div className="lista-container">
@@ -86,7 +75,7 @@ export default function Lista() {
                         <td className="ultimadoacao">{doador.ultima}</td>
                         <div className="editaapaga"></div>
                         <FiEdit onClick={() => handleEditaDoador(doador.cpf)} type="button" className="editar"></FiEdit>
-                        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
+                        <FiTrash onClick={() => src="script.js"} type="button"> </FiTrash>
                     </tr>
                     ))}
 

@@ -40,7 +40,7 @@ export default function Lista() {
             await api.put(`doador/${cpf}`, {
 
             });
-            setDoadores(doadores.filter(doador => doador.cpf != cpf));
+            setDoadores(doadores.filter());
         }
         catch (err) {
             alert("Erro ao editar pessoa")

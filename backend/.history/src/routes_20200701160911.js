@@ -7,7 +7,6 @@ const ListaFuncionarioController = require('./controllers/ListaFuncionarioContro
 const LoginController = require('./controllers/LoginController')
 const PrecisaController = require('./controllers/PrecisaController')
 const EsperaController = require('./controllers/EsperaController')
-const AgendamentoController = require('./controllers/AgendamentoController')
 
 
 const routes = express.Router();
@@ -18,9 +17,9 @@ routes.get('/funcionario', FuncionarioController.index)
 routes.post('/funcionario', FuncionarioController.create);
 routes.delete('/funcionario/:cpf', FuncionarioController.delete);
 
-routes.get('/agendamento', AgendamentoController.index)
-routes.post('/agendamento', AgendamentoController.create)
-routes.delete('/agendamento/:rg', AgendamentoController.delete)
+// routes.get('/agendamento', AgendamentoController.index)
+// routes.post('/agendamento', AgendamentoController.create)
+// routes.delete('/agendamento', AgendamentoController.delete)
 
 
 routes.get('/lista', ListaController.index);

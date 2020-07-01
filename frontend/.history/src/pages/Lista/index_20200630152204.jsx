@@ -15,8 +15,6 @@ export default function Lista() {
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const funcionarioName = localStorage.getItem('funcionarioName');
-
-
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('lista').then(response => {
@@ -51,11 +49,10 @@ export default function Lista() {
         <div className="lista-container">
             <header>
                 <img src={logoImg} />
-                <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-                <script type="text/javascript" src="script.js"></script>
+
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
-
+                
             </header>
 
             <h1 className="textao">Doadores cadastrados</h1>
@@ -94,7 +91,7 @@ export default function Lista() {
 
             </table>
 
-
+            
 
         </div>
     )

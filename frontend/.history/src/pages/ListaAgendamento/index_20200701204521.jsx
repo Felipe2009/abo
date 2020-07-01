@@ -6,8 +6,8 @@ import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 
 
-export default function Lista() {
-    const [doadores, setDoadores] = useState([]);
+export default function ListaAgendamento() {
+    const [agenda, setAgenda] = useState([]);
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
@@ -20,32 +20,22 @@ export default function Lista() {
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('lista').then(response => {
-            setDoadores(response.data);
+            setAgenda(response.data);
         })
     }, [funcionarioEmail]);
 
-    async function handleDeleteDoador(cpf) {
+    async function handleDeleteDoador(rg) {
         try {
-            await api.delete(`doador/${cpf}`, {
+            await api.delete(`agendamento/${rg}`, {
 
             });
-            setDoadores(doadores.filter(doador => doador.cpf != cpf));
+            setAgenda(agenda.filter(agendamento => agendamento.rg != rg));
         }
         catch (err) {
             alert("Erro ao deletar pessoa")
         }
     }
-    async function handleEditaDoador(cpf) {
-        try {
-            await api.put(`doador/${cpf}`, {
-
-            });
-            setDoadores(doadores.filter(doador => doador.cpf != cpf));
-        }
-        catch (err) {
-            alert("Erro ao editar pessoa")
-        }
-    }
+   
 
     return (
         <div className="lista-container">
@@ -77,15 +67,13 @@ export default function Lista() {
                     </tr>
                 </thead>
                 <tbody>
-                    {doadores.map(doador => (<tr key={doador.cpf}>
-                        <td className="alargarnome">{doador.name}</td>
-                        <td>{doador.cpf}</td>
-                        <td>{doador.tipo}</td>
-                        <td className="alargaremail">{doador.email}</td>
-                        <td>{doador.sexo}</td>
-                        <td className="ultimadoacao">{doador.ultima}</td>
+                    {agenda.map(agendamento => (<tr key={agendamento.rg}>
+                        <td className="alargarnome">{agendamento.name}</td>
+                        <td>{agendamento.rg}</td>
+                        <td>{agendamento.tipo}</td>
+                        <td className="alargaremail">{agendamento.email}</td>
+                        <td>{agendamento.sexo}</td>
                         <div className="editaapaga"></div>
-                        <FiEdit onClick={() => handleEditaDoador(doador.cpf)} type="button" className="editar"></FiEdit>
                         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
                     </tr>
                     ))}

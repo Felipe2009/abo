@@ -11,7 +11,7 @@ import Espera from './pages/Espera';
 import Tabela from './pages/Tabela'
 import ListaFuncionario from './pages/ListaFuncionario'
 import Agendamento from './pages/Agendamento'
-import listaAgendamento from './pages/ListaAgendamento'
+//import listaAgendamento from './pages/ListaAgendamento'
 
 
 export default function Routes(){
@@ -28,7 +28,7 @@ export default function Routes(){
             <Route path="/tabela" component={Tabela} />
             <Route path="/listaFuncionario" component={ListaFuncionario} />
             <Route path="/agendamento" component={Agendamento} />
-            <Route path="/listaAgendamento" component={listaAgendamento} /> 
+            {/* <Route path="/listaAgendamento" component={listaAgendamento} /> */}
 
 
 

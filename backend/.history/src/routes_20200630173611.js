@@ -7,7 +7,6 @@ const ListaFuncionarioController = require('./controllers/ListaFuncionarioContro
 const LoginController = require('./controllers/LoginController')
 const PrecisaController = require('./controllers/PrecisaController')
 const EsperaController = require('./controllers/EsperaController')
-const AgendamentoController = require('./controllers/AgendamentoController')
 
 
 const routes = express.Router();
@@ -18,10 +17,6 @@ routes.get('/funcionario', FuncionarioController.index)
 routes.post('/funcionario', FuncionarioController.create);
 routes.delete('/funcionario/:cpf', FuncionarioController.delete);
 
-routes.get('/agendamento', AgendamentoController.index)
-routes.post('/agendamento', AgendamentoController.create)
-routes.delete('/agendamento/:rg', AgendamentoController.delete)
-
 
 routes.get('/lista', ListaController.index);
 routes.get('/listaFuncionario', ListaFuncionarioController.index);
@@ -31,7 +26,7 @@ routes.get('/espera', EsperaController.index);
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
 routes.delete('/doador/:cpf', DoadorController.delete);
-// routes.put('/doador/:cpf', DoadorController.put);
+routes.post('/doador/:cpf', DoadorController.put);
 
 
 

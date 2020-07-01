@@ -20,7 +20,7 @@ routes.delete('/funcionario/:cpf', FuncionarioController.delete);
 
 routes.get('/agendamento', AgendamentoController.index)
 routes.post('/agendamento', AgendamentoController.create)
-routes.delete('/agendamento/:rg', AgendamentoController.delete)
+routes.delete('/agendamento', AgendamentoController.delete)
 
 
 routes.get('/lista', ListaController.index);

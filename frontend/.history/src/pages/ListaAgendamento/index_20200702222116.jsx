@@ -69,8 +69,7 @@ export default function ListaAgendamento() {
                         <td>{agendar.dia}</td>
                         <td className="alargardia">{agendar.horario}</td>
                         <td>{agendar.tipo}</td>
-                        <div className="editaapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
+                        <FiCheck className="" type="button"> </FiCheck>
                         <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}

@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import {FiCheck,FiTrash } from 'react-icons/fi';
+import {FiTrash } from 'react-icons/fi';
 
 
 export default function ListaAgendamento() {
@@ -58,8 +58,8 @@ export default function ListaAgendamento() {
                         <th>Nome</th>
                         <th>RG</th>
                         <th>Dia</th>
-                        <th>Horario</th>
                         <th>Tipo</th>
+                        <th>Horario</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,11 +67,10 @@ export default function ListaAgendamento() {
                         <td className="alargarnome">{agendar.name}</td>
                         <td>{agendar.rg}</td>
                         <td>{agendar.dia}</td>
-                        <td className="alargardia">{agendar.horario}</td>
-                        <td>{agendar.tipo}</td>
+                        <td className="alargardia">{agendar.tipo}</td>
+                        <td>{agendar.horario}</td>
                         <div className="editaapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
-                        <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
+                        <FiTrash onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}
 

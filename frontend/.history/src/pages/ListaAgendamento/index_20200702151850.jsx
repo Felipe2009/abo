@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import {FiCheck,FiTrash } from 'react-icons/fi';
+import { FiEdit, FiTrash } from 'react-icons/fi';
 
 
 export default function ListaAgendamento() {
@@ -12,21 +12,24 @@ export default function ListaAgendamento() {
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
 
+
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
+    const funcionarioName = localStorage.getItem('funcionarioName');
+
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
-        api.get('agendar').then(response => {
+        api.get('lista').then(response => {
             setAgenda(response.data);
         })
     }, [funcionarioEmail]);
 
     async function handleDeleteAgendamento(rg) {
         try {
-            await api.delete(`agendar/${rg}`, {
+            await api.delete(`agendamento/${rg}`, {
 
             });
-            setAgenda(agenda.filter(agendar => agendar.rg != rg));
+            setAgenda(agenda.filter(agendamento => agendamento.rg != rg));
         }
         catch (err) {
             alert("Erro ao deletar agendamento")
@@ -57,21 +60,20 @@ export default function ListaAgendamento() {
                     <tr>
                         <th>Nome</th>
                         <th>RG</th>
+                        <th>Tipo</th>
                         <th>Dia</th>
                         <th>Horario</th>
-                        <th>Tipo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {agenda.map(agendar => (<tr key={agendar.rg}>
-                        <td className="alargarnome">{agendar.name}</td>
-                        <td>{agendar.rg}</td>
-                        <td>{agendar.dia}</td>
-                        <td className="alargardia">{agendar.horario}</td>
-                        <td>{agendar.tipo}</td>
+                    {agenda.map(agendamento => (<tr key={agendamento.rg}>
+                        <td className="alargarnome">{agendamento.name}</td>
+                        <td>{agendamento.rg}</td>
+                        <td>{agendamento.tipo}</td>
+                        <td className="alargaremail">{agendamento.dia}</td>
+                        <td>{agendamento.horario}</td>
                         <div className="editaapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
-                        <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
+                        <FiTrash onClick={() => handleDeleteAgendamento(agendamento.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}
 

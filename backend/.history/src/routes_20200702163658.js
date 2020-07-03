@@ -18,9 +18,9 @@ routes.get('/funcionario', FuncionarioController.index)
 routes.post('/funcionario', FuncionarioController.create);
 routes.delete('/funcionario/:cpf', FuncionarioController.delete);
 
-routes.get('/agendar', AgendarController.index)
-routes.post('/agendar', AgendarController.create)
-routes.delete('/agendar/:rg', AgendarController.delete)
+routes.get('/agendamento', AgendarController.index)
+routes.post('/agendamento', AgendarController.create)
+routes.delete('/agendamento/:rg', AgendarController.delete)
 
 
 routes.get('/lista', ListaController.index);

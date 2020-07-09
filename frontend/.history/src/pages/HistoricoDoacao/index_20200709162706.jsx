@@ -3,33 +3,36 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import {FiCheck,FiTrash } from 'react-icons/fi';
+import { FiEdit, FiTrash } from 'react-icons/fi';
 
 
-export default function ListaAgendamento() {
-    const [agenda, setAgenda] = useState([]);
+export default function HistoricoDoacao() {
+    const [doadores, setDoadores] = useState([]);
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
 
+
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
+    const funcionarioName = localStorage.getItem('funcionarioName');
+
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
-        api.get('agendar').then(response => {
-            setAgenda(response.data);
+        api.get('historicodoacao').then(response => {
+            setDoadores(response.data);
         })
     }, [funcionarioEmail]);
 
-    async function handleDeleteAgendamento(rg) {
+    async function handleDeleteDoador(cpf) {
         try {
-            await api.delete(`agendar/${rg}`, {
+            await api.delete(`doador/${cpf}`, {
 
             });
-            setAgenda(agenda.filter(agendar => agendar.rg != rg));
+            setDoadores(doadores.filter(doador => doador.cpf != cpf));
         }
         catch (err) {
-            alert("Erro ao deletar agendamento")
+            alert("Erro ao deletar pessoa")
         }
     }
    
@@ -45,33 +48,34 @@ export default function ListaAgendamento() {
 
             </header>
 
-            <h1 className="textao">Lista de Agendamento</h1>
+            <h1 className="textao">Histórico de Doação</h1>
             <br></br>
 
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="1" className="tabelalista">
+            <table id="tabela" border="4" className="tabelalista">
 
-                <thead >
-                    <tr >
+                <thead>
+                    <tr>
                         <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Dia</th>
-                        <th>Horario</th>
+                        <th>CPF</th>
                         <th>Tipo</th>
+                        <th>Email</th>
+                        <th>Sexo</th>
+                        <th>Ultima Doação</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {agenda.map(agendar => (<tr key={agendar.telefone}>
-                        <td classname="esticar">{agendar.name}</td>
-                        <td>{agendar.telefone}</td>
-                        <td>{agendar.dia}</td>
-                        <td className="alargardia">{agendar.horario}</td>
-                        <td>{agendar.tipo}</td>
+                    {doadores.map(doador => (<tr key={doador.cpf}>
+                        <td className="alargarnome">{doador.name}</td>
+                        <td>{doador.cpf}</td>
+                        <td>{doador.tipo}</td>
+                        <td className="alargaremail">{doador.email}</td>
+                        <td>{doador.sexo}</td>
+                        <td className="ultimadoacao">{doador.ultima}</td>
                         <div className="editaapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
-                        <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
+                        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
                     </tr>
                     ))}
 

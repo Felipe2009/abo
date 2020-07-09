@@ -12,7 +12,7 @@ import Tabela from './pages/Tabela'
 import ListaFuncionario from './pages/ListaFuncionario'
 import Agendar from './pages/Agendar'
 import listaAgendamento from './pages/ListaAgendamento'
-import historicoDoacao from './pages/HistoricoDoacao'
+import historicodoacao from './pages/HistoricoDoacao'
 
 
 export default function Routes(){

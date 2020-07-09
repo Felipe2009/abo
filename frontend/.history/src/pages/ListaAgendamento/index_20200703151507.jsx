@@ -53,8 +53,8 @@ export default function ListaAgendamento() {
 
             <table id="tabela" border="1" className="tabelalista">
 
-                <thead >
-                    <tr >
+                <thead>
+                    <tr classname="esticar">
                         <th>Nome</th>
                         <th>Telefone</th>
                         <th>Dia</th>
@@ -64,7 +64,7 @@ export default function ListaAgendamento() {
                 </thead>
                 <tbody>
                     {agenda.map(agendar => (<tr key={agendar.telefone}>
-                        <td classname="esticar">{agendar.name}</td>
+                        <td className="alargarnome">{agendar.name}</td>
                         <td>{agendar.telefone}</td>
                         <td>{agendar.dia}</td>
                         <td className="alargardia">{agendar.horario}</td>

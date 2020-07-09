@@ -22,10 +22,7 @@ routes.get('/agendar', AgendarController.index)
 routes.post('/agendar', AgendarController.create)
 routes.delete('/agendar/:rg', AgendarController.delete)
 
-
-routes.delete('/historicoDoacao', HistoricoDoacao.delete);
 routes.get('/historicoDoacao', HistoricoDoacao.index);
-
 routes.get('/lista', ListaController.index);
 routes.get('/listaFuncionario', ListaFuncionarioController.index);
 routes.get('/espera', EsperaController.index);

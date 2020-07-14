@@ -49,7 +49,7 @@ export default function ListaFuncionario() {
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <table id="tabela" border="3" className="tabelalistafunc">
+            <table id="tabela" border="2" className="tabelalistafunc">
 
                 <thead>
                     <tr>

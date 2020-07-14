@@ -3,36 +3,33 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import {FiTrash } from 'react-icons/fi';
+import {FiCheck,FiTrash } from 'react-icons/fi';
 
 
-export default function HistoricoDoacao() {
-    const [historico, setHistorico] = useState([]);
+export default function ListaAgendamento() {
+    const [agenda, setAgenda] = useState([]);
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
 
-
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const funcionarioName = localStorage.getItem('funcionarioName');
-
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
-        api.get('historicodoacao').then(response => {
-            setHistorico(response.data);
+        api.get('agendar').then(response => {
+            setAgenda(response.data);
         })
     }, [funcionarioEmail]);
 
-    async function handleDeleteDoador(cpf) {
+    async function handleDeleteAgendamento(rg) {
         try {
-            await api.delete(`doador/${cpf}`, {
+            await api.delete(`agendar/${rg}`, {
 
             });
-            setHistorico(historico.filter(historico => historico.cpf != cpf));
+            setAgenda(agenda.filter(agendar => agendar.rg != rg));
         }
         catch (err) {
-            alert("Erro ao deletar pessoa")
+            alert("Erro ao deletar agendamento")
         }
     }
    
@@ -48,7 +45,7 @@ export default function HistoricoDoacao() {
 
             </header>
 
-            <h1 className="textao">Histórico de Doação</h1>
+            <h1 className="textao">Lista de Agendamento</h1>
             <br></br>
 
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
@@ -56,26 +53,25 @@ export default function HistoricoDoacao() {
 
             <table id="tabela" border="4" className="tabelalista">
 
-                <thead>
-                    <tr>
+                <thead >
+                    <tr >
                         <th>Nome</th>
-                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Dia</th>
+                        <th>Horario</th>
                         <th>Tipo</th>
-                        <th>Email</th>
-                        <th>Sexo</th>
-                        <th>Ultima Doação</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {historico.map(historico => (<tr key={historico.cpf}>
-                        <td className="alargarnome">{historico.name}</td>
-                        <td>{historico.cpf}</td>
-                        <td>{historico.tipo}</td>
-                        <td className="alargaremail">{historico.email}</td>
-                        <td>{historico.sexo}</td>
-                        <td className="ultimadoacao">{historico.ultima}</td>
+                    {agenda.map(agendar => (<tr key={agendar.telefone}>
+                        <td classname="esticar">{agendar.name}</td>
+                        <td>{agendar.telefone}</td>
+                        <td>{agendar.dia}</td>
+                        <td className="alargardia">{agendar.horario}</td>
+                        <td>{agendar.tipo}</td>
                         <div className="editaapaga"></div>
-                        <FiTrash onClick={() => handleDeleteDoador(historico.cpf)} type="button"> </FiTrash>
+                        <FiCheck className="ok" type="button"> </FiCheck>
+                        <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}
 

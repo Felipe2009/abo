@@ -65,7 +65,7 @@
 table th {
     width: 450px;
     border: 2px solid;
-    border-style: double black;
+    border-style: double;
 }
 
 table td {
@@ -73,7 +73,7 @@ table td {
     font-size: 12pt;
     border: 2px solid;
     border-color: black;
-    border-style: double black;
+    border-style: double;
 }
 
 .apagafunc {

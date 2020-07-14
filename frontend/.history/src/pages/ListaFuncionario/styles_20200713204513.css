@@ -65,15 +65,12 @@
 table th {
     width: 450px;
     border: 2px solid;
-    border-style: double black;
 }
 
 table td {
     text-align: center;
     font-size: 12pt;
     border: 2px solid;
-    border-color: black;
-    border-style: double black;
 }
 
 .apagafunc {

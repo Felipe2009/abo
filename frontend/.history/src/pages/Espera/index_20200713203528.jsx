@@ -40,7 +40,7 @@ export default function Espera() {
             <br></br>
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
-            <table border="6" className="tabelaespera">
+            <table border="6" className="tabelalista">
 
                 <thead>
                     <tr>

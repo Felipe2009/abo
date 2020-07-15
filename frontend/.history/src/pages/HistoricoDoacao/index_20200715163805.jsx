@@ -24,7 +24,7 @@ export default function HistoricoDoacao() {
         })
     }, [funcionarioEmail]);
 
-       
+    
     return (
         <div className="lista-container">
             <header>

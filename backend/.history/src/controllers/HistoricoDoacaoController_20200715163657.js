@@ -10,7 +10,7 @@ module.exports = {
     async delete(request, response) {
         const { cpf } = request.params;
 
-        await connection('agendar').where('cpf', cpf).delete();
+        await connection('historico').where('cpf', cpf).delete();
         return response.status(204).send();
     },
 }

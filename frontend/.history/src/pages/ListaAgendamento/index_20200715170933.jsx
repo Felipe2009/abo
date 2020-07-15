@@ -35,7 +35,7 @@ export default function ListaAgendamento() {
    
     async function handleHistorico(rg) {
         try {
-            await api.get(`agendar/${rg}`, {
+            await api.post(`agendar/${rg}`, {
 
             });
             setAgenda(agenda.filter(agendar => agendar.rg != rg));

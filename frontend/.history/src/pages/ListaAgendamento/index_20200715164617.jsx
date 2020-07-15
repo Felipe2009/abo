@@ -33,12 +33,12 @@ export default function ListaAgendamento() {
         }
     }
    
-    async function handleHistorico(rg) {
+    async function handleHistorico(cpf) {
         try {
-            await api.get(`agendar/${rg}`, {
+            await api.post(`listaAgendamento/${cpf}`, {
 
             });
-            setAgenda(agenda.filter(agendar => agendar.rg != rg));
+            setAgenda(agenda.filter(agendamento => agendamento.cpf != cpf));
         }
         catch (err) {
             alert("Erro ao inserir pessoa")
@@ -80,7 +80,7 @@ export default function ListaAgendamento() {
                         <td>{agendar.dia}</td>
                         <td className="alargardia">{agendar.horario}</td>
                         <td>{agendar.tipo}</td>
-                        <div className="okapaga"></div>
+                        <div className="editaapaga"></div>
                         <FiCheck className="ok" onClick={() => handleHistorico(agendar.rg)} type="button"> </FiCheck>
                         <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>

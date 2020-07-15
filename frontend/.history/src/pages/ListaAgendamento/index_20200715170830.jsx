@@ -33,12 +33,12 @@ export default function ListaAgendamento() {
         }
     }
    
-    async function handleHistorico(rg) {
+    async function handleHistorico(cpf) {
         try {
-            await api.get(`agendar/${rg}`, {
+            await api.post(`agendar/${cpf}`, {
 
             });
-            setAgenda(agenda.filter(agendar => agendar.rg != rg));
+            setAgenda(agenda.filter(agendar => agendar.cpf != cpf));
         }
         catch (err) {
             alert("Erro ao inserir pessoa")

@@ -9,8 +9,7 @@ const PrecisaController = require('./controllers/PrecisaController')
 const EsperaController = require('./controllers/EsperaController')
 const AgendarController = require('./controllers/AgendarController')
 const HistoricoDoacao = require('./controllers/HistoricoDoacaoController')
-const ListaAgendamento = require('./controllers/ListaAgendamentoController');
-const ListaAgendamentoController = require('./controllers/ListaAgendamentoController');
+const ListaAgendamento = require('./controllers/ListaAgendamentoController')
 
 
 const routes = express.Router();
@@ -32,7 +31,8 @@ routes.get('/historicoDoacao', HistoricoDoacao.index);
 routes.get('/lista', ListaController.index);
 routes.get('/listaFuncionario', ListaFuncionarioController.index);
 routes.get('/espera', EsperaController.index);
-routes.get('/listaAgendamento', ListaAgendamentoController.index)
+routes.get('/listaAgendamento', ListaAgendamentoController.index);
+
 
 
 routes.get('/doador', DoadorController.index);

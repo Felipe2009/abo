@@ -24,7 +24,7 @@ export default function HistoricoDoacao() {
         })
     }, [funcionarioEmail]);
 
-       
+    
     return (
         <div className="lista-container">
             <header>
@@ -47,14 +47,13 @@ export default function HistoricoDoacao() {
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Tipo</th>
-
+                        
                     </tr>
                 </thead>
                 <tbody>
                     {historicos.map(historico => (<tr key={historico.cpf}>
                         <td classname="esticar">{historico.name}</td>
-                       <td>{historico.tipo}</td>
+                       
                     </tr>
                     ))}
 

@@ -32,7 +32,7 @@ routes.get('/historicoDoacao', HistoricoDoacao.index);
 routes.get('/lista', ListaController.index);
 routes.get('/listaFuncionario', ListaFuncionarioController.index);
 routes.get('/espera', EsperaController.index);
-routes.get('/listaAgendamento', ListaAgendamentoController.index)
+routes.get('/listaagendamento', ListaAgendamentoController.index)
 
 
 routes.get('/doador', DoadorController.index);

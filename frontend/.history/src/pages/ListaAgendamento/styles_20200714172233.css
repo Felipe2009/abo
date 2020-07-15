@@ -20,12 +20,9 @@
 
 .tabelalistaagendamento {
     background-color: rgb(239, 242, 248);
+    position: absolute;
     margin-left: 50px;
     border-color: rgb(5, 5, 3);
     width: 910px;
     height: 120px;
-}
-
-.tabelalistaagendamento td {
-    height: 70px;
 }

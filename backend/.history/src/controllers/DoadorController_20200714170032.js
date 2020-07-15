@@ -43,7 +43,7 @@ module.exports = {
 
     async put(request, response) {
         const { cpf } = request.params;
-        await connection('doador').where('cpf', cpf).update();
+        await connection('doador').where('cpf', cpf).put();
         return response.status(204).send();
     }
 };

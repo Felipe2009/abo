@@ -51,9 +51,11 @@ export default function Lista() {
         <div className="lista-container">
             <header>
                 <img src={logoImg} />
-
-                <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-                <script type="text/javascript" src="script.js"></script> 
+                <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"></link>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+                {/* <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script> */}
+                {/* <script type="text/javascript" src="script.js"></script> */}
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
 
@@ -95,6 +97,8 @@ export default function Lista() {
                 </tbody>
 
             </table>
+
+
 
         </div>
     )

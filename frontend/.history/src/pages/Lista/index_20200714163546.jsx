@@ -52,8 +52,8 @@ export default function Lista() {
             <header>
                 <img src={logoImg} />
 
-                <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-                <script type="text/javascript" src="script.js"></script> 
+                {/* <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script> */}
+                {/* <script type="text/javascript" src="script.js"></script> */}
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
 
@@ -95,6 +95,23 @@ export default function Lista() {
                 </tbody>
 
             </table>
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"></link>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#tabela').DataTable({
+                        "language": {
+                            "lengthMenu": "Mostrando MENU registros por página",
+                            "zeroRecords": "Nenhum Registro Encontrado",
+                            "info": "Mostrando Página PAGE de _PAGES_",
+                            "infoEmpty": "Nenhum registro Disponível",
+                            "infoFiltered": "(filtrado de MAX registro no total)"
+                        }
+                    })
+                } );
+</script>
+
 
         </div>
     )

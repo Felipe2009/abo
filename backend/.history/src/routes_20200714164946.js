@@ -34,7 +34,7 @@ routes.get('/espera', EsperaController.index);
 routes.get('/doador', DoadorController.index);
 routes.post('/doador', DoadorController.create);
 routes.delete('/doador/:cpf', DoadorController.delete);
-routes.put('/doador/:cpf', DoadorController.put);
+routes.put('/doador/:cpf', DoadorController.delete);
 
 // routes.put('/doador/:cpf', DoadorController.put);
 

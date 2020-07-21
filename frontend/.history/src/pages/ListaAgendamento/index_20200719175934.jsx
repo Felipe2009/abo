@@ -35,7 +35,18 @@ export default function ListaAgendamento() {
             alert("Erro ao deletar agendamento")
         }
     }
-    
+
+
+    async function handleLista(e) {
+        try {
+            await api.post('agendar', data)
+            history.push('/historicodoacao');
+        } catch (err) {
+            alert("Erro ao cadastrar doador")
+        }
+    }
+
+
     return (
         <div className="lista-container">
             <header>
@@ -80,6 +91,8 @@ export default function ListaAgendamento() {
                 </tbody>
 
             </table>
+
+
 
         </div>
     )

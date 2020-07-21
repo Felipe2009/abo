@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import Editar, { TextArea } from './edit.jsx'
+import { ReactComponent } from '*.svg';
 
 
 export default function Lista() {

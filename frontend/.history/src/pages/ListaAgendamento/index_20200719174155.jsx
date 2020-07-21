@@ -3,18 +3,47 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiCheck, FiTrash } from 'react-icons/fi';
+import {FiCheck,FiTrash } from 'react-icons/fi';
 
 
 export default function ListaAgendamento() {
+    const [rg, setRg] = useState('');
+    const [name, setName] = useState('');
+    const [dia, setDia] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [sexo, setSexo] = useState('');
+    const [tipo, setTipo] = useState('');
+    const [horario, setHorario] = useState('');
+
+
     const [agenda, setAgenda] = useState([]);
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
-
+    
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
+
+    async function handleLista(e) {
+        e.preventDefault();
+
+        const data = {
+            rg,
+            name,
+            telefone,
+            sexo,
+            tipo,
+            dia,
+            horario
+        };
+        try {
+            await api.post('agendar', data)
+            history.push('/historicodoacao');
+        } catch (err) {
+            alert("Erro ao cadastrar doador")
+        }
+    }
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -22,7 +51,6 @@ export default function ListaAgendamento() {
             setAgenda(response.data);
         })
     }, [funcionarioEmail]);
-
 
     async function handleDeleteAgendamento(rg) {
         try {
@@ -36,6 +64,7 @@ export default function ListaAgendamento() {
         }
     }
     
+
     return (
         <div className="lista-container">
             <header>
@@ -72,7 +101,7 @@ export default function ListaAgendamento() {
                         <td className="alargardia">{agendar.horario}</td>
                         <td>{agendar.tipo}</td>
                         <div className="okapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
+                        <FiCheck className="ok" onClick={() => handleLista(agendar.rg)} type="button"> </FiCheck>
                         <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}
@@ -80,6 +109,8 @@ export default function ListaAgendamento() {
                 </tbody>
 
             </table>
+
+
 
         </div>
     )

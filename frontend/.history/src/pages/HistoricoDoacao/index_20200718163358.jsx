@@ -46,16 +46,13 @@ export default function HistoricoDoacao() {
                     <tr>
                         <th>Nome</th>
                         <th>Tipo</th>
-                        <th>RG</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    {historicos.map(agendar => (<tr key={agendar.rg}>
-                        <td classname="esticar">{agendar.name}</td>
-                       <td>{agendar.tipo}</td>
-                       <td>{agendar.rg}</td>
-
+                    {historicos.map(historico => (<tr key={historico.cpf}>
+                        <td classname="esticar">{historico.name}</td>
+                       <td>{historico.tipo}</td>
                     </tr>
                     ))}
 

@@ -35,7 +35,18 @@ export default function ListaAgendamento() {
             alert("Erro ao deletar agendamento")
         }
     }
-    
+
+
+    async function handleLista(e) {
+        try {
+            await api.post('agendar')
+            history.push('/historicodoacao');
+        } catch (err) {
+            alert("Erro ao cadastrar doador")
+        }
+    }
+
+
     return (
         <div className="lista-container">
             <header>
@@ -72,7 +83,7 @@ export default function ListaAgendamento() {
                         <td className="alargardia">{agendar.horario}</td>
                         <td>{agendar.tipo}</td>
                         <div className="okapaga"></div>
-                        <FiCheck className="ok" type="button"> </FiCheck>
+                        <FiCheck className="ok" onClick={() => handleLista(agendar.rg)} type="button"> </FiCheck>
                         <FiTrash className="apaga" onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
                     </tr>
                     ))}
@@ -80,6 +91,8 @@ export default function ListaAgendamento() {
                 </tbody>
 
             </table>
+
+
 
         </div>
     )

@@ -8,8 +8,9 @@ const LoginController = require('./controllers/LoginController')
 const PrecisaController = require('./controllers/PrecisaController')
 const EsperaController = require('./controllers/EsperaController')
 const AgendarController = require('./controllers/AgendarController')
+const ListaAgendamento = require('./controllers/ListaAgendamentoController');
 const ListaAgendamentoController = require('./controllers/ListaAgendamentoController');
-const HistoricoController = require('./controllers/HistoricoController')
+
 
 const routes = express.Router();
 routes.post('/login', LoginController.create); //criando sessão de login
@@ -24,7 +25,7 @@ routes.post('/agendar', AgendarController.create)
 routes.delete('/agendar/:rg', AgendarController.delete)
 
 
-routes.get('/historicodoacao', HistoricoController.index)
+
 routes.get('/lista', ListaController.index);
 routes.get('/listaFuncionario', ListaFuncionarioController.index);
 routes.get('/espera', EsperaController.index);

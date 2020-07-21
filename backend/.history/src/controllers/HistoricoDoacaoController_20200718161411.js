@@ -3,14 +3,14 @@ const connection = require('../database/connection'); //importando arquivo de co
 module.exports = {
     async index(request, response) {
 
-        const historico = await connection('agendar').select('*');
+        const historico = await connection('historico').select('*');
 
         return response.json(historico);
     },
     async delete(request, response) {
         const { cpf } = request.params;
 
-        await connection('agendar').where('cpf', cpf).delete();
+        await connection('historico').where('cpf', cpf).delete();
         return response.status(204).send();
     },
 }

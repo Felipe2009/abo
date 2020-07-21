@@ -3,18 +3,18 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiCheck, FiTrash } from 'react-icons/fi';
+import {FiCheck,FiTrash } from 'react-icons/fi';
 
 
 export default function ListaAgendamento() {
-    const [agenda, setAgenda] = useState([]);
+        const [agenda, setAgenda] = useState([]);
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
-
+    
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-
+    
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -22,7 +22,6 @@ export default function ListaAgendamento() {
             setAgenda(response.data);
         })
     }, [funcionarioEmail]);
-
 
     async function handleDeleteAgendamento(rg) {
         try {
@@ -36,6 +35,7 @@ export default function ListaAgendamento() {
         }
     }
     
+
     return (
         <div className="lista-container">
             <header>
@@ -80,6 +80,8 @@ export default function ListaAgendamento() {
                 </tbody>
 
             </table>
+
+
 
         </div>
     )

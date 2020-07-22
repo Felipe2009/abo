@@ -80,13 +80,13 @@ table td {
 
 .verificarestoquelista {
     text-decoration: none;
-    font-weight: 550;
+    font-weight: 500;
     color: #242424;
     transition: opacity 0.2s;
     margin-left: 55px;
-    font-size: 11pt;
+    margin-top: 20px;
+    font-size: 12pt;
     position: relative;
-    top: 16px;
 }
 
 .editar {
@@ -120,9 +120,9 @@ table td {
 
 .agendalista {
     position: relative;
-    margin-left: 820px;
+    margin-left: 780px;
     font-size: 13px;
     text-decoration: none;
-    color: #242424;
+    color: #141414;
     font-weight: 550;
 }

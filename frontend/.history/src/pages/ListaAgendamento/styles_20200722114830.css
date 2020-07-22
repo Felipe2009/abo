@@ -42,16 +42,7 @@
     color: #242424;
     transition: opacity 0.2s;
     margin-left: 55px;
-    font-size: 11pt;
+    font-size: 12pt;
     position: relative;
-    top: 16px;
-}
-
-.agendamentodoacao {
-    font-weight: 550;
-    text-decoration: none;
-    color: #242424;
-    margin-left: 810px;
-    transition: opacity 0.2s;
-    font-size: 11pt;
+    top: 1px;
 }

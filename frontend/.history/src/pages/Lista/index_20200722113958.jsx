@@ -55,7 +55,7 @@ export default function Lista() {
 
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
-            <Link className="agendalista" to="/agendar"> Agendar doação</Link>
+            <Link className="agendamento" to="/agendar"> Agendar doação</Link>
             <br></br>
             <table id="tabela" border="6" className="tabelalista">
 

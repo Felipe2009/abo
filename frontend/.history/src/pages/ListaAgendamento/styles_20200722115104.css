@@ -44,14 +44,12 @@
     margin-left: 55px;
     font-size: 11pt;
     position: relative;
-    top: 16px;
+    top: 1px;
 }
 
 .agendamentodoacao {
     font-weight: 550;
     text-decoration: none;
     color: #242424;
-    margin-left: 810px;
-    transition: opacity 0.2s;
-    font-size: 11pt;
+    margin-left: 825px;
 }

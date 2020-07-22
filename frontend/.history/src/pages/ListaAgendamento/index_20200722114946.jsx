@@ -53,7 +53,7 @@ export default function ListaAgendamento() {
             <Link className="verificarestoquelistaagendamento" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <Link className="agendamentodoacao" to="/agendar"> Agendar doação</Link>
+            <Link className="verificarestoquelistaagendamento" to="/agendar"> Agendar doação</Link>
             <br></br>
 
             <table id="tabela" border="6" className="tabelalistaagendamento">

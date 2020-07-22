@@ -84,7 +84,7 @@ table td {
     color: #242424;
     transition: opacity 0.2s;
     margin-left: 55px;
-    font-size: 11pt;
+    font-size: 12pt;
     position: relative;
     top: 16px;
 }
@@ -120,7 +120,7 @@ table td {
 
 .agendalista {
     position: relative;
-    margin-left: 820px;
+    margin-left: 850px;
     font-size: 13px;
     text-decoration: none;
     color: #242424;

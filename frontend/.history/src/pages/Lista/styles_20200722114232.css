@@ -84,9 +84,9 @@ table td {
     color: #242424;
     transition: opacity 0.2s;
     margin-left: 55px;
-    font-size: 11pt;
+    margin-top: 20px;
+    font-size: 10pt;
     position: relative;
-    top: 16px;
 }
 
 .editar {
@@ -120,9 +120,8 @@ table td {
 
 .agendalista {
     position: relative;
-    margin-left: 820px;
-    font-size: 13px;
+    margin-left: 780px;
+    font-size: 12px;
     text-decoration: none;
-    color: #242424;
-    font-weight: 550;
+    color: #141414
 }

@@ -78,6 +78,7 @@ export default function Lista() {
                             dataType="text"
                             title="Enter username"
                             showButtons={false}
+                            mode="popup"
                             value={doador.name}
                             validate={(value) => {
                                 if (!value) {

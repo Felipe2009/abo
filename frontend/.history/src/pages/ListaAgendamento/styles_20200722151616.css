@@ -21,7 +21,7 @@
 .tabelalistaagendamento {
     background-color: rgb(239, 242, 248);
     margin-left: 50px;
-    border-color: #666666;
+    border-color: rgb(5, 5, 3);
     width: 910px;
     height: 120px;
 }
@@ -50,8 +50,8 @@
 .agendamentodoacao {
     font-weight: 550;
     text-decoration: none;
-    color: #242424;
-    margin-left: 820px;
+    color: #dd6767;
+    margin-left: 810px;
     transition: opacity 0.2s;
     font-size: 11pt;
 }

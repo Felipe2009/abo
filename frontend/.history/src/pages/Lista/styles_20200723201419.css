@@ -109,7 +109,7 @@ table td {
 }
 
 .editaapaga {
-    margin-bottom: 25px;
+    margin-left: 15px;
 }
 
 .tabelalista td {
@@ -129,6 +129,4 @@ table td {
 .editable {
     text-decoration: none;
     color: #000000;
-    font-weight: 700;
-    font-size: 10pt;
 }

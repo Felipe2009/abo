@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    alert("ok");
     $('#tabela tbody tr  td').dblclick(function(){ //chamando o td da tabela, dbl click pra executar função assim q o duplo clique aconteça
         if($('td > input').length >0){ //verificando se tem um elemento input q é filho de td
             return;
@@ -12,6 +11,7 @@ $(document).ready(function(){
             var keyCode = e.which;//fazendo a confirmação depois do enter 
             if(keyCode == 13){
                 var conteudoNovo = $(this).val();
+
                 if(conteudoNovo != ""){
                     $(this).parent().html(conteudoNovo)
                 }

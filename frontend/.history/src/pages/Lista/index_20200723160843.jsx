@@ -4,7 +4,7 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
-import Editable from 'react-x-editable';
+import $ from 'jquery';
 
 
 export default function Lista() {
@@ -72,50 +72,15 @@ export default function Lista() {
 
                 <tbody>
                     {doadores.map(doador => (<tr key={doador.cpf}>
-                        <td> <Editable
-                            name="username"
-                            className="editable"
-                            dataType="text"
-                            title="Enter username"
-                            showButtons={false}
-                            value={doador.name}
-                            validate={(value) => {
-                                if (!value) {
-                                    return 'Required';
-                                }
-                            }}
-                        /></td>
+                        <td className="alargarnome">{doador.name}</td>
                         <td>{doador.cpf}</td>
-
                         <td>{doador.tipo}</td>
-                        <td> <Editable
-                            //name="username"
-                            dataType="text"
-                            //title="Enter username"
-                            showButtons={false}
-                            value={doador.email}
-                            validate={(value) => {
-                                if (!value) {
-                                    return 'Required';
-                                }
-                            }}
-                        /></td>
+                        <td className="alargaremail">{doador.email}</td>
                         <td>{doador.sexo}</td>
-                        <td> <Editable
-                            name="username"
-                            dataType="text"
-                            title="Enter username"
-                            showButtons={false}
-                            value={doador.ultima}
-                            validate={(value) => {
-                                if (!value) {
-                                    return 'Required';
-                                }
-                            }}
-                        /></td>
+                        <td className="ultimadoacao">{doador.ultima}</td>
                         <div className="editaapaga"></div>
 
-                        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+                        <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit>
                         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
                     </tr>
                     ))}

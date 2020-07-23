@@ -72,26 +72,24 @@ export default function Lista() {
 
                 <tbody>
                     {doadores.map(doador => (<tr key={doador.cpf}>
+                        <td className="alargarnome">{doador.name}</td>
                         <td> <Editable
                             name="username"
-                            className="editable"
                             dataType="text"
                             title="Enter username"
                             showButtons={false}
-                            value={doador.name}
+                            value={doador.cpf}
                             validate={(value) => {
                                 if (!value) {
                                     return 'Required';
                                 }
                             }}
                         /></td>
-                        <td>{doador.cpf}</td>
-
                         <td>{doador.tipo}</td>
                         <td> <Editable
-                            //name="username"
+                            name="username"
                             dataType="text"
-                            //title="Enter username"
+                            title="Enter username"
                             showButtons={false}
                             value={doador.email}
                             validate={(value) => {
@@ -101,21 +99,10 @@ export default function Lista() {
                             }}
                         /></td>
                         <td>{doador.sexo}</td>
-                        <td> <Editable
-                            name="username"
-                            dataType="text"
-                            title="Enter username"
-                            showButtons={false}
-                            value={doador.ultima}
-                            validate={(value) => {
-                                if (!value) {
-                                    return 'Required';
-                                }
-                            }}
-                        /></td>
+                        <td className="ultimadoacao">{doador.ultima}</td>
                         <div className="editaapaga"></div>
 
-                        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+                        <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit>
                         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
                     </tr>
                     ))}

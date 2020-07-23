@@ -85,8 +85,18 @@ export default function Lista() {
                                 }
                             }}
                         /></td>
-                        <td>{doador.cpf}</td>
-
+                        <td> <Editable
+                            name="username"
+                            dataType="text"
+                            title="Enter username"
+                            showButtons={false}
+                            value={doador.cpf}
+                            validate={(value) => {
+                                if (!value) {
+                                    return 'Required';
+                                }
+                            }}
+                        /></td>
                         <td>{doador.tipo}</td>
                         <td> <Editable
                             //name="username"

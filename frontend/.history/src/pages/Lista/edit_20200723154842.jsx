@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    alert("ok");
     $('#tabela tbody tr  td').dblclick(function(){ //chamando o td da tabela, dbl click pra executar função assim q o duplo clique aconteça
         if($('td > input').length >0){ //verificando se tem um elemento input q é filho de td
             return;

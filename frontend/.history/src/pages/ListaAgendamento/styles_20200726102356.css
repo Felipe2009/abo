@@ -1,0 +1,59 @@
+.apaga {
+    margin-top: 14px;
+}
+
+.ok {
+    margin-bottom: 1px;
+}
+
+.esticar {
+    padding-right: 10px;
+    width: 1700px;
+    margin-bottom: 30px;
+}
+
+.alargardia {
+    padding-right: 10px;
+    width: 1700px;
+    margin-bottom: 30px;
+}
+
+.tabelalistaagendamento {
+    background-color: rgb(239, 242, 248);
+    margin-left: 50px;
+    border-color: #666666;
+    width: 910px;
+    height: 120px;
+}
+
+.tabelalistaagendamento td {
+    height: 70px;
+}
+
+.okapaga {
+    margin-left: 35px;
+    height: 18px;
+    width: 10px;
+}
+
+.verificarestoquelistaagendamento {
+    text-decoration: none;
+    font-weight: 550;
+    color: #242424;
+    transition: opacity 0.2s;
+    margin-left: 55px;
+    font-size: 11pt;
+    position: relative;
+    top: 16px;
+}
+
+.agendamentodoacao {
+    font-weight: 550;
+    text-decoration: none;
+    color: #242424;
+    margin-left: 820px;
+    transition: opacity 0.2s;
+    font-size: 11pt;
+    position: relative;
+    margin-bottom: -60px;
+}

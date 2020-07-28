@@ -4,29 +4,12 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiTrash } from 'react-icons/fi';
-import MUIDataTable from "mui-datatables";
+
 
 export default function Espera() {
     const [precisas, setPrecisas] = useState([]);
 
     const history = useHistory();
-    const columns = ["name","rg","tipo","sexo"];
-    const data = [precisas.map(precisa => (<tr key={precisa.name}>
-
-            <td>{precisa.name}</td>
-            <td>{precisa.rg}</td>
-            <td>{precisa.tipo}</td>
-            <td>{precisa.sexo}</td>
-
-        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
-        <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash>
-    </tr>
-    ))]
-    const options = {
-        filter: true,
-        search: true,
-    };
-
 
     useEffect(() => {
         api.get('espera').then(response => {
@@ -57,21 +40,41 @@ export default function Espera() {
             <br></br>
             <Link className="verificarestoqueespera" to="/estoque"> Verificar estoque</Link>
             <br></br>
-            <Link className="agendar" to="/agendar"> Agendar Doação</Link>
-            <br></br>
+            <table border="6" className="tabelaespera">
 
-            <MUIDataTable
-                //data = {data}
-                data={precisas}
-                columns={columns}
-                options={options}
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>RG</th>
+                        <th>Tipo</th>
+                        <th>Telefone</th>
+                        <th>Sexo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {precisas.map(precisa => (
+                        // key é o valor para identificar
+                        <tr key={precisa.rg}>
 
-            >
+                            <td>{precisa.name}</td>
+                            <td>{precisa.rg}</td>
+                            <td>{precisa.tipo}</td>
+                            <td>{precisa.telefone}</td>
+                            <td>{precisa.sexo}</td>
+                            <br></br>
+                            <FiTrash classname="apagaprecisa" onClick={() => handleDeletePrecisa(precisa.rg)} type="button"></FiTrash>
+                        </tr>
+                    ))}
+                   
+                </tbody>
 
-            </MUIDataTable>  
-      
+            </table>
+
+
+
         </div>
     )
 
 }
 
+{/* <button onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> */ }

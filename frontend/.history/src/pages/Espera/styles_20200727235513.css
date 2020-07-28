@@ -171,15 +171,6 @@
     position: relative;
     text-decoration: none;
     color: #242424;
-    margin-left: 10px;
+    margin-left: 65px;
     font-weight: 550;
-    bottom: -16px;
-}
-
-.agendar {
-    text-decoration: none;
-    color: #242424;
-    position: relative;
-    font-weight: 550;
-    margin-left: 810px;
 }

@@ -19,7 +19,7 @@ export default function Espera() {
             <td>{precisa.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
-        <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash>
+        <FiTrash onClick={() => handleDeletePrecisa(precisa.cpf)} type="button"> </FiTrash>
     </tr>
     ))]
     const options = {
@@ -57,7 +57,7 @@ export default function Espera() {
             <br></br>
             <Link className="verificarestoqueespera" to="/estoque"> Verificar estoque</Link>
             <br></br>
-            <Link className="agendar" to="/agendar"> Agendar Doação</Link>
+            <Link className="agendar" to="/agendar"> Verificar estoque</Link>
             <br></br>
 
             <MUIDataTable

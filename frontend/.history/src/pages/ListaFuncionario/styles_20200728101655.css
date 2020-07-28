@@ -62,27 +62,11 @@
     height: 50px;
 }
 
-table th {
-    width: 450px;
-    border: 2px solid;
-    border-style: double;
-}
-
-table td {
-    text-align: center;
-    font-size: 12pt;
-    border: 2px solid;
-    border-color: black;
-    border-style: double;
-}
-
 .verificarestoquelistafunc {
     text-decoration: none;
     margin-left: 10px;
     color: #242424;
     font-weight: 550;
-    position: relative;
-    bottom: -15px;
 }
 
 .agendarlistafunc {

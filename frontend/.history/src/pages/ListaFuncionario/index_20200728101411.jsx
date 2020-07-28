@@ -68,12 +68,9 @@ export default function ListaFuncionario() {
             <Link className="verificarestoquelistafunc" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <Link className="agendarlistafunc" to="/agendar"> Agendar Doação</Link>
-            <br></br>
-
             <MUIDataTable
                 //data = {data}
-                data={funcionarios}
+                data={precisas}
                 columns={columns}
                 options={options}
 

@@ -17,7 +17,7 @@ export default function ListaAgendamento() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name","rg","tipo","sexo"];
+    const columns = ["Name","rg","tipo","sexo"];
     const data = [agenda.map(agendar => (<tr key={agendar.name}>
 
             <td>{agendar.name}</td>

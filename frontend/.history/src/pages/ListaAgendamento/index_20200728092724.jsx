@@ -17,13 +17,11 @@ export default function ListaAgendamento() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name","rg","tipo","sexo"];
+    const columns = ["name","tipo"];
     const data = [agenda.map(agendar => (<tr key={agendar.name}>
 
             <td>{agendar.name}</td>
-            <td>{agendar.rg}</td>
             <td>{agendar.tipo}</td>
-            <td>{agendar.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteAgendamento(agendar.cpf)} type="button"> </FiTrash>

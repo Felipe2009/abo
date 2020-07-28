@@ -7,6 +7,7 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 // import Editable from 'react-x-editable';
 // import { FaSearch } from 'react-icons/fa'
 import MUIDataTable from "mui-datatables";
+import TableRow from '@material-ui/core/TableRow'
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);

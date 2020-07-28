@@ -3,8 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash } from 'react-icons/fi';
-import MUIDataTable from "mui-datatables";
+import {FiTrash } from 'react-icons/fi';
 
 
 export default function ListaFuncionario() {
@@ -21,24 +20,6 @@ export default function ListaFuncionario() {
         })
     }, [funcionarioEmail]);
 
-    const columns = ["name", "cpf", "email"];
-    const data = [funcionarios.map(funcionario => (<tr key={funcionario.name}>
-
-        <td>{funcionario.name}</td>
-        <td>{funcionario.rg}</td>
-        <td>{funcionario.tipo}</td>
-        <td>{funcionario.sexo}</td>
-
-        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
-        <FiTrash onClick={() => handleDeleteFuncionario(funcionario.cpf)} type="button"> </FiTrash>
-    </tr>
-    ))]
-    const options = {
-        filter: true,
-        search: true,
-    };
-
-
     async function handleDeleteFuncionario(cpf) {
         try {
             await api.delete(`funcionario/${cpf}`, {
@@ -50,7 +31,7 @@ export default function ListaFuncionario() {
             alert("Erro ao deletar pessoa")
         }
     }
-
+    
 
     return (
         <div className="listafuncionario-container">
@@ -59,7 +40,7 @@ export default function ListaFuncionario() {
 
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
-
+                
             </header>
 
             <h1 className="textao">Lista de Funcionarios</h1>
@@ -68,19 +49,32 @@ export default function ListaFuncionario() {
             <Link className="verificarestoquelistafunc" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <Link className="agendarlistafunc" to="/agendar"> Agendar Doação</Link>
-            <br></br>
+            <table id="tabela" border="3" className="tabelalistafunc">
 
-            <MUIDataTable
-                //data = {data}
-                data={funcionarios}
-                columns={columns}
-                options={options}
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {funcionarios.map(funcionario => (<tr key={funcionario.cpf}>
+                        <td className="nome">{funcionario.name}</td>
+                        <td>{funcionario.cpf}</td>
+                        <td className="alargaremail">{funcionario.email}</td>
+                        <td>{funcionario.whatsapp}</td>
+                      
+                        <div className="apagar"></div>
+                        <FiTrash className="apagafunc" onClick={() => handleDeleteFuncionario(funcionario.cpf)} type="button"> </FiTrash>
+                    </tr>
+                    ))}
 
-            >
+                </tbody>
 
-            </MUIDataTable>
-
+            </table>
         </div>
     )
 

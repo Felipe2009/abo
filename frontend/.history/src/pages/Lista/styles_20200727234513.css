@@ -124,7 +124,7 @@ table td {
     text-decoration: none;
     color: #242424;
     font-weight: 550;
-    bottom: 2px;
+    bottom: -6px;
 }
 
 .editable-container {

@@ -4,9 +4,8 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiCheck, FiTrash } from 'react-icons/fi';
-// import Editable from 'react-x-editable';
-// import {FaSearch} from 'react-icons/fa'
-import MUIDataTable from "mui-datatables";
+import Editable from 'react-x-editable';
+import {FaSearch} from 'react-icons/fa'
 
 
 export default function ListaAgendamento() {
@@ -17,13 +16,11 @@ export default function ListaAgendamento() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name","rg","tipo","sexo"];
+    const columns = ["name","tipo"];
     const data = [agenda.map(agendar => (<tr key={agendar.name}>
 
             <td>{agendar.name}</td>
-            <td>{agendar.rg}</td>
             <td>{agendar.tipo}</td>
-            <td>{agendar.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteAgendamento(agendar.cpf)} type="button"> </FiTrash>
@@ -72,15 +69,7 @@ export default function ListaAgendamento() {
             <Link className="agendamentodoacao" to="/agendar"> Agendar doação</Link>
             <br></br>
              
-            <MUIDataTable
-                //data = {data}
-                data={agenda}
-                columns={columns}
-                options={options}
-
-            >
-
-            </MUIDataTable>  
+                     
                 
 
         </div>

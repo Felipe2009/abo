@@ -76,18 +76,23 @@ table td {
     border-style: double;
 }
 
+.apagafunc {
+    margin-bottom: 30px;
+    margin-top: 14px;
+}
+
+.apagar {
+    width: 20px;
+    margin-top: 10px;
+}
+
+.nome {
+    text-align: center;
+    width: 1400px;
+}
+
 .verificarestoquelistafunc {
     text-decoration: none;
     margin-left: 10px;
     color: #242424;
-    font-weight: 550;
-    position: relative;
-    bottom: -15px;
-}
-
-.agendarlistafunc {
-    text-decoration: none;
-    margin-left: 810px;
-    color: #242424;
-    font-weight: 550;
 }

@@ -19,7 +19,7 @@ export default function Espera() {
             <td>{precisa.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
-        <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash>
+        <FiTrash onClick={() => handleDeletePrecisa(precisa.cpf)} type="button"> </FiTrash>
     </tr>
     ))]
     const options = {

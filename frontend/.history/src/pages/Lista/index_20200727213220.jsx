@@ -17,13 +17,12 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "cpf", "tipo","sexo"];
+    const columns = ["Name", "CPF", "Tipo"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
 
             <td>{doador.name}</td>
             <td>{doador.cpf}</td>
             <td>{doador.tipo}</td>
-            <td>{doador.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
@@ -80,8 +79,7 @@ export default function Lista() {
 
             <MUIDataTable
                 title={"Lista"}
-                //data = {data}
-                data={doadores}
+                data={data}
                 columns={columns}
                 options={options}
 

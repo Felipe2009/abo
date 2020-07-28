@@ -7,7 +7,7 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 // import Editable from 'react-x-editable';
 // import { FaSearch } from 'react-icons/fa'
 import MUIDataTable from "mui-datatables";
-import TableRow from '@material-ui/core/TableRow'
+
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
@@ -17,18 +17,26 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "cpf", "tipo","sexo"];
-    const data = [doadores.map(doador => (<tr key={doador.cpf}>
+    const columns = ["Name", "CPF"];
+    const doador = [{ "Name": doadores.name, "CPF": doadores.cpf }]
 
-            <td>{doador.name}</td>
-            <td>{doador.cpf}</td>
-            <td>{doador.tipo}</td>
-            <td>{doador.sexo}</td>
+    // const data = [doadores.map(doador => (<tr key={doador.cpf}>
 
-        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
-        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
-    </tr>
-    ))]
+    //     <tbody>
+
+    //         <tr>{doador.name}</tr>
+    //         <tr>{doador.name}</tr>
+    //         <tr>{doador.name}</tr>
+    //         <tr>{doador.name}</tr>
+    //         <tr>{doador.name}</tr>
+    //         <tr>{doador.ultima}</tr>
+
+    //     </tbody>
+
+    //     {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+    //     <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
+    // </tr>
+    // ))]
     const options = {
         filter: true,
         search: true,
@@ -80,8 +88,12 @@ export default function Lista() {
 
             <MUIDataTable
                 title={"Lista"}
-                //data = {data}
-                data={doadores}
+                data={doador.map(doadores => {
+                    render (
+                    doadores.name,
+                    doadores.cpf
+                    )
+                })}
                 columns={columns}
                 options={options}
 

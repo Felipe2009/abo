@@ -17,13 +17,12 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "cpf", "tipo","sexo"];
+    const columns = ["Name", "Cpf", "Tipo"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
 
             <td>{doador.name}</td>
             <td>{doador.cpf}</td>
             <td>{doador.tipo}</td>
-            <td>{doador.sexo}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>

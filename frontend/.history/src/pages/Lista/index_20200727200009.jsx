@@ -4,10 +4,10 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
-// import Editable from 'react-x-editable';
-// import { FaSearch } from 'react-icons/fa'
+import Editable from 'react-x-editable';
+import { FaSearch } from 'react-icons/fa'
 import MUIDataTable from "mui-datatables";
-import TableRow from '@material-ui/core/TableRow'
+
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
@@ -17,22 +17,25 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "cpf", "tipo","sexo"];
+    const columns = ["Name", "CPF", "Tipo", "Email", "Sexo", "Ultima"];
+    
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
+        
+        <tbody>
 
-            <td>{doador.name}</td>
-            <td>{doador.cpf}</td>
-            <td>{doador.tipo}</td>
-            <td>{doador.sexo}</td>
+            <tr>{doador.name}</tr>
+            <tr>{doador.name}</tr>
+            <tr>{doador.name}</tr>
+            <tr>{doador.name}</tr>
+            <tr>{doador.name}</tr>
+            <tr>{doador.ultima}</tr>
+
+        </tbody>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
     </tr>
     ))]
-    const options = {
-        filter: true,
-        search: true,
-    };
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -80,11 +83,8 @@ export default function Lista() {
 
             <MUIDataTable
                 title={"Lista"}
-                //data = {data}
-                data={doadores}
+                data={doadores.map(data)}
                 columns={columns}
-                options={options}
-
             >
 
             </MUIDataTable>

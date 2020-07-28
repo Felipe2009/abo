@@ -4,10 +4,10 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
-// import Editable from 'react-x-editable';
-// import { FaSearch } from 'react-icons/fa'
+import Editable from 'react-x-editable';
+import { FaSearch } from 'react-icons/fa'
 import MUIDataTable from "mui-datatables";
-import TableRow from '@material-ui/core/TableRow'
+
 
 export default function Lista() {
     const [doadores, setDoadores] = useState([]);
@@ -17,22 +17,29 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "cpf", "tipo","sexo"];
+    const options = {
+        filter: "true",
+      };
+    const columns = ["Name", "CPF", "Tipo", "Email", "Sexo", "Ultima"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
 
-            <td>{doador.name}</td>
-            <td>{doador.cpf}</td>
-            <td>{doador.tipo}</td>
-            <td>{doador.sexo}</td>
+        {doador.name}
+         {doador.cpf}
+        {doador.tipo}
+        {doador.email}
+        {doador.sexo}
+        {doador.ultima}
+        
+
+        <div className="editaapaga"></div>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
     </tr>
     ))]
-    const options = {
-        filter: true,
-        search: true,
-    };
+
+
+    // <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -79,15 +86,24 @@ export default function Lista() {
             <br></br>
 
             <MUIDataTable
-                title={"Lista"}
-                //data = {data}
-                data={doadores}
+                title={"Employee List"}
+                data={data}
                 columns={columns}
                 options={options}
-
             >
 
             </MUIDataTable>
+
+
+
+            {/* <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css"></link>
+
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script> */}
+
+
         </div>
+
     )
+
+
 }

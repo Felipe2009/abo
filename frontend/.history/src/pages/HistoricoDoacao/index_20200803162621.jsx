@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import MUIDataTable from "mui-datatables";
 
+
 export default function HistoricoDoacao() {
     const [historicos, setHistoricos] = useState([]);
     const history = useHistory();

@@ -4,6 +4,7 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import MUIDataTable from "mui-datatables";
+import { FaPencilAlt } from "react-icons/fa";
 
 export default function HistoricoDoacao() {
     const [historicos, setHistoricos] = useState([]);
@@ -30,6 +31,7 @@ export default function HistoricoDoacao() {
         search: true,
     };
 
+    <FaPencilAlt></FaPencilAlt>
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('historico').then(response => {

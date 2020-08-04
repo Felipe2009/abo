@@ -4,6 +4,7 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import MUIDataTable from "mui-datatables";
+import { BsPlusCircle } from "react-icons/bs";
 
 export default function HistoricoDoacao() {
     const [historicos, setHistoricos] = useState([]);

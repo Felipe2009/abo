@@ -15,13 +15,13 @@ export default function HistoricoDoacao() {
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
     const columns = ["name", "dia", "condicao", "tipo", "sexo","quantidade"];
-    const data = [historicos.map(historico => (<tr key={historico.name}>
+    const data = [historicos.map(doador => (<tr key={doador.name}>
 
-        <td>{historico.name}</td>
-        <td>{historico.dia}</td>
-        <td>{historico.condicao}</td>
-        <td>{historico.tipo}</td>
-        <td>{historico.sexo}</td>
+        <td>{doador.name}</td>
+        <td>{doador.dia}</td>
+        <td>{doador.condicao}</td>
+        <td>{doador.tipo}</td>
+        <td>{doador.sexo}</td>
         
     </tr>
     ))]

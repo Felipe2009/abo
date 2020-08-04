@@ -20,6 +20,7 @@ export default function Lista() {
 
     const columns = ["name", "cpf", "tipo", "sexo", "ultima"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
+        <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash>
 
         <td>{doador.name}</td>
         <td>{doador.cpf}</td>
@@ -86,7 +87,6 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
 
         </div>
     )

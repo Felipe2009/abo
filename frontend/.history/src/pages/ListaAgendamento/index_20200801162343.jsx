@@ -27,7 +27,7 @@ export default function ListaAgendamento() {
     const data = [agenda.map(agendar => (<tr key={agendar.name}>
 
         <td>{agendar.name}</td>
-        <td>{agendar.dia}</td>
+        <td>{agendar.date}</td>
         <td>{agendar.horario}</td>
         <td>{agendar.tipo}</td>
         <td>{agendar.sexo}</td>

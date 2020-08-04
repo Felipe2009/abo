@@ -86,7 +86,7 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
+            <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
 
         </div>
     )

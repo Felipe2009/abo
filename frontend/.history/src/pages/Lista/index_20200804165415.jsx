@@ -56,6 +56,7 @@ export default function Lista() {
             alert("Erro ao deletar pessoa")
         }
     }
+    <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
 
     return (
 
@@ -86,7 +87,6 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
 
         </div>
     )

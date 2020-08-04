@@ -76,6 +76,7 @@ export default function Lista() {
             <br></br>
             <Link className="agendalista" to="/agendar"> Agendar doação</Link>
             <br></br>
+            <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash>
 
             <MUIDataTable
                 //data = {data}
@@ -86,7 +87,6 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
 
         </div>
     )

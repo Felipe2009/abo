@@ -21,6 +21,7 @@ export default function ListaAgendamento() {
     var dateFormatted = day + '/' + (month++) + '/' + year;
 
     console.log(dateFormatted);
+    agendar.dia.sort();
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const columns = ["name", "dia", "horario", "tipo", "sexo"];

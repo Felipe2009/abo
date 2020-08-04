@@ -23,10 +23,10 @@ export default function Espera() {
         <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash>
     </tr>
     ))]
-    // const options = {
-    //     filter: true,
-    //     search: true,
-    // };
+    const options = {
+        filter: true,
+        search: true,
+    };
 
 
     useEffect(() => {
@@ -65,7 +65,7 @@ export default function Espera() {
                 //data = {data}
                 data={precisas}
                 columns={columns}
-                //options={options}
+                options={options}
 
             >
 

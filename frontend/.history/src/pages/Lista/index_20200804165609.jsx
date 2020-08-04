@@ -71,6 +71,7 @@ export default function Lista() {
 
             <h1 className="textao">Doadores cadastrados</h1>
             <br></br>
+            <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
 
             <Link className="verificarestoquelista" to="/estoque"> Verificar estoque</Link>
             <br></br>
@@ -86,7 +87,6 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
 
         </div>
     )

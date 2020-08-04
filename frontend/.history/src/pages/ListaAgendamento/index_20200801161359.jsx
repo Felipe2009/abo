@@ -14,25 +14,19 @@ export default function ListaAgendamento() {
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
-    var date = new Date()
-    var day = date.getDate();
-    var month = date.getMonth();
-    var year = date.getFullYear();
-    var dateFormatted = day + '/' + (month++) + '/' + year;
 
-    console.log(dateFormatted);
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-    const columns = ["name", "dia", "horario", "tipo", "sexo"];
+    const columns = ["name","dia","horario","tipo","sexo"];
     const data = [agenda.map(agendar => (<tr key={agendar.name}>
 
-        <td>{agendar.name}</td>
-        <td>{agendar.dia}</td>
-        <td>{agendar.horario}</td>
-        <td>{agendar.tipo}</td>
-        <td>{agendar.sexo}</td>
+            <td>{agendar.name}</td>
+            <td>{agendar.dia}</td>
+            <td>{agendar.horario}</td>
+            <td>{agendar.tipo}</td>
+            <td>{agendar.sexo}</td>
 
-        <FiCheck type="button" className="editar"></FiCheck>
+        <FiCheck type="button" className="editar"></FiCheck> 
         <FiTrash onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
     </tr>
     ))]
@@ -40,6 +34,7 @@ export default function ListaAgendamento() {
         filter: true,
         search: true,
     };
+
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('listaagendamento').then(response => {
@@ -66,7 +61,7 @@ export default function ListaAgendamento() {
                 <img src={logoImg} />
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
-
+               
             </header>
 
             <h1 className="textao">Lista de Agendamento</h1>
@@ -77,7 +72,7 @@ export default function ListaAgendamento() {
 
             <Link className="agendamentodoacao" to="/agendar"> Agendar doação</Link>
             <br></br>
-
+             
             <MUIDataTable
                 //data = {data}
                 data={agenda}
@@ -86,10 +81,9 @@ export default function ListaAgendamento() {
 
             >
 
-            </MUIDataTable>
-
+            </MUIDataTable>  
+                
 
         </div>
-
-    )
-}
+    
+    )}

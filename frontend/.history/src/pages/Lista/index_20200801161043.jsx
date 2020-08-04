@@ -4,9 +4,8 @@ import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiEdit, FiTrash } from 'react-icons/fi';
-//import { BsPlusCircle } from "react-icons/bs";
-//import Editable from 'react-x-editable';
-import { FaPlus } from 'react-icons/fa'
+import Editable from 'react-x-editable';
+// import { FaSearch } from 'react-icons/fa'
 import MUIDataTable from "mui-datatables";
 
 export default function Lista() {
@@ -17,26 +16,22 @@ export default function Lista() {
 
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-
-    const columns = ["name", "cpf", "tipo", "sexo", "ultima"];
+    const columns = ["name", "cpf", "tipo","sexo","ultima"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
+            <td>{doador.name}</td>
+            <td>{doador.cpf}</td>
+            <td>{doador.tipo}</td>
+            <td>{doador.sexo}</td>
+            <td>{doador.ultima}</td>
 
-        <td>{doador.name}</td>
-        <td>{doador.cpf}</td>
-        <td>{doador.tipo}</td>
-        <td>{doador.sexo}</td>
-        <td>{doador.ultima}</td>
-        <FaPlus></FaPlus>
-
-        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+            {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
     </tr>
     ))]
-
     const options = {
         filter: true,
         search: true,
     };
-
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -65,6 +60,8 @@ export default function Lista() {
 
                 <img src={logoImg} />
                 <script type="text/javascript" src="edit.jsx"></script>
+
+
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
             </header>
@@ -82,12 +79,8 @@ export default function Lista() {
                 data={doadores}
                 columns={columns}
                 options={options}
-
             >
-
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
-
         </div>
     )
 }

@@ -20,18 +20,18 @@ export default function Lista() {
 
     const columns = ["name", "cpf", "tipo", "sexo", "ultima"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
-
         <td>{doador.name}</td>
         <td>{doador.cpf}</td>
         <td>{doador.tipo}</td>
         <td>{doador.sexo}</td>
         <td>{doador.ultima}</td>
-        <FaPlus></FaPlus>
+        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
+<FaPlus></FaPlus>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
     </tr>
     ))]
-
+    
     const options = {
         filter: true,
         search: true,
@@ -84,10 +84,7 @@ export default function Lista() {
                 options={options}
 
             >
-
             </MUIDataTable>
-            {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
-
         </div>
     )
 }

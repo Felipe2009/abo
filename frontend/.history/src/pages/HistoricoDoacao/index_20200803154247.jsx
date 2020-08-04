@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import MUIDataTable from "mui-datatables";
+
 
 export default function HistoricoDoacao() {
     const [historicos, setHistoricos] = useState([]);
@@ -14,21 +14,6 @@ export default function HistoricoDoacao() {
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
-    const columns = ["name", "dia", "condicao", "tipo", "sexo","quantidade"];
-    const data = [historicos.map(historico => (<tr key={historico.name}>
-
-        <td>{historico.name}</td>
-        <td>{historico.dia}</td>
-        <td>{historico.condicao}</td>
-        <td>{historico.tipo}</td>
-        <td>{historico.sexo}</td>
-        
-    </tr>
-    ))]
-    const options = {
-        filter: true,
-        search: true,
-    };
 
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
@@ -43,6 +28,7 @@ export default function HistoricoDoacao() {
             <header>
                 <img src={logoImg} />
                 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+                <script type="text/javascript" src="script.js"></script>
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
                 <Link className="voltar" to="/"> Voltar para home</Link>
 
@@ -54,18 +40,8 @@ export default function HistoricoDoacao() {
             <Link className="verificarestoquehistorico" to="/estoque"> Verificar estoque</Link>
             <br></br>
 
-            <Link className="agendardoacaohistorico" to="/agendar">Agendar Doação</Link>
+            <Link className="agendardoacaohistorico" to="/agendar">Agrndar Doação</Link>
             <br></br>
-            <MUIDataTable
-                //data = {data}
-                data={historicos}
-                columns={columns}
-                options={options}
-
-            >
-
-            </MUIDataTable>
-
         </div>
     )
 

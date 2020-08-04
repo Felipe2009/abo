@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import MUIDataTable from "mui-datatables";
 
+
 export default function HistoricoDoacao() {
     const [historicos, setHistoricos] = useState([]);
     const history = useHistory();
@@ -14,12 +15,12 @@ export default function HistoricoDoacao() {
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
 
-    const columns = ["name", "dia", "condicao", "tipo", "sexo","quantidade"];
+    const columns = ["name", "dia", "horario", "tipo", "sexo","quantidade"];
     const data = [historicos.map(historico => (<tr key={historico.name}>
 
         <td>{historico.name}</td>
         <td>{historico.dia}</td>
-        <td>{historico.condicao}</td>
+        <td>{historico.horario}</td>
         <td>{historico.tipo}</td>
         <td>{historico.sexo}</td>
         

@@ -40,6 +40,7 @@ export default function ListaAgendamento() {
         filter: true,
         search: true,
     };
+    dia.sort();
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('listaagendamento').then(response => {

@@ -14,13 +14,7 @@ export default function ListaAgendamento() {
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
-    var date = new Date()
-    var day = date.getDate();
-    var month = date.getMonth();
-    var year = date.getFullYear();
-    var dateFormatted = day + '/' + (month++) + '/' + year;
 
-    console.log(dateFormatted);
 
     const funcionarioEmail = localStorage.getItem('funcionarioEmail');
     const columns = ["name", "dia", "horario", "tipo", "sexo"];
@@ -40,6 +34,14 @@ export default function ListaAgendamento() {
         filter: true,
         search: true,
     };
+
+    var date = new Date()
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var dateFormatted = day + '/' + (month++) + '/' + year;
+
+    console.log(dateFormatted);
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('listaagendamento').then(response => {

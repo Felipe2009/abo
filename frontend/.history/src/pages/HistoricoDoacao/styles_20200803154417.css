@@ -3,9 +3,7 @@
     color: #242424;
     font-size: 11pt;
     font-weight: 550;
-    margin-left: 10px;
-    position: relative;
-    top: 15px;
+    margin-left: 50px;
 }
 
 .agendardoacaohistorico {
@@ -13,7 +11,7 @@
     color: #242424;
     font-size: 11pt;
     font-weight: 550;
-    margin-left: 800px;
-    top: -1px;
+    margin-left: 750px;
+    top: 40px;
     position: relative;
 }

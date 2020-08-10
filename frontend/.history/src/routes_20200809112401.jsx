@@ -14,7 +14,7 @@ import Agendar from './pages/Agendar'
 import listaAgendamento from './pages/ListaAgendamento'
 import historicoDoacao from './pages/HistoricoDoacao'
 import cadastroHistorico from './pages/CadastroHistorico'
-import fluxo from './pages/Fluxo'
+
 
 
 export default function Routes(){
@@ -34,8 +34,6 @@ export default function Routes(){
             <Route path="/listaAgendamento" component={listaAgendamento} /> 
             <Route path="/historicoDoacao" component={historicoDoacao} /> 
             <Route path="/cadastroHistorico" component={cadastroHistorico} /> 
-            <Route path="/fluxo" component={fluxo} /> 
-
 
         </Switch>
         

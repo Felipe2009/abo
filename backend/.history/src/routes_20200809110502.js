@@ -11,7 +11,6 @@ const AgendarController = require('./controllers/AgendarController')
 const ListaAgendamentoController = require('./controllers/ListaAgendamentoController');
 const HistoricoController = require('./controllers/HistoricoController')
 const CadastroHistoricoController = require('./controllers/CadastroHistoricoController')
-const FluxoController = require('./controllers/FluxoController')
 
 
 const routes = express.Router();
@@ -48,6 +47,5 @@ routes.get('/cadastroHistorico', CadastroHistoricoController.index)
 routes.post('/cadastroHistorico', CadastroHistoricoController.create)
 routes.delete('/cadastroHistorico', CadastroHistoricoController.delete)
 
-routes.get('/fluxo', FluxoController.index)
 
 module.exports = routes; //exportando variavel dentro de um arquivo

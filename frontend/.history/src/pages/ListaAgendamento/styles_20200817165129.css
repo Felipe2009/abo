@@ -70,5 +70,5 @@
     border-bottom: 5px solid #dddddd;
     border-right: 5px solid #dddddd;
     border-style: groove;
-    display: table-cell;
+    display: flex;
 }

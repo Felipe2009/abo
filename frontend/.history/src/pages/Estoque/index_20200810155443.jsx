@@ -57,9 +57,9 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number" 
+                    <input className="xxx" type="number" ></input>
 
-                    />           bolsas
+                               bolsas
 
                     
                     <img className="figurab" src={figuraaa}></img>

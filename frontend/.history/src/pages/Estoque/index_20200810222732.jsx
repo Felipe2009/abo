@@ -78,7 +78,7 @@ export default function Estoque() {
                     <br></br>
 
                     <strong>Quantidade Disponível:</strong>
-                    <input className="xxx" type="number"
+                    <input  type="number"
 
                     />             bolsas
 

@@ -32,7 +32,7 @@ export default function CadastroHistorico() {
         };
         try {
             await api.post('cadastroHistorico', data)
-             history.push('/fluxo');
+            // history.push('/lista');
         } catch (err) {
             alert("Erro ao cadastrar")
         }
@@ -89,7 +89,7 @@ export default function CadastroHistorico() {
                         <option value="AB+">AB+</option>
                         <option value="AB-">AB-</option>
                         <option value="O+">O+</option>
-                        <option value="O-">O-</option>
+                        <option value="O+">O-</option>
 
                     </select>
 

@@ -69,6 +69,5 @@
     border-top: 5px solid #dddddd;
     border-bottom: 5px solid #dddddd;
     border-right: 5px solid #dddddd;
-    border-style: groove;
-    display: table-cell;
+    border-style: dashed;
 }

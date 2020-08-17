@@ -65,10 +65,6 @@
 }
 
 .cell-border {
-    border-left: 5px solid #dddddd;
-    border-top: 5px solid #dddddd;
-    border-bottom: 5px solid #dddddd;
-    border-right: 5px solid #dddddd;
-    border-style: groove;
-    display: table-cell;
+    border-top: 5px solid #ddd;
+    border-right: 5px solid #ce7878;
 }

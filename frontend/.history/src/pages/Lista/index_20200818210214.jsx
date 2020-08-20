@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
-import { FiTrash } from 'react-icons/fi';
+import { FiEdit, FiTrash } from 'react-icons/fi';
 //import { BsPlusCircle } from "react-icons/bs";
 //import Editable from 'react-x-editable';
 import MUIDataTable from "mui-datatables";
@@ -18,20 +18,17 @@ export default function Lista() {
 
     const columns = ["name", "cpf", "tipo", "sexo"];
     const data = [doadores.map(doador => (<tr key={doador.cpf}>
-        <table id="myTable">
-            <tbody>
-                <tr>
+<table id="mytable">
 
-                    <td>{doador.name}</td>
-                    <td>{doador.cpf}</td>
-                    <td>{doador.tipo}</td>
-                    <td>{doador.sexo}</td>
-                </tr>
-            </tbody>
+        <td>{doador.name}</td>
+        <td>{doador.cpf}</td>
+        <td>{doador.tipo}</td>
+        <td>{doador.sexo}</td>
         </table>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
+        {/* <FaPlus type="submit" onClick={() => handleMais(doador.cpf)} className="mais"></FaPlus> */}
 
     </tr>
     ))]
@@ -39,21 +36,14 @@ export default function Lista() {
         filter: true,
         search: true,
         responsive: "standard"
-        
     };
 
-    var myTable = $('#myTable').DataTable();
-
-    $('#myTable').on('click', 'td', function () {
-        myTable.row(this).delete();
-    });
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('lista').then(response => {
             setDoadores(response.data);
         })
     }, [funcionarioEmail]);
-
 
     async function handleDeleteDoador(cpf) {
         try {
@@ -66,8 +56,11 @@ export default function Lista() {
             alert("Erro ao deletar pessoa")
         }
     }
-   
-    
+    var myTable = $('#myTable').DataTable();
+
+    $('#myTable').on('click', function () {
+        myTable.row(this).delete();
+    });
     return (
 
         <div className="lista-container" >
@@ -89,7 +82,6 @@ export default function Lista() {
             <Link className="agendalista" to="/agendar"> Agendar doação</Link>
             <br></br>
 
-
             <MUIDataTable className="cell-border"
                 //data = {data}
                 data={doadores}
@@ -99,8 +91,6 @@ export default function Lista() {
             >
 
             </MUIDataTable>
-
-
             {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
         </div>
     )

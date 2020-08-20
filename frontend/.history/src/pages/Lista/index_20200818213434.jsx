@@ -39,14 +39,13 @@ export default function Lista() {
         filter: true,
         search: true,
         responsive: "standard"
-        
     };
+    <script>
+                $('table tbody').on('click','btn', function(){
+                    $(this).closest('tr').remove()
+                })
+    </script>
 
-    var myTable = $('#myTable').DataTable();
-
-    $('#myTable').on('click', 'td', function () {
-        myTable.row(this).delete();
-    });
     // use effect serve para disparar uma função em um determinado momento do componente
     useEffect(() => {
         api.get('lista').then(response => {
@@ -66,8 +65,15 @@ export default function Lista() {
             alert("Erro ao deletar pessoa")
         }
     }
-   
-    
+
+    // var myTable = $('#myTable').DataTable();
+
+    // $('#myTable').on('click', 'td', function () {
+    //     myTable.row(this).delete();
+    // });
+
+
+
     return (
 
         <div className="lista-container" >
@@ -88,7 +94,7 @@ export default function Lista() {
             <br></br>
             <Link className="agendalista" to="/agendar"> Agendar doação</Link>
             <br></br>
-
+            
 
             <MUIDataTable className="cell-border"
                 //data = {data}

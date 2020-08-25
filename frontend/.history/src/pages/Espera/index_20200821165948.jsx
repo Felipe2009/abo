@@ -28,25 +28,23 @@ export default function Espera() {
             </table>
         </tbody>
 
-
-
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
-    $('#tabela tbody').on('click', 'img.icon-delete', function () {
-        table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
-    });
     const options = {
         filter: true,
         search: true,
         responsive: "standard"
     };
+    var table = $('#tabela').DataTable();
 
+    $('#tabela tbody').on('click', function () {
+        table
+            .row($(this).parents('tr'))
+            .remove()
+            .draw();
+    });
     // $(document).ready(function () {
     //     var table = $('#tabela').DataTable();
 

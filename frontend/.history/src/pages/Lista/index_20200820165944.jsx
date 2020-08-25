@@ -30,7 +30,8 @@ export default function Lista() {
             </tbody>
         </table>
 
-        <FiTrash onClick={() => handleDeleteDoador(doador.cpf)} type="button"> </FiTrash>
+        {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
+        <FiTrash onClick={() => handleDeleteDoador(this)} type="button"> </FiTrash>
 
     </tr>
     ))]
@@ -40,6 +41,7 @@ export default function Lista() {
         responsive: "standard"
 
     };
+
 
     // var myTable = $('#myTable').DataTable();
 
@@ -72,13 +74,13 @@ export default function Lista() {
 
         <div className="lista-container" >
 
-            { (function ($) {
+            (function ($) {
                 handleDeleteDoador = function (cpf) {
                     var tr = $(cpf).closest('tr');
                     tr.fadeOut(400, function () { tr.remove(); });
                     return false;
                 }
-})}
+            });
             <header>
 
                 <img src={logoImg} />
@@ -107,7 +109,5 @@ export default function Lista() {
 
             {/* <FiTrash onClick={() => handleDeleteDoador(doadores.cpf)} type="button"> </FiTrash> */}
         </div>
-
     )
-        
 }

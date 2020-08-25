@@ -74,7 +74,7 @@ export default function Lista() {
 
             { (function ($) {
                 handleDeleteDoador = function (cpf) {
-                    var tr = $(cpf).closest('tr');
+                    var tr = $(cpf).closest('td');
                     tr.fadeOut(400, function () { tr.remove(); });
                     return false;
                 }

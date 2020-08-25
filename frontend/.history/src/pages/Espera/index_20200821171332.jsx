@@ -27,6 +27,7 @@ export default function Espera() {
                 <td>{precisa.quantidade}</td>
             </table>
         </tbody>
+        var table = $('#tabela').DataTable();
 
 
 
@@ -34,7 +35,6 @@ export default function Espera() {
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
     $('#tabela tbody').on('click', 'img.icon-delete', function () {
         table
             .row($(this).parents('tr'))

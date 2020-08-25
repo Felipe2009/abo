@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiTrash } from 'react-icons/fi';
 import MUIDataTable from "mui-datatables";
+import { FaPlus } from 'react-icons/fa'
 
 
 export default function Espera() {
@@ -13,63 +14,32 @@ export default function Espera() {
     const history = useHistory();
     const $ = require('jquery');
     $.DataTable = require('datatables.net');
-
-    const funcionarioEmail = localStorage.getItem('funcionarioEmail');
-
-    const columns = ["name", "rg", "tipo", "sexo", "quantidade"];
+    
+    const columns = ["name","rg","tipo","sexo","quantidade"];
     const data = [precisas.map(precisa => (<tr key={precisa.name}>
-        <tbody>
-            <table id="tabela">
-                <td>{precisa.name}</td>
-                <td>{precisa.rg}</td>
-                <td>{precisa.tipo}</td>
-                <td>{precisa.sexo}</td>
-                <td>{precisa.quantidade}</td>
-            </table>
-        </tbody>
+    <FaPlus></FaPlus>
 
-
+            <td>{precisa.name}</td>
+            <td>{precisa.rg}</td>
+            <td>{precisa.tipo}</td>
+            <td>{precisa.sexo}</td>
+            <td>{precisa.quantidade}</td>
 
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
-    $('#tabela tbody').on('click', 'img.icon-delete', function () {
-        table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
-    });
-    const options = {
+     const options = {
         filter: true,
         search: true,
-        responsive: "standard"
-    };
+     };
 
-    // $(document).ready(function () {
-    //     var table = $('#tabela').DataTable();
-
-    //     $('#tabela tbody').on('click', 'tr', function () {
-    //         if ($(this).hasClass('selected')) {
-    //             $(this).removeClass('selected');
-    //         }
-    //         else {
-    //             table.$('tr.selected').removeClass('selected');
-    //             $(this).addClass('selected');
-    //         }
-    //     });
-
-    //     $('#button').click(function () {
-    //         table.row('.selected').remove().draw(false);
-    //     });
-    // });
 
     useEffect(() => {
         api.get('espera').then(response => {
             setPrecisas(response.data);
         })
-    }, [funcionarioEmail]);
+    });
     // async function handleDeletePrecisa(rg) {
     //     try {
     //         await api.delete(`precisa/${rg}`, {
@@ -105,9 +75,8 @@ export default function Espera() {
 
             >
 
-            </MUIDataTable>
-
-
+            </MUIDataTable>  
+      
         </div>
     )
 

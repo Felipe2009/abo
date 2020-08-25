@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiTrash } from 'react-icons/fi';
 import MUIDataTable from "mui-datatables";
+import { FaPlus } from 'react-icons/fa'
 
 
 export default function Espera() {
@@ -28,42 +29,32 @@ export default function Espera() {
             </table>
         </tbody>
 
-
-
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
-    $('#tabela tbody').on('click', 'img.icon-delete', function () {
-        table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
-    });
     const options = {
         filter: true,
         search: true,
         responsive: "standard"
     };
+    $(document).ready(function () {
+        var table = $('#tabela').DataTable();
 
-    // $(document).ready(function () {
-    //     var table = $('#tabela').DataTable();
+        $('#tabela tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
 
-    //     $('#tabela tbody').on('click', 'tr', function () {
-    //         if ($(this).hasClass('selected')) {
-    //             $(this).removeClass('selected');
-    //         }
-    //         else {
-    //             table.$('tr.selected').removeClass('selected');
-    //             $(this).addClass('selected');
-    //         }
-    //     });
-
-    //     $('#button').click(function () {
-    //         table.row('.selected').remove().draw(false);
-    //     });
-    // });
+        $('#button').click(function () {
+            table.row('.selected').remove().draw(false);
+        });
+    });
 
     useEffect(() => {
         api.get('espera').then(response => {

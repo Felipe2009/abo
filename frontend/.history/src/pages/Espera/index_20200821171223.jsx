@@ -28,25 +28,16 @@ export default function Espera() {
             </table>
         </tbody>
 
-
-
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
-    $('#tabela tbody').on('click', 'img.icon-delete', function () {
-        table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
-    });
     const options = {
         filter: true,
         search: true,
         responsive: "standard"
     };
-
+    
     // $(document).ready(function () {
     //     var table = $('#tabela').DataTable();
 
@@ -81,6 +72,14 @@ export default function Espera() {
     //         alert("Erro ao deletar pessoa")
     //     }
     // }
+    var table = $('#tabela').DataTable();
+
+    $('#tabela tbody').on('click','img.icon-delete',function () {
+        table
+            .row($(this).parents('tr'))
+            .remove()
+            .draw();
+     });
 
     return (
         <div className="espera-container">

@@ -26,9 +26,9 @@ export default function ListaAgendamento() {
         <td>{agendar.tipo}</td>
         <td>{agendar.sexo}</td>
 
-        {/* <FiCheck type="button" className="editar"></FiCheck>
+        {/* <FiCheck type="button" className="editar"></FiCheck> */}
         <FaCheck type="submit" onClick={() => handleMais(agendar.name)} className="mais"></FaCheck>
-        <FiTrash onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash> */}
+        <FiTrash onClick={() => handleDeleteAgendamento(agendar.rg)} type="button"> </FiTrash>
     </tr>
     ))]
     const options = {

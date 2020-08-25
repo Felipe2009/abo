@@ -5,6 +5,7 @@ import logoImg from '../../assets/gots.png'
 import api from '../../services/api';
 import { FiTrash } from 'react-icons/fi';
 import MUIDataTable from "mui-datatables";
+import { FaPlus } from 'react-icons/fa'
 
 
 export default function Espera() {
@@ -18,52 +19,24 @@ export default function Espera() {
 
     const columns = ["name", "rg", "tipo", "sexo", "quantidade"];
     const data = [precisas.map(precisa => (<tr key={precisa.name}>
-        <tbody>
-            <table id="tabela">
-                <td>{precisa.name}</td>
-                <td>{precisa.rg}</td>
-                <td>{precisa.tipo}</td>
-                <td>{precisa.sexo}</td>
-                <td>{precisa.quantidade}</td>
-            </table>
-        </tbody>
-
-
-
+        <FaPlus></FaPlus>
+        <table id="tabela">
+            <td>{precisa.name}</td>
+            <td>{precisa.rg}</td>
+            <td>{precisa.tipo}</td>
+            <td>{precisa.sexo}</td>
+            <td>{precisa.quantidade}</td>
+        </table>
         {/* <FiEdit onClick={() => (doador.cpf)} type="button" className="editar"></FiEdit> */}
         {/* <FiTrash onClick={() => handleDeletePrecisa(precisa.rg)} type="button"> </FiTrash> */}
     </tr>
     ))]
-    var table = $('#tabela').DataTable();
-    $('#tabela tbody').on('click', 'img.icon-delete', function () {
-        table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
-    });
     const options = {
         filter: true,
         search: true,
         responsive: "standard"
     };
 
-    // $(document).ready(function () {
-    //     var table = $('#tabela').DataTable();
-
-    //     $('#tabela tbody').on('click', 'tr', function () {
-    //         if ($(this).hasClass('selected')) {
-    //             $(this).removeClass('selected');
-    //         }
-    //         else {
-    //             table.$('tr.selected').removeClass('selected');
-    //             $(this).addClass('selected');
-    //         }
-    //     });
-
-    //     $('#button').click(function () {
-    //         table.row('.selected').remove().draw(false);
-    //     });
-    // });
 
     useEffect(() => {
         api.get('espera').then(response => {
@@ -81,6 +54,20 @@ export default function Espera() {
     //         alert("Erro ao deletar pessoa")
     //     }
     // }
+
+    $('#tabela').DataTable({
+        buttons: [
+            {
+                extend: 'pdf',
+                text: 'Save current page',
+                exportOptions: {
+                    modifier: {
+                        page: 'current'
+                    }
+                }
+            }
+        ]
+    });
 
     return (
         <div className="espera-container">
@@ -106,7 +93,6 @@ export default function Espera() {
             >
 
             </MUIDataTable>
-
 
         </div>
     )

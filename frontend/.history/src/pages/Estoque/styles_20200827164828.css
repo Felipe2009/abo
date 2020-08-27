@@ -1,0 +1,164 @@
+.estoque-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.src {
+    height: 0px;
+    margin-left: -210px;
+    margin-top: 10px;
+    width: 10px;
+}
+
+.aaa {
+    align-items: center;
+    color: #151516;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 580;
+    transition: opacity 0.2s;
+}
+
+.volta {
+    align-items: center;
+    color: #151516;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 580;
+    margin-left: 100px;
+    transition: opacity 0.2s;
+}
+
+.estoque-container header {
+    display: flex;
+    align-items: center
+}
+
+.estoque-container header img {
+    height: 105px;
+}
+
+.estoque-container header a {
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+.estoque-container header button {
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin-left: 14px;
+}
+
+.estoque-container header button:hover {
+    border-color: #999;
+}
+
+.estoque-container h1 {
+    margin-top: 20px;
+    margin-bottom: 11px;
+}
+
+.estoque-container ul li {
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    width: 315px;
+    height: 170px;
+}
+
+.estoque-container ul li button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 0;
+}
+
+.estoque-container ul li button:hover {
+    opacity: 0.8;
+}
+
+.estoque-container ul li strong {
+    display: block;
+    margin-bottom: 14px;
+    color: #26262c;
+}
+
+.estoque-container ul li p {
+    color: #737380;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: opacity 0.2s;
+}
+
+.textao {
+    text-align: center;
+}
+
+.figurab {
+    width: 52px;
+    margin-left: 250px;
+    margin-top: -42px;
+}
+
+.estoque-container ul li a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: #131212;
+    font-weight: 600;
+    font-size: 8pt;
+}
+
+.xxx {
+    width: 45px;
+    border-radius: 3px;
+    border-color: rgb(15, 15, 15);
+    height: 25px;
+}
+
+.listagema {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    margin-left: 1px;
+    font-weight: 550;
+}
+
+.imagem img {
+    width: 52px;
+    position: relative;
+    left: 200px;
+    top: -65px;
+}
+
+.estoque-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* fr -> q são 2 colunas com 1 unidade flexível */
+    grid-gap: 20px;
+    /* distanciamento entre os cards */
+    list-style: none;
+    margin-left: 45px;
+    align-items: start
+}
+
+.imagem strong {
+    margin-left: -30px;
+}
+
+.imagem input {
+    margin-top: 10px;
+}

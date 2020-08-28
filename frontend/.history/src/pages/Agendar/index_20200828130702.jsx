@@ -47,7 +47,9 @@ export default function Agendar() {
                     <img className="logoo" src={logoImg} ></img>
                     <h1>Agendar doação</h1>
                     <br></br>
-                   
+                    <Link className="back-link" to="/cadastroHistorico">
+
+                        Cadastrar Doação
                     <Link className="back-link" to="/">
 
                         Voltar para home

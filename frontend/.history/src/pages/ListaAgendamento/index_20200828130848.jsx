@@ -56,9 +56,9 @@ export default function ListaAgendamento() {
         <div className="lista-container">
             <header>
                 <img src={logoImg} />
-                
+                <Link className="botaooo" to="/cadastroHistorico">Cadastrar Doação</Link>
                 <Link className="botaoo" to="/cadastroDoador">Cadastrar Doador</Link>
-                <Link className="voltar" to="/cadastroHistorico">Cadastrar Doação</Link>
+                <Link className="voltar" to="/"> Voltar para home</Link>
 
             </header>
 

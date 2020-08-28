@@ -1,0 +1,90 @@
+.type {
+    margin-left: 25px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+}
+
+.opcao {
+    margin-left: 12px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    margin-right: 5px;
+}
+
+.precisa-container {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precisa-container.content {
+    width: 100%;
+    padding: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* joga a imagem pra esquerda e o form pra direita */
+    align-items: center;
+}
+
+.precisa .content section {
+    width: 100%;
+    max-width: 200px;
+}
+
+.precisa-container .content section h1 {
+    /* margin: 64px 0 32px; */
+    font-size: 30px;
+    text-align: center;
+}
+
+.precisa-container .content section form {
+    width: 100%;
+    max-width: 200px;
+}
+
+.precisa-container .content form button {
+    margin-top: 6px;
+    inline-size: 370px;
+}
+
+.precisa-container .content form input {
+    margin-top: 6px;
+    inline-size: 305px;
+}
+
+.precisa-container .content form .input-group {
+    border-radius: 8px;
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+    display: flex;
+}
+
+.telefone {
+    height: 58px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #dcdce6;
+}
+
+#placeholder-text::placeholder {
+    font-size: 15px;
+    text-align: left;
+}
+
+.foi {
+    text-decoration: none;
+    font-size: 12pt;
+    color: #000000
+}

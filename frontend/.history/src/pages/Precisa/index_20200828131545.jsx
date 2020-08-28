@@ -48,11 +48,13 @@ export default function Precisa() {
                   
                     <h1>Cadastrar Pessoa</h1>
                     <br></br>
-                    <Link className="back-link" to="/espera">
+                    <Link className="back-link" to="/">
 
-                        Ver lista de receptores
+                        Voltar para home
                         </Link>
-                       
+                        <a className="atualizar" to="/espera">
+
+                            Lista Receptores</a>
                     
 
                     <br></br>
